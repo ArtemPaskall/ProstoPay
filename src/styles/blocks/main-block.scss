@@ -1,0 +1,12 @@
+.main-block {
+  max-width: 1280px;
+  position: relative;
+
+  &__img {
+    width: 100%;
+    padding: 0 11.48% 0 7.26%;
+    position: absolute;
+    top: -90px;
+    z-index: -2;
+  }
+}

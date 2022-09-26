@@ -1,0 +1,33 @@
+.why-prostoPay {
+  position: relative;
+  padding-top: 5.7vw;
+  @include Desctop {
+    padding-top: 73px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  &__img {
+    width: 100%;
+    padding: 20px 0 0 7.26%;
+    z-index: -3;
+    position: relative;
+  }
+
+  &__benefit {
+    position: absolute;
+    bottom: -70px;
+    right: 111px;
+    transition: all 0.5s;
+    z-index: 1;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

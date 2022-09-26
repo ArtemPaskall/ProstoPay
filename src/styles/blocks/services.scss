@@ -1,0 +1,32 @@
+.services {
+  position: relative;
+  padding-top: 6.5vw;
+  @include Desctop {
+    padding-top: 83px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  &__diagram {
+    margin: 0 auto;
+    margin-top: 38px;
+  }
+
+  &__benefit {
+    position: absolute;
+    transform: rotate(90deg);
+    left: 45px;
+    top: 375px;
+    transition: all 0.5s;
+
+
+    &:hover {
+      transform: rotate(90deg) scale(1.1);
+    }
+  }
+}

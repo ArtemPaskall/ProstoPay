@@ -1,0 +1,11 @@
+@mixin Desctop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin iPad {
+  @media (max-width: 1279.99px) {
+    @content;
+  }
+}

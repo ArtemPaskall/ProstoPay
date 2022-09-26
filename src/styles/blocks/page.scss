@@ -1,0 +1,61 @@
+.page {
+  scroll-behavior: smooth;
+
+  &__body {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 400;
+    color: $text-color;
+    min-width: 320px;
+  }
+
+  &__section {
+
+    &--video {
+      position: absolute;
+      transform: translateY(-100%);
+      transition: transform 0.5s;
+
+      right: 0;
+      left: 0;
+    }
+
+    &--video-open {
+      position: absolute;
+      transform: translateY(0);
+    }
+
+   &--servises {
+    margin: 0 auto;
+   }
+
+   &--pay-service {
+    margin-top: 66px;
+   }
+
+   &--products {
+    margin-top: 75px;
+   }
+
+   &--about {
+    margin-top: 73px;
+   }
+
+   &--contacts {
+    margin-top: 186px;
+   }
+  }
+
+  &__main {
+    margin: 0 auto;
+  }
+
+  &__footer {
+    position: relative;
+    top: 120px;
+    margin: 0 auto;
+  }
+
+  .page__body--with-menu {
+    overflow: hidden;
+  }
+}

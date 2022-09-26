@@ -1,13 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>ProstoPay</title>
     <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;700&family=Josefin+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+  <body class="page__body">
+
+
+
+    <header class="page__header header">
+      <div class="header__content">
+        <div class="container container--header">
+          <div class="settings header__nav" >
+            <div class="settings__lang">
+              <img src="./images/language.png" alt="Select language" class="settings__lang--img">
+                <div class="settings__options" id="select-lang">
+                  <div class="settings__option settings__option--UA">UA</div>
+                  <div class="settings__option settings__option--EN">EN</div>
+                  <div class="settings__option settings__option--GE">GE</div>
+                </div>
+              <div class="settings__current-lang" id="current-lang">UA</div>
+            </div>
+            <div class="settings__log-out">
+              <a href="https://dashboard.prostopay.net/" target="_blank">
+              <!-- <a href="services.html" id="services-link"> -->
+                <img src="./images/Log-out.png" alt="Log out" class="settings__log-out--img">
+              </a>
+            </div>
+         </div>
+         <div class="header__wrapper">
+            <div class="header__description">
+              <a href="#" class="header__logo-link">
+                <img src="./images/logo.png" alt="Vending machine" class="header__logo">
+              </a>
+              <div class="header__text lang-header-description">Для кави, вендингу та іншого рітейлу</div>
+              <div class="header__button button__large">Зв’язатися з нами</div>
+            </div>
+            <div class="header__wraper-img">
+              <img src="./images/vending-machine.png" alt="Vending machine" class="header__img">
+            </div>
+         </div>
+         <div class="header__video">
+          <div class="header__video--link" id="video-open">
+            <img src="./images/play-circle.png" alt="ProstoPay video" class="header__video--icon">
+          </вclass=>
+         </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page__section--video video" id="video">
+        <iframe class="video__item" src="https://www.youtube.com/embed/EzmDDfB9UiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="video__hide-button">
+          <img src="./images/close-video-icon.png" alt="Close video image" class="video__hide-button--image" id="video-close">
+        </div>
+      </section>
+
+    <main class="page__main  main-block">
+
+      <img src="./images/super-line-full.png" alt="Line" class="main-block__img">
+
+      <section class="page__section--why-prostoPay why-prostoPay">
+          <h2 class="why-prostoPay__title">Чому ми?</h2>
+          <img src="./images/whyProstoPay.png" alt="Prosto Pay benefits" class="why-prostoPay__img">
+          <div class="why-prostoPay__benefit benefit">
+            <p class="benefit__title">80%</p>
+            <p class="benefit__description">менше простоїв</p>
+          </div>
+      </section>
+
+      <section class="page__section--services services" id="services-block">
+        <div class="services__benefit benefit">
+          <p class="benefit__title">10%</p>
+          <p class="benefit__description">менше витрат</p>
+        </div>
+        <h2 class="services__title">Наші сервіси</h2>
+
+        <div class="services__diagram diagram">
+          <img src="./images/connectors.png" alt="Diagram with services" class="diagram__connectors">
+          <a href="#">
+            <img src="./images/tax-icon.png" alt="Tax icon" class="diagram__fiscal-img">
+          </a>
+          <a href="#">
+            <img src="./images/cashless.png" alt="Cashless image" class="diagram__cashless-img">
+          </a>
+          <a href="#">
+            <img src="./images/feedback.png" alt="Customer feedback image" class="diagram__feedback-img">
+          </a>
+          <a href="#">
+            <img src="./images/analytics.png" alt="Analytics image" class="diagram__analytics-img">
+          </a>
+          <a href="#">
+            <img src="./images/remote.png" alt="Remote control image" class="diagram__remote-img">
+          </a>
+
+          <a href="#" class="diagram__cashless-link diagram__link">Безготівкова <br /> оплата</a>
+          <a href="#" class="diagram__feedback-link diagram__link">Відгуки <br /> клієнтів</a>
+          <a href="#" class="diagram__monitoring-link diagram__link">Онлайн <br /> моніторинг</a>
+          <a href="#" class="diagram__analytics-link diagram__link">Аналітика</a>
+          <a href="#" class="diagram__remot-link diagram__link">Дистанційне <br /> керування</a>
+          <a href="#" class="diagram__fiscal-link diagram__link">Фіскалізація</a>
+        </div>
+
+        <a href="#" class="button__more diagram__button">Більше</a>
+      </section>
+
+      <section class="page__section--pay-service pay-service">
+        <div class="pay-service__background"></div>
+        <h2 class="pay-service__title">платіжні сервіси</h2>
+        <div class="pay-service__content">
+          <div class="pay-service__items">
+            <img src="./images/apple-pay-logo.png" alt="Apple pay image" class="pay-service__item">
+            <img src="./images/visa.png" alt="" class="pay-service__item">
+            <img src="./images/google-pay-logo.png" alt="" class="pay-service__item">
+            <img src="./images/mastercard-logo.png" alt="" class="pay-service__item pay-service__item--master">
+          </div>
+          <a href="#" class="button__more pay-service__button">Більше</a>
+        </div>
+
+      </section>
+
+      <section class="page__section--products products" id="products">
+        <h2 class="products__title">Продукти</h2>
+        <p class="products__description">Ми розробляємо IoT-пристрої
+           і платіжні рішення для вендингу, кавомашин та інших видів роздрібного бізнесу
+        </p>
+        <div class="products__content">
+
+          <div class="products__hardware">
+            <h3 class="products__hardware-title">Hardware</h3>
+            <div class="products__hardware-wrap">
+              <img src="./images/hardware-img.png" alt="Hardware image" class="products__hardware-img">
+              <ul class="products__hardware-list">
+                <li class="products__hardware-list-item">
+                  <a href="#" class="products__hardware-link">Серія А</a>
+                </li>
+                <li class="products__hardware-list-item">
+                  <a href="#" class="products__hardware-link">Серія L</a>
+                </li>
+              </ul>
+              <a href="#" class="button__more products__more">Більше</a>
+            </div>
+          </div>
+
+          <div class="products__software">
+            <h3 class="products__software-title">Software</h3>
+            <div class="products__software-wrap">
+              <img src="./images/software-img.png" alt="Software image" class="products__software-img">
+              <ul>
+                <li>
+                  <a href="#" class="products__software-link">WEB-кабінет</a>
+                </li>
+                <li>
+                  <a href="#" class="products__software-link">ProstoService</a>
+                </li>
+                <li>
+                  <a href="#" class="products__software-link">ProstoPay</a>
+                </li>
+              </ul>
+              <a href="#" class="button__more products__more">Більше</a>
+            </div>
+          </div>
+        </div>
+        <div class="products__benefit benefit">
+          <p class="benefit__title">20хв</p>
+          <p class="benefit__description">на встановлення</p>
+        </div>
+      </section>
+
+      <section class="page__section--about about" id="about">
+        <h2 class="about__title">Про нас</h2>
+        <div class="about__text">ProstoPay був створений в Україні. Простота керує нашим баченням. Ми робимо складні ІТ-рішення простими у використанні для партнерів і клієнтів.
+          Наша місія допомагати кавовим і вендинговим компаніям вести свій бізнес на новому рівні операційної ефективності та продуктивності,
+           а також насолоджуватися зростанням доходу завдяки сучасним платіжним рішенням.<br />
+          Ми почали в 2016 році з простим рішенням для RFID-карт на автоматах з продажу снеків.
+           Це був лише початок, далі ми продовжили зростати, створюючи нові IoT-пристрої та програмні продукти.
+            Власна команда розробників (і фізичних пристроїв, і програмних продуктів) надає різноманітні гнучкі клієнтоорієнтовані рішення.
+            Сьогодні наші продукти підтримують телеметрію та безготівкові платежі для кави, снеків, автоматів з розливу води, їжї, іграшок, автомийок та на інших торгових апаратах.<br />
+          Не варто забувати і про нашу підтримку: ProstoPay не зміг би розвиватися без швидкої та якісної підтримки клієнтів.
+          Ми пишаємося тим, що завжди готові прийти на допомогу і вирішити будь-яку проблему для наших партнерів і клієнтів. Обираючи ProstoPay, ви отримуєте сучасний продукт, швидку та якісну техпідтримку, конфіденційність даних та надійні і дружні відносини. </div>
+      </section>
+
+      <section class="page__section--contacts contacts" id="contacts">
+        <div class="contacts__content">
+
+          <div class="contacts__email">
+            <p class="contacts__item contacts__item--left">E-mail</p>
+            <a href="mailto:service@prostopay.ne" class="contacts__item contacts__item--right">service@prostopay.net</a>
+          </div>
+          <div class="contacts__phone">
+            <p class="contacts__item contacts__item--left">Phone</p>
+            <div class="contacts__item contacts__item--phone">
+              <a href="tel:+380 67 445 9679" class="contacts__phone--number contacts__item--right">+380 67 445 9679</a>
+              <a href="tel:+380 50 402 7759" class="contacts__phone--number contacts__item--right">+380 50 402 7759</a>
+           </div>
+          </div>
+          <div class="contacts__address">
+            <p class="contacts__item contacts__item--left">Address</p>
+            <a href="https://goo.gl/maps/6xb7aDDVGXs4zpg58" class="contacts__item contacts__item--right"  target="_blank">вул. Оболонська 7, м. Київ</a>
+          </div>
+
+        </div>
+        <a href="#" class="contacts__button button__large">Зв’язатися з нами</a>
+        <div class="contacts__benefit benefit">
+          <p class="benefit__title">-60%</p>
+          <p class="benefit__description">непотрібних відвідувань</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page__footer footer">
+      <div class="footer__social">
+        <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
+        <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
+        <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+      </div>
+      <div class="footer__content">
+        <a href=""><img src="./images/logo.png" alt="ProstoPay logo" class="footer__logo"></a>
+        <p class="footer__text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
+        <div class="footer__links">
+          <a href="#about" class="footer__link">Про нас</a>
+          <a href="#services-block" class="footer__link">Сервіси</a>
+          <a href="#products" class="footer__link">Продукти</a>
+          <a href="#contacts" class="footer__link">Контакти</a>
+        </div>
+      </div>
+        <p class="footer__copyright">
+          © 2016 - 2022 ТОВ "Простопей". Всі права захищено.
+        </p>
+    </footer>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

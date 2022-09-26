@@ -1,0 +1,67 @@
+.pay-service {
+  max-width: 1187px;
+  position: relative;
+
+  &__title {
+    padding-left: 27.27%;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+
+    background: linear-gradient(167.84deg, #FFC014 26.97%, #F87303 91.14%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    position: relative;
+    bottom: -9px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+    margin: 0 0 0 8%;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 50px;
+  }
+
+  &__item {
+    padding-right: 50px;
+    transition: all 0.3s;
+
+    &--master {
+      width: 77px;
+      height:60px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__background {
+    position: absolute;
+    width: 1187px;
+    height: 100px;
+    background: linear-gradient(90deg, #DFE6F4 0%, rgba(237, 239, 252, 0.5) 70.89%);
+    z-index: -3;
+    margin: 0 0 0 8%;
+    top: 29px;
+  }
+}

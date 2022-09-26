@@ -1,0 +1,171 @@
+.products {
+  position: relative;
+
+  &__title {
+    text-align: center;
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 24px;
+    line-height: 29px;
+    max-width: 780px;
+    margin: 0 auto
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__hardware {
+    margin-left: 30px;
+
+    &-title {
+      font-size: 48px;
+      line-height: 59px;
+      padding: 15px 0;
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+
+      width: 334px;
+      height: 400px;
+      background: rgba(237, 239, 252, 0.5);
+
+      border-radius: 20px;
+      margin-left: 45px;
+      padding-bottom: 55px;
+    }
+
+    &-img {
+      width: 228px;
+      height: 161px;
+    }
+
+    &-list {
+      width: 100%;
+      padding: 0 28px;
+    }
+
+    &-link {
+      text-decoration: none;
+      font-size: 32px;
+      line-height: 39px;
+
+      color: $text-color;
+      position: relative;
+
+      &:hover:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: $text-color;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        animation: product-link-hover 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &__software {
+    margin-right: 10px;
+
+    &-title {
+      text-align: right;
+      font-size: 48px;
+      line-height: 59px;
+      padding: 15px 0;
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+
+      width: 334px;
+      height: 400px;
+      background: rgba(237, 239, 252, 0.5);
+
+      border-radius: 20px;
+      margin-right: 55px;
+      padding-bottom: 55px;
+    }
+
+    &-img {
+      width: 228px;
+      height: 161px;
+    }
+
+    &-list {
+      width: 100%;
+      padding: 0 28px;
+    }
+
+    &-link {
+      text-decoration: none;
+      font-size: 32px;
+      line-height: 39px;
+      position: relative;
+
+      color: $text-color;
+
+      &:hover:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: $text-color;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        animation: product-link-hover 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &__more {
+    position: absolute;
+    bottom: 24px;
+  }
+
+  &__benefit {
+    position: absolute;
+    left: 150px;
+    top: 545px;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes product-link-hover {
+  0% {
+    width: 0px;
+
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+
+

@@ -1,7 +1,26 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "reset.scss";
+@import "mixins.scss";
+@import "variables.scss";
 
-body {
-  background: $c-gray;
-}
+@import "./blocks/page.scss";
+@import "./blocks/container.scss";
+@import "./blocks/header.scss";
+@import "./blocks/settings.scss";
+@import "./blocks/buttons.scss";
+@import "./blocks/video.scss";
+@import "./blocks/main-block.scss";
+@import "./blocks/why-prostoPay.scss";
+@import "./blocks/services.scss";
+@import "./blocks/diagram.scss";
+@import "./blocks/pay-service.scss";
+@import "./blocks/products.scss";
+@import "./blocks/about.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/footer.scss";
+
+
+
+
+
+
+
