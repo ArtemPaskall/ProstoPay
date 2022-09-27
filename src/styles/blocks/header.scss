@@ -3,11 +3,11 @@
     max-width: 1280px;
     height: 100vh;
     background: linear-gradient(100.25deg, #1B3F92 37.47%, #5C81ED 87.36%);
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
 
     @include iPad {
-      max-width: 768px;
+      max-width: $ipad-width;
     }
   }
 
@@ -30,7 +30,6 @@
   }
 
   &__description {
-
   }
 
   &__logo-link {
@@ -39,6 +38,10 @@
 
   &__logo {
     width: 100%;
+
+    @include iPad {
+      max-width: 300px;
+    }
   }
 
   &__text {
@@ -54,6 +57,10 @@
     max-width: 320px;
     max-height: 424px;
     width: 100%;
+
+    @include iPad {
+      max-width: 250px;
+    }
   }
 
   &__video {
@@ -65,7 +72,11 @@
     // z-index: 2;
     cursor: pointer;
 
-      &--icon {
+    @include iPad {
+      padding: 65px 0 0;
+    }
+
+    &--icon {
       width: 96px;
       height: 96px;
     }
@@ -88,6 +99,3 @@
     transform: scale(0.9);
   }
 }
-
-
-

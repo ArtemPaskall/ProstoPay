@@ -11,6 +11,12 @@
     &--img {
       width: 28px;
       height: 28px;
+
+
+      @include iPad {
+        width: 22px;
+        height: 22px;
+      }
     }
 
     &:hover  {
@@ -45,6 +51,10 @@
 
     background-color: rgba($color: #ffffff, $alpha: 0.4);
     border-radius: 22px;
+
+    @include iPad {
+      transform: translate(-107%, -89%);
+    }
   }
 
   &__current-lang {
@@ -54,10 +64,20 @@
 
     font-size: 20px;
     padding: 16px;
+
+    @include iPad {
+      font-size: 18px;
+      padding: 14px;
+    }
   }
 
   &__option {
     padding: 8px;
+
+    @include iPad {
+      padding: 6px;
+    }
+
   }
 
   &__log-out {
@@ -67,6 +87,12 @@
     &--img {
       width: 35px;
       height: 28px;
+
+
+      @include iPad {
+        width: 28px;
+        height: 22px;
+      }
     }
 
     &:hover {

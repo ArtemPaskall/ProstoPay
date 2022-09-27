@@ -24,25 +24,42 @@
       transform: translateY(0);
     }
 
-   &--servises {
-    margin: 0 auto;
+    &--servises {
+      margin: 0 auto;
+    }
+
+    &--pay-service {
+      margin-top: 66px;
+
+    @include iPad {
+      margin-top: 25px;
+    }
    }
 
-   &--pay-service {
-    margin-top: 66px;
+    &--products {
+      margin-top: 75px;
+
+      @include iPad {
+        margin-top: 25px;
+      }
    }
 
-   &--products {
-    margin-top: 75px;
-   }
+    &--about {
+      margin: 0 auto;
+      margin-top: 73px;
 
-   &--about {
-    margin-top: 73px;
-   }
+      @include iPad {
+        margin-top: 35px;
+      }
+    }
 
-   &--contacts {
-    margin-top: 186px;
-   }
+    &--contacts {
+      margin-top: 186px;
+
+      @include iPad {
+        margin-top: 40px;
+      }
+    }
   }
 
   &__main {
@@ -53,6 +70,10 @@
     position: relative;
     top: 120px;
     margin: 0 auto;
+
+    @include iPad {
+      top: 32px;
+    }
   }
 
   .page__body--with-menu {

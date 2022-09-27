@@ -2,11 +2,19 @@
   max-width: 1280px;
   position: relative;
 
+  @include iPad {
+    max-width: $ipad-width;
+  }
+
   &__img {
     width: 100%;
     padding: 0 11.48% 0 7.26%;
     position: absolute;
     top: -90px;
     z-index: -2;
+
+    @include iPad {
+      top: -53px;
+    }
   }
 }

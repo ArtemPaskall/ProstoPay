@@ -3,12 +3,17 @@
   height: 488px;
   position: relative;
 
+  @include iPad {
+    width: 486px;
+    height: 292px;
+  }
+
   & img {
     cursor: pointer;
   }
 
   &__connectors {
-    cursor: default !important;
+    // cursor: default !important;
     width: 664px;
     height: 342px;
     position: relative;
@@ -16,7 +21,12 @@
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    // z-index: -1;
+
+    @include iPad {
+      width: 398px;
+      height: 205px;
+    }
   }
 
   &__fiscal-img {
@@ -26,6 +36,13 @@
     top: 260px;
     left: -10px;
     transition: transform 0.3s;
+
+    @include iPad {
+      width: 62px;
+      height: 62px;
+      top: 150px;
+      left: -5px;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -40,6 +57,13 @@
     left: 170px;
     transition: transform 0.3s;
 
+    @include iPad {
+      width: 80px;
+      height: 80px;
+      top: 0;
+      left: 120px;
+    }
+
     &:hover {
       transform: scale(0.9);
     }
@@ -52,6 +76,13 @@
     top: 75px;
     left: 690px;
     transition: transform 0.3s;
+
+    @include iPad {
+      width: 65px;
+      height: 65px;
+      top: 55px;
+      left: 400px;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -66,6 +97,13 @@
     left: 490px;
     transition: transform 0.3s;
 
+    @include iPad {
+      width: 70px;
+      height: 70px;
+      top: 142px;
+      left: 305px;
+    }
+
     &:hover {
       transform: scale(0.9);
     }
@@ -78,6 +116,13 @@
     top: 375px;
     left: 240px;
     transition: transform 0.3s;
+
+    @include iPad {
+      width: 55px;
+      height: 55px;
+      top: 220px;
+      left: 165px;
+    }
 
     &:hover {
       transform: scale(1.1);
@@ -93,6 +138,11 @@
     text-align: center;
     transition: transform 0.3s;
 
+    @include iPad {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
     &:hover {
       transform: scale(1.1);
     }
@@ -101,36 +151,71 @@
   &__cashless-link {
     top: -20px;
     left: 0;
+
+    @include iPad {
+      top: -10px;
+      left: 10px;
+    }
   }
 
   &__feedback-link {
     top: 45px;
     left: 560px;
+
+    @include iPad {
+      top: 35px;
+      left: 320px;
+    }
   }
 
   &__monitoring-link {
     top: 210px;
     left: 310px;
+
+    @include iPad {
+      top: 130px;
+      left: 200px;
+    }
   }
 
   &__analytics-link {
     top: 325px;
     left: 630px;
+
+    @include iPad {
+      top: 205px;
+      left: 370px;
+    }
   }
 
   &__remot-link {
     top: 425px;
     left: 360px;
+
+    @include iPad {
+      top: 245px;
+      left: 230px;
+    }
   }
 
   &__fiscal-link {
     top: 390px;
     left: 40px;
+
+    @include iPad {
+      top: 215px;
+      left: 20px;
+    }
   }
 
   &__button {
     position: absolute;
     right: 256px;
     bottom: 11px;
+
+    @include iPad {
+      top: 350px;
+      left: 550px;
+    }
   }
 }

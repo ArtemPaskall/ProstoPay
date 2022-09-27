@@ -35,6 +35,11 @@
     text-decoration: none;
     color: $text-color;
 
+    @include iPad {
+      font-size: 18px;
+    line-height: 20px;
+    }
+
     &--left {
       width: 120px;
       height: 50px;
@@ -61,13 +66,23 @@
     position: absolute;
     right: 62px;
     top: 65px;
+
+    @include iPad {
+      right: 12px;
+      top: 65px;
+    }
   }
 
   &__benefit {
     position: absolute;
     right: 250px;
-    top: -222px;
+    top: -232px;
     transition: 0.5s;
+
+    @include iPad {
+      right: 130px;
+      top: -92px;
+    }
 
     &:hover {
       transform: scale(1.1);

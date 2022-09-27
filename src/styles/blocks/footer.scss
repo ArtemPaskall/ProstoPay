@@ -12,6 +12,11 @@
 
   padding: 22px;
 
+  @include iPad {
+    max-width: $ipad-width;
+    padding: 27px 27px 18px;
+  }
+
   &__social {
     display: flex;
     flex-direction: row;
@@ -19,8 +24,15 @@
     align-items: center;
 
     &--link {
-      padding-right: 50px;
+      margin-right: 50px;
       transition: 0.5s;
+
+      @include iPad {
+        & img {
+          width: 35px;
+          height: 32px;
+        }
+      }
 
       &:last-child {
         padding-right: 0;
@@ -52,6 +64,12 @@
     font-size: 20px;
     line-height: 24px;
     color: #FDFFFF;
+
+  @include iPad {
+    margin-right: 0;
+    font-size: 17px;
+    line-height: 22px;
+    }
   }
 
   &__links {
@@ -61,6 +79,10 @@
     align-items: center;
 
     margin-right: 80px;
+
+    @include iPad {
+      display: none;
+    }
   }
 
   &__link {
@@ -70,6 +92,17 @@
     color: #FFFFFF;
     padding: 10px 0;
     transition: 0.3s;
+
+    @include iPad {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 0;
+      margin: 0 45px 0 0;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
 
     &::after {
       content: "";
@@ -91,11 +124,25 @@
     }
   }
 
+  &__links-top {
+    display: none;
+
+  @include iPad {
+    display: flex;
+    flex-direction: row;
+    }
+  }
+
   &__copyright {
     font-weight: 300;
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
+
+  @include iPad {
+    font-size: 16px;
+    line-height: 20px;
+    }
   }
 }
 

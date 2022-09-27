@@ -1,6 +1,11 @@
 .pay-service {
-  max-width: 1187px;
+  // max-width: 1187px;
+  max-width: 1178px;
   position: relative;
+
+  @include iPad {
+    max-width: 706px;
+  }
 
   &__title {
     padding-left: 27.27%;
@@ -26,6 +31,10 @@
     width: 100%;
     height: 100px;
     margin: 0 0 0 8%;
+
+    @include iPad {
+      height: 70px;
+    }
   }
 
   &__items {
@@ -35,15 +44,58 @@
     align-items: center;
 
     padding-right: 50px;
+
+    @include iPad {
+      padding-right: 30px;
+    }
   }
 
   &__item {
-    padding-right: 50px;
     transition: all 0.3s;
+    padding-right: 50px;
+
+    @include iPad {
+      padding-right: 30px;
+   }
+
+    &--apple {
+      width: 186px;
+      height: 56px;
+
+      @include iPad {
+        width: 107px;
+        height: 35px;
+     }
+    }
+
+    &--visa {
+      width: 184px;
+      height: 44px;
+
+      @include iPad {
+        width: 100px;
+        height: 28px;
+     }
+    }
+
+    &--google-pay {
+      width: 190px;
+      height: 56px;
+
+      @include iPad {
+        width: 110px;
+        height: 34px;
+     }
+    }
 
     &--master {
       width: 77px;
-      height:60px;
+      height: 60px;
+
+      @include iPad {
+        width: 47px;
+        height: 35px;
+     }
     }
 
     &:last-child {
@@ -63,5 +115,10 @@
     z-index: -3;
     margin: 0 0 0 8%;
     top: 29px;
+
+    @include iPad {
+      height: 60px;
+      max-width: 706px;
+   }
   }
 }

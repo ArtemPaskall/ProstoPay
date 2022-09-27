@@ -5,6 +5,11 @@
     text-align: center;
     font-size: 48px;
     line-height: 59px;
+
+    @include iPad {
+      font-size: 36px;
+      line-height: 43px;
+    }
   }
 
   &__description {
@@ -12,7 +17,14 @@
     font-size: 24px;
     line-height: 29px;
     max-width: 780px;
-    margin: 0 auto
+    margin: 0 auto;
+
+    @include iPad {
+      font-size: 16px;
+      line-height: 18px;
+      max-width: 600px;
+      padding-top: 10px;
+    }
   }
 
   &__content {
@@ -29,6 +41,11 @@
       font-size: 48px;
       line-height: 59px;
       padding: 15px 0;
+
+      @include iPad {
+        font-size: 32px;
+        line-height: 36px;
+      }
     }
 
     &-wrap {
@@ -45,11 +62,22 @@
       border-radius: 20px;
       margin-left: 45px;
       padding-bottom: 55px;
+
+      @include iPad {
+        width: 234px;
+        height: 230px;
+        padding-bottom: 45px;
+      }
     }
 
     &-img {
       width: 228px;
       height: 161px;
+
+      @include iPad {
+        width: 136px;
+        height: 96px;
+      }
     }
 
     &-list {
@@ -64,6 +92,11 @@
 
       color: $text-color;
       position: relative;
+
+      @include iPad {
+        font-size: 18px;
+        line-height: 20px;
+      }
 
       &:hover:after {
         content: "";
@@ -88,6 +121,11 @@
       font-size: 48px;
       line-height: 59px;
       padding: 15px 0;
+
+      @include iPad {
+        font-size: 32px;
+        line-height: 36px;
+      }
     }
 
     &-wrap {
@@ -104,11 +142,22 @@
       border-radius: 20px;
       margin-right: 55px;
       padding-bottom: 55px;
+
+      @include iPad {
+        width: 234px;
+        height: 230px;
+        padding-bottom: 45px;
+      }
     }
 
     &-img {
       width: 228px;
       height: 161px;
+
+      @include iPad {
+        width: 136px;
+        height: 96px;
+      }
     }
 
     &-list {
@@ -121,6 +170,11 @@
       font-size: 32px;
       line-height: 39px;
       position: relative;
+
+      @include iPad {
+        font-size: 18px;
+        line-height: 20px;
+      }
 
       color: $text-color;
 
@@ -142,6 +196,10 @@
   &__more {
     position: absolute;
     bottom: 24px;
+
+    @include iPad {
+      bottom: 16px;
+    }
   }
 
   &__benefit {
@@ -149,6 +207,11 @@
     left: 150px;
     top: 545px;
     transition: all 0.5s;
+
+    @include iPad {
+       left: 110px;
+       top: 355px;
+    }
 
     &:hover {
       transform: scale(1.1);

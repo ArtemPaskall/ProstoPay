@@ -1,8 +1,13 @@
 .why-prostoPay {
   position: relative;
   padding-top: 5.7vw;
+
   @include Desctop {
     padding-top: 73px;
+  }
+
+  @include iPad {
+    padding-top: 43px;
   }
 
   &__title {
@@ -10,6 +15,11 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 59px;
+
+    @include iPad {
+      font-size: 36px;
+      line-height: 43px;
+    }
   }
 
   &__img {
@@ -17,14 +27,24 @@
     padding: 20px 0 0 7.26%;
     z-index: -3;
     position: relative;
+
+    @include iPad {
+      padding-top: 10px;
+    }
   }
 
   &__benefit {
     position: absolute;
-    bottom: -70px;
-    right: 111px;
     transition: all 0.5s;
     z-index: 1;
+
+    bottom: -70px;
+    right: 111px;
+
+    @include iPad {
+      bottom: -40px;
+      right: 70px;
+    }
 
     &:hover {
       transform: scale(1.1);

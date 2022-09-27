@@ -1,8 +1,13 @@
 .services {
   position: relative;
   padding-top: 6.5vw;
+
   @include Desctop {
     padding-top: 83px;
+  }
+
+  @include iPad {
+    padding-top: 35px;
   }
 
   &__title {
@@ -10,11 +15,20 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 59px;
+
+    @include iPad {
+      font-size: 36px;
+      line-height: 43px;
+    }
   }
 
   &__diagram {
     margin: 0 auto;
     margin-top: 38px;
+
+    @include iPad {
+      margin-top: 20px;
+    }
   }
 
   &__benefit {
@@ -24,6 +38,10 @@
     top: 375px;
     transition: all 0.5s;
 
+    @include iPad {
+      left: 28px;
+      top: 220px;
+    }
 
     &:hover {
       transform: rotate(90deg) scale(1.1);
