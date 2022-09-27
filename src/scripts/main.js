@@ -57,21 +57,29 @@ const video = document.getElementById('video');
 
 showButton.addEventListener('click', () => {
   const videoSection = document.querySelector('.page__section--video')
-  videoSection.classList.add('page__section--video-open')
-  setTimeout(() => {
-    video.style.zIndex = "1";
-  }, 600)
 
-  setTimeout(() => {
-    videoSection.style.position = "relative"
-  }, 150)
+  if (!videoSection.classList.contains('page__section--video-open')) {
+    videoSection.classList.add('page__section--video-open')
+    setTimeout(() => {
+      video.style.zIndex = "1";
+    }, 600)
+
+    setTimeout(() => {
+      videoSection.style.position = "relative"
+    }, 150)
+    console.log(videoSection.classList.contains('page__section--video-open'))
+  } else {
+    hideVideo();
+  }
 })
 
-closeButton.addEventListener('click', () => {
+closeButton.addEventListener('click', hideVideo)
+
+function hideVideo() {
   video.style.zIndex = "-1";
   const videoSection = document.querySelector('.page__section--video')
   videoSection.classList.remove('page__section--video-open')
   videoSection.style.position = "absolute"
-})
+}
 
 
