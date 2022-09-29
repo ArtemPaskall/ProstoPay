@@ -89,37 +89,28 @@ function hideVideo() {
 
 let lastScrollTop = 0;
 const menu = document.getElementById('menu');
-const videoSection = document.getElementById('video');
 window.addEventListener('scroll', function() {
 let scrollTop = window.pageYOffset  || document.documentElement.scrollTop;
-let isMenuVisible = isInViewport(menu);
-let isVideoVisible = isInViewport(videoSection);
 
 let menustyle = this.getComputedStyle(menu);
 let height = menustyle.height;
 
   if (scrollTop > lastScrollTop) {
     menu.style.top = '-' + height;
-  } else {
-    if (scrollTop < 500) {
-      menu.style.display = "none";
-    } else {
-      menu.style.display = "flex";
-    }
-    menu.style.display = "flex";
-    menu.style.top = "0";
-  }
-  lastScrollTop = scrollTop;
 
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+  } else {
+    menu.style.top = "0";
+
+    if (scrollTop < 500) {
+      menu.style.top = '-' + height;
+      menu.style.top = '-300px';
+      menu.style.position = 'absolute';
+    } else {
+      menu.style.position = 'sticky';
+    }
   }
+
+  lastScrollTop = scrollTop;
 });
 
 
