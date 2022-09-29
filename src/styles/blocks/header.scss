@@ -11,7 +11,7 @@
     }
   }
 
-  &__nav {
+  &__settigs {
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -42,6 +42,7 @@
     @include iPad {
       max-width: 300px;
     }
+
   }
 
   &__text {

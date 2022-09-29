@@ -38,14 +38,18 @@ function changeLanguage(prevHash) {
   // link.href = link.href + '#' + hash;
   // console.log(link.href);
 
+
   for (const key in translationArr) {
-    let element = document.querySelector('.lang-' + key);
+    let element = document.querySelectorAll('._lang__' + key);
+
     if(element) {
-      if(translationArr[key][hash] !== undefined) {
-        element.innerHTML = translationArr[key][hash];
-      } else if (hash !== prevHash) {
-        element.innerHTML = translationArr[key][prevHash];
-      }
+      element.forEach(item => {
+        if(translationArr[key][hash] !== undefined) {
+          item.innerHTML = translationArr[key][hash];
+        } else if (hash !== prevHash) {
+          item.innerHTML = translationArr[key][prevHash];
+        }
+      })
     }
   }
 }
@@ -62,12 +66,11 @@ showButton.addEventListener('click', () => {
     videoSection.classList.add('page__section--video-open')
     setTimeout(() => {
       video.style.zIndex = "1";
-    }, 600)
+    }, 400)
 
     setTimeout(() => {
       videoSection.style.position = "relative"
     }, 150)
-    console.log(videoSection.classList.contains('page__section--video-open'))
   } else {
     hideVideo();
   }
@@ -81,5 +84,44 @@ function hideVideo() {
   videoSection.classList.remove('page__section--video-open')
   videoSection.style.position = "absolute"
 }
+
+// Hide header menu on scroll down, show on scroll up
+
+let lastScrollTop = 0;
+const menu = document.getElementById('menu');
+const videoSection = document.getElementById('video');
+window.addEventListener('scroll', function() {
+let scrollTop = window.pageYOffset  || document.documentElement.scrollTop;
+let isMenuVisible = isInViewport(menu);
+let isVideoVisible = isInViewport(videoSection);
+
+let menustyle = this.getComputedStyle(menu);
+let height = menustyle.height;
+
+  if (scrollTop > lastScrollTop) {
+    menu.style.top = '-' + height;
+  } else {
+    if (scrollTop < 500) {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+    menu.style.display = "flex";
+    menu.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+});
+
+
 
 

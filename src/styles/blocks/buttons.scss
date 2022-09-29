@@ -84,6 +84,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: 0.3s;
 
   &__title {
     font-weight: 100;
@@ -105,6 +106,10 @@
       font-size: 14px;
       line-height: 18px;
     }
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 

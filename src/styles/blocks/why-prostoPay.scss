@@ -2,7 +2,7 @@
   position: relative;
   padding-top: 5.7vw;
 
-  @include Desctop {
+  @include Desktop {
     padding-top: 73px;
   }
 
@@ -36,7 +36,6 @@
   &__benefit {
     position: absolute;
     transition: all 0.5s;
-    z-index: 1;
 
     bottom: -70px;
     right: 111px;
@@ -44,10 +43,6 @@
     @include iPad {
       bottom: -40px;
       right: 70px;
-    }
-
-    &:hover {
-      transform: scale(1.1);
     }
   }
 }

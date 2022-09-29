@@ -72,20 +72,4 @@
       top: 65px;
     }
   }
-
-  &__benefit {
-    position: absolute;
-    right: 250px;
-    top: -232px;
-    transition: 0.5s;
-
-    @include iPad {
-      right: 130px;
-      top: -92px;
-    }
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
 }

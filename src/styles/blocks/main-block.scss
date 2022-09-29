@@ -17,4 +17,15 @@
       top: -53px;
     }
   }
+
+  &__benefit {
+    position: absolute;
+    right: 210px;
+    bottom: 270px;
+
+    @include iPad {
+      right: 135px;
+      bottom: 190px;
+    }
+  }
 }

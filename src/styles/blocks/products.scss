@@ -206,15 +206,10 @@
     position: absolute;
     left: 150px;
     top: 545px;
-    transition: all 0.5s;
 
     @include iPad {
        left: 110px;
        top: 355px;
-    }
-
-    &:hover {
-      transform: scale(1.1);
     }
   }
 }
@@ -222,13 +217,9 @@
 @keyframes product-link-hover {
   0% {
     width: 0px;
-
   }
 
   100% {
     width: 100%;
   }
 }
-
-
-
