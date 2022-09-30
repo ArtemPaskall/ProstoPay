@@ -5,10 +5,13 @@ import { translationArr } from './translate';
 
 const allLang = ['UA', 'EN', 'GE'];
 const select = document.getElementById('select-lang');
+const langSwitchers = document.querySelectorAll('.select-lang');
 
-for (const child of select.children) {
-  child.addEventListener('click', () => changeURLLanguage(child));
-}
+langSwitchers.forEach(select => {
+  for (const child of select.children) {
+    child.addEventListener('click', () => changeURLLanguage(child));
+  }
+})
 
 function changeURLLanguage(child) {
   const lang = child.innerHTML;
@@ -28,9 +31,10 @@ function changeLanguage(prevHash) {
     window.location.reload();
   }
 
-  const currentLang = document.getElementById('current-lang');
+  const currentLang = document.querySelectorAll('.current-lang');
 
-  currentLang.innerHTML = hash;
+  currentLang.forEach(item =>  item.innerHTML = hash)
+
 
   // const link = document.getElementById('services');
   // console.log(link);
@@ -94,6 +98,8 @@ let scrollTop = window.pageYOffset  || document.documentElement.scrollTop;
 
 let menustyle = this.getComputedStyle(menu);
 let height = menustyle.height;
+menu.style.position = 'absolute';
+menu.style.top = '-400px';
 
   if (scrollTop > lastScrollTop) {
     menu.style.top = '-' + height;
@@ -102,8 +108,7 @@ let height = menustyle.height;
     menu.style.top = "0";
 
     if (scrollTop < 500) {
-      menu.style.top = '-' + height;
-      menu.style.top = '-300px';
+      menu.style.top = '-400px';
       menu.style.position = 'absolute';
     } else {
       menu.style.position = 'sticky';
@@ -114,5 +119,22 @@ let height = menustyle.height;
 });
 
 
+// Menu hide
+const menuIcon = document.getElementById('dropdownOpen')
+const dropdownMenu = document.getElementById('dropdownMenu')
+console.log(dropdownMenu.classList);
 
+menuIcon.addEventListener('click', function() {
+  console.log(dropdownMenu.classList);
+
+  if (!dropdownMenu.classList.contains('dropdown__animation')) {
+    dropdownMenu.classList.add('dropdown__animation')
+  } else {
+    dropdownMenu.classList.remove('dropdown__animation')
+  }
+
+  // window.addEventListener('scroll', function() {
+  //   dropdownMenu.classList.remove('dropdown__animation')
+  // })
+})
 

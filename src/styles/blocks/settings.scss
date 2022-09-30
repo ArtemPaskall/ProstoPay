@@ -4,14 +4,50 @@
   align-items: center;
   color: white;
 
+  &--onIPad {
+    @include Desktop {
+      display: none;
+    }
+  }
+
   &__lang {
     position: relative;
     margin-right: 33px;
 
+    @include iPad {
+      // margin-right: 0;
+    }
+
+    &__options {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      transform: translate(-107%, -97%);
+      padding: 0 7px;
+      opacity: 0;
+
+      background-color: rgba($color: #ffffff, $alpha: 0.4);
+      border-radius: 22px;
+
+      @include iPad {
+        transform: translate(-107%, -89%);
+      }
+    }
+
+    &__option {
+      transition: all 0.3s;
+
+      &:hover {
+        color: $text-color;
+      }
+    }
+
     &--img {
       width: 28px;
       height: 28px;
-
 
       @include iPad {
         width: 22px;
@@ -19,7 +55,7 @@
       }
     }
 
-    &:hover  {
+    &:hover {
       cursor: pointer;
 
       .settings__options {
@@ -32,25 +68,6 @@
         opacity: 0;
         transition: opacity 0.3s;
       }
-    }
-  }
-
-  &__options {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    position: absolute;
-    transform: translate(-107%, -97%);
-    padding: 0 7px;
-    opacity: 0;
-
-    background-color: rgba($color: #ffffff, $alpha: 0.4);
-    border-radius: 22px;
-
-    @include iPad {
-      transform: translate(-107%, -89%);
     }
   }
 
@@ -74,7 +91,6 @@
     @include iPad {
       padding: 6px;
     }
-
   }
 
   &__log-out {
@@ -85,7 +101,6 @@
       width: 35px;
       height: 28px;
 
-
       @include iPad {
         width: 28px;
         height: 22px;
@@ -94,6 +109,26 @@
 
     &:hover {
       transform: scale(1.2);
+    }
+  }
+
+  &--onDropdown {
+    @include iPad {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100px;
+    }
+
+    .settings__lang {
+      @include iPad {
+        margin: 0 0 25px;
+        padding-top: 5px;
+      }
+    }
+
+    .settings__current-lang {
+      padding: 5px 16px;
+      transform: translate(-100%, -95%);
     }
   }
 }

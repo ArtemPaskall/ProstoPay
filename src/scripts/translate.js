@@ -89,6 +89,10 @@ export const translationArr = {
     'UA': '20хв',
     'EN': '20mins',
   },
+  'about-description': {
+    'UA': 'непотрібних відвідувань',
+    'EN': 'unnecessary visits',
+  },
   'about-title': {
     'UA': 'Про нас',
     'EN': 'About Us',

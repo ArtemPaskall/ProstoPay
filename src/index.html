@@ -15,53 +15,6 @@
   </head>
   <body class="page__body">
 
-    <!-- <div class="page__menu menu">
-      <div class="menu__content">
-        <div class="menu__logo">
-          <a href="#">
-            <img src="./images/logo.png" alt="ProstoPay Logo" class="menu__logo-img">
-          </a>
-        </div>
-        <nav class="menu__navigation">
-          <a href="#about" class="menu__nav-link">Про нас</a>
-          <a href="#services-block" class="menu__nav-link">Сервіси</a>
-          <a href="#products" class="menu__nav-link">Продукти</a>
-          <a href="#contacts" class="menu__nav-link">Контакти</a>
-        </nav>
-        <div class="menu__settings-wrap">
-          <div class="menu__settings settings" >
-            <div class="settings__lang">
-              <img
-                src="./images/language.png"
-                alt="Select language"
-                class="settings__lang--img"
-              >
-              <div class="settings__options" id="select-lang">
-                <div class="settings__option settings__option--UA">UA</div>
-                <div class="settings__option settings__option--EN">EN</div>
-                <div class="settings__option settings__option--GE">GE</div>
-              </div>
-              <div class="settings__current-lang" id="current-lang">UA</div>
-            </div>
-            <div class="settings__log-out">
-              <a href="https://dashboard.prostopay.net/" target="_blank">
-                <a href="services.html" id="services-link">
-                <img
-                  src="./images/Log-out.png"
-                  alt="Log out"
-                  class="settings__log-out--img"
-                >
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <a href="#" class="menu__menu-mobile">
-          <img src="./images/menu-mobile-icon.png" alt="Menu mobile icon" >
-        </a>
-      </div>
-    </div> -->
-
     <header class="page__header header">
       <div class="header__content">
         <div class="container container--header">
@@ -72,12 +25,12 @@
                 alt="Select language"
                 class="settings__lang--img"
               >
-              <div class="settings__options" id="select-lang">
+              <div class="settings__options select-lang">
                 <div class="settings__option settings__option--UA">UA</div>
                 <div class="settings__option settings__option--EN">EN</div>
                 <div class="settings__option settings__option--GE">GE</div>
               </div>
-              <div class="settings__current-lang" id="current-lang">UA</div>
+              <div class="settings__current-lang current-lang">UA</div>
             </div>
             <div class="settings__log-out">
               <a href="https://dashboard.prostopay.net/" target="_blank">
@@ -131,12 +84,16 @@
               <img src="./images/logo.png" alt="ProstoPay Logo" class="menu__logo-img">
             </a>
           </div>
-          <nav class="menu__navigation">
-            <a href="#about" class="menu__nav-link">Про нас</a>
-            <a href="#services-block" class="menu__nav-link">Сервіси</a>
-            <a href="#products" class="menu__nav-link">Продукти</a>
-            <a href="#contacts" class="menu__nav-link">Контакти</a>
+
+          <nav class="nav nav--onDesktop">
+            <ul class="nav__list">
+              <li><a href="#about" class="nav__link">Про нас</a></li>
+              <li><a href="#services-block" class="nav__link">Сервіси</a></li>
+              <li><a href="#products" class="nav__link">Продукти</a></li>
+              <li><a href="#contacts" class="nav__link">Контакти</a></li>
+            </ul>
           </nav>
+
           <div class="menu__settings-wrap">
             <div class="menu__settings settings" >
               <div class="settings__lang">
@@ -145,12 +102,12 @@
                   alt="Select language"
                   class="settings__lang--img"
                 >
-                <div class="settings__options" id="select-lang">
+                <div class="settings__options select-lang">
                   <div class="settings__option settings__option--UA">UA</div>
                   <div class="settings__option settings__option--EN">EN</div>
                   <div class="settings__option settings__option--GE">GE</div>
                 </div>
-                <div class="settings__current-lang" id="current-lang">UA</div>
+                <div class="settings__current-lang current-lang">UA</div>
               </div>
               <div class="settings__log-out">
                 <a href="https://dashboard.prostopay.net/" target="_blank">
@@ -165,19 +122,49 @@
             </div>
           </div>
 
-          <a href="#" class="menu__menu-mobile">
+          <div class="menu__menu-mobile" id="dropdownOpen">
             <img src="./images/menu-mobile-icon.png" alt="Menu mobile icon" >
-          </a>
+          </div>
         </div>
 
-        <div class="dropdown">
+        <div class="dropdown" id="dropdownMenu">
           <div class="dropdown__navigation">
-            <div class="dropdown__nav"></div>
-            <div class="dropdown__settings"></div>
+            <nav class="dropdown__nav nav nav--onIPad">
+              <ul class="nav__list">
+                <li><a href="#about" class="nav__link">Про нас</a></li>
+                <li><a href="#services-block" class="nav__link">Сервіси</a></li>
+                <li><a href="#products" class="nav__link">Продукти</a></li>
+                <li><a href="#contacts" class="nav__link">Контакти</a></li>
+              </ul>
+            </nav>
+            <div class="dropdown__settigs settings settings--onIPad settings--onDropdown">
+              <div class="settings__lang">
+                <img
+                  src="./images/language.png"
+                  alt="Select language"
+                  class="settings__lang--img"
+                >
+                <div class="settings__options select-lang">
+                  <div class="settings__option settings__option--UA">UA</div>
+                  <div class="settings__option settings__option--EN">EN</div>
+                  <div class="settings__option settings__option--GE">GE</div>
+                </div>
+                <div class="settings__current-lang current-lang">UA</div>
+              </div>
+              <div class="settings__log-out">
+                <a href="https://dashboard.prostopay.net/" target="_blank">
+                  <!-- <a href="services.html" id="services-link"> -->
+                  <img
+                    src="./images/Log-out.png"
+                    alt="Log out"
+                    class="settings__log-out--img"
+                  >
+                </a>
+              </div>
+            </div>
           </div>
-          <!-- <div class="dropdown__button">
-            asdfasfd
-          </div> -->
+          <!-- <div class="dropdown__button"></div> -->
+            <div class=" dropdown__button button__large _lang__header-button">Зв’язатися з нами</div>
         </div>
       </div>
     </div>
@@ -188,7 +175,7 @@
 
       <div class=" main-block__benefit  benefit">
         <p class="benefit__title">-60%</p>
-        <p class="benefit__description">непотрібних відвідувань</p>
+        <p class="benefit__description _lang__about-description">непотрібних відвідувань</p>
       </div>
 
       <section class="page__section--why-prostoPay why-prostoPay">
