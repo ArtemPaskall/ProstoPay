@@ -87,10 +87,10 @@
 
           <nav class="nav nav--onDesktop">
             <ul class="nav__list">
-              <li><a href="#about" class="nav__link">Про нас</a></li>
-              <li><a href="#services-block" class="nav__link">Сервіси</a></li>
-              <li><a href="#products" class="nav__link">Продукти</a></li>
-              <li><a href="#contacts" class="nav__link">Контакти</a></li>
+              <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+              <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
+              <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
+              <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
             </ul>
           </nav>
 
@@ -131,10 +131,10 @@
           <div class="dropdown__navigation">
             <nav class="dropdown__nav nav nav--onIPad">
               <ul class="nav__list">
-                <li><a href="#about" class="nav__link">Про нас</a></li>
-                <li><a href="#services-block" class="nav__link">Сервіси</a></li>
-                <li><a href="#products" class="nav__link">Продукти</a></li>
-                <li><a href="#contacts" class="nav__link">Контакти</a></li>
+                <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+                <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
+                <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
+                <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
               </ul>
             </nav>
             <div class="dropdown__settigs settings settings--onIPad settings--onDropdown">
@@ -326,12 +326,20 @@
     </main>
 
     <footer class="page__footer footer">
-      <div class="footer__links-top">
+      <nav class="nav nav--footer-top">
+        <ul class="nav__list">
+          <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+          <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
+          <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
+          <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+        </ul>
+      </nav>
+      <!-- <div class="footer__links-top">
         <a href="#about" class="footer__link">Про нас</a>
         <a href="#services-block" class="footer__link">Сервіси</a>
         <a href="#products" class="footer__link">Продукти</a>
         <a href="#contacts" class="footer__link">Контакти</a>
-      </div>
+      </div> -->
       <div class="footer__social">
         <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
         <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
@@ -346,12 +354,14 @@
           >
         </a>
         <p class="footer__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
-        <div class="footer__links">
-          <a href="#about" class="footer__link">Про нас</a>
-          <a href="#services-block" class="footer__link">Сервіси</a>
-          <a href="#products" class="footer__link">Продукти</a>
-          <a href="#contacts" class="footer__link">Контакти</a>
-        </div>
+        <nav class="nav nav--footer">
+          <ul class="nav__list">
+            <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+            <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
+            <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
+            <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+          </ul>
+        </nav>
       </div>
       <p class="footer__copyright _lang__footer-copyright">
         © 2016 - 2022 ТОВ "Простопей". Всі права захищено.

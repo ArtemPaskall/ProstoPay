@@ -72,66 +72,61 @@
     }
   }
 
-  &__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  // &__links {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   align-items: center;
 
-    margin-right: 80px;
+  //   margin-right: 80px;
 
-    @include iPad {
-      display: none;
-    }
-  }
+  //   @include iPad {
+  //     display: none;
+  //   }
+  // }
 
-  &__link {
-    text-decoration: none;
-    font-size: 24px;
-    line-height: 29px;
-    color: #FFFFFF;
-    padding: 10px 0;
-    transition: 0.3s;
+  // &__link {
+  //   text-decoration: none;
+  //   font-size: 24px;
+  //   line-height: 29px;
+  //   color: #FFFFFF;
+  //   padding: 10px 0;
+  //   transition: 0.3s;
 
-    @include iPad {
-      font-size: 20px;
-      line-height: 24px;
-      padding: 0;
-      margin: 0 45px 0 0;
+  //   @include iPad {
+  //     font-size: 20px;
+  //     line-height: 24px;
+  //     padding: 0;
+  //     margin: 0 45px 0 0;
 
-      &:last-child {
-        padding-right: 0;
-      }
-    }
+  //     &:last-child {
+  //       padding-right: 0;
+  //     }
+  //   }
 
-    &::after {
-      content: "";
-      display: block;
-      background-color: #FFFFFF;
-      width: 0%;
-      height: 2px;
-      margin-top: 3px;
-      border-radius: 3px;
-    }
+  //   &::after {
+  //     content: "";
+  //     display: block;
+  //     background-color: #FFFFFF;
+  //     width: 0%;
+  //     height: 2px;
+  //     margin-top: 3px;
+  //     border-radius: 3px;
+  //   }
 
-    // &:hover:after {
-    //   animation: link-hover 0.5s ease-in-out;
-    //   width: 100%;
-    // }
+  //   &:hover {
+  //     transform: scale(110%);
+  //   }
+  // }
 
-    &:hover {
-      transform: scale(110%);
-    }
-  }
+  // &__links-top {
+  //   display: none;
 
-  &__links-top {
-    display: none;
-
-  @include iPad {
-    display: flex;
-    flex-direction: row;
-    }
-  }
+  // @include iPad {
+  //   display: flex;
+  //   flex-direction: row;
+  //   }
+  // }
 
   &__copyright {
     font-weight: 300;
@@ -146,12 +141,3 @@
   }
 }
 
-@keyframes link-hover {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 100%;
-  }
-}

@@ -123,6 +123,23 @@ export const translationArr = {
     'UA': 'вул. Оболонська 7, м. Київ',
     'EN': '7 Obolonska St, Kyiv, Ukraine',
   },
+  'about-us': {
+    'UA': 'Про нас',
+    'EN': 'About us',
+  },
+  'services': {
+    'UA': 'Сервіси',
+    'EN': 'Services',
+  },
+  'products': {
+    'UA': 'Продукти',
+    'EN': 'Products',
+  },
+  'contacts': {
+    'UA': 'Контакти',
+    'EN': 'Contacts',
+  },
+
 };
 
 
