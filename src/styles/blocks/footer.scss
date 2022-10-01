@@ -2,9 +2,6 @@
   width: 100%;
   max-width: 1280px;
   height: 360px;
-  background: linear-gradient(120.09deg, #1B3F92 15.36%, #5C81ED 85.12%);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,11 +62,11 @@
     line-height: 24px;
     color: #FDFFFF;
 
-  @include iPad {
-    margin-right: 0;
-    font-size: 17px;
-    line-height: 22px;
-    }
+    @include iPad {
+      margin-right: 0;
+      font-size: 17px;
+      line-height: 22px;
+      }
   }
 
   // &__links {
@@ -134,10 +131,10 @@
     line-height: 24px;
     color: #FFFFFF;
 
-  @include iPad {
-    font-size: 16px;
-    line-height: 20px;
-    }
+    @include iPad {
+      font-size: 16px;
+      line-height: 20px;
+      }
   }
 }
 

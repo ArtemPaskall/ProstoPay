@@ -1,9 +1,17 @@
 .header {
+  background: linear-gradient(100.25deg, #1B3F92 37.47%, #5C81ED 87.36%);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  display: block;
+
+  @include mobile {
+    display: none;
+  }
+
   &__content {
     max-width: 1280px;
     height: 100vh;
-    background: linear-gradient(100.25deg, #1B3F92 37.47%, #5C81ED 87.36%);
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+    // background: linear-gradient(100.25deg, #1B3F92 37.47%, #5C81ED 87.36%);
+    // box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
 
     @include iPad {
@@ -27,9 +35,6 @@
     column-gap: 50px;
 
     margin-top: 32px;
-  }
-
-  &__description {
   }
 
   &__logo-link {
@@ -70,7 +75,6 @@
     justify-content: center;
     padding-bottom: 52px;
     position: relative;
-    // z-index: 2;
     cursor: pointer;
 
     @include iPad {
@@ -84,7 +88,6 @@
 
     animation-name: video-icon-move;
     animation-duration: 1s;
-    animation-timing-function: linear;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;

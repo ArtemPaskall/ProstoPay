@@ -3,7 +3,7 @@ import { translationArr } from './translate';
 
 // Select language and translate content;
 
-const allLang = ['UA', 'EN', 'GE'];
+const allLang = ['UA', 'EN'];
 const select = document.getElementById('select-lang');
 const langSwitchers = document.querySelectorAll('.select-lang');
 
@@ -19,6 +19,21 @@ function changeURLLanguage(child) {
   window.location.href = window.location.pathname + '#' + lang;
   // window.location.reload();
   changeLanguage(prevHash);
+  changeImages()
+}
+
+function changeImages() {
+  let hash = window.location.hash;
+  hash = hash.substring(1);
+  let imageWhyProsto = document.querySelectorAll('._lang__img');
+
+  imageWhyProsto.forEach(item => {
+    item.classList.remove('_lang__img--vivble');
+
+    if(item.classList.contains(hash)) {
+      item.classList.add('_lang__img--vivble');
+    }
+  })
 }
 
 function changeLanguage(prevHash) {
@@ -32,10 +47,11 @@ function changeLanguage(prevHash) {
   }
 
   const currentLang = document.querySelectorAll('.current-lang');
+  currentLang.forEach(item => item.innerHTML = hash)
 
-  currentLang.forEach(item =>  item.innerHTML = hash)
 
 
+  // console.log(visibleImage);
   // const link = document.getElementById('services');
   // console.log(link);
 
@@ -59,11 +75,15 @@ function changeLanguage(prevHash) {
 }
 
 // Hide and show video section
-const showButton = document.getElementById('video-open');
+const showButtons = document.querySelectorAll('.video-open');
 const closeButton = document.getElementById('video-close');
 const video = document.getElementById('video');
 
-showButton.addEventListener('click', () => {
+showButtons.forEach(showButton => {
+  showButton.addEventListener('click', showVideo)
+})
+
+function showVideo() {
   const videoSection = document.querySelector('.page__section--video')
 
   if (!videoSection.classList.contains('page__section--video-open')) {
@@ -75,10 +95,8 @@ showButton.addEventListener('click', () => {
     setTimeout(() => {
       videoSection.style.position = "relative"
     }, 150)
-  } else {
-    hideVideo();
   }
-})
+}
 
 closeButton.addEventListener('click', hideVideo)
 
@@ -106,10 +124,11 @@ menu.style.top = '-400px';
 
   } else {
     menu.style.top = "0";
-
+    menu.style.zIndex = '1';
     if (scrollTop < 500) {
       menu.style.top = '-400px';
       menu.style.position = 'absolute';
+      menu.style.zIndex = '-8';
     } else {
       menu.style.position = 'sticky';
     }
@@ -122,10 +141,8 @@ menu.style.top = '-400px';
 // Menu hide
 const menuIcon = document.getElementById('dropdownOpen')
 const dropdownMenu = document.getElementById('dropdownMenu')
-console.log(dropdownMenu.classList);
 
 menuIcon.addEventListener('click', function() {
-  console.log(dropdownMenu.classList);
 
   if (!dropdownMenu.classList.contains('dropdown__animation')) {
     dropdownMenu.classList.add('dropdown__animation')

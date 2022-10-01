@@ -14,8 +14,8 @@
     position: relative;
     margin-right: 33px;
 
-    @include iPad {
-      // margin-right: 0;
+    @include mobile {
+      margin: 0;
     }
 
     &--img {

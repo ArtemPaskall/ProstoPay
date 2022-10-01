@@ -23,6 +23,7 @@
   }
 
   &__img {
+    display: none;
     width: 100%;
     padding: 20px 0 0 7.26%;
     z-index: -3;
@@ -44,5 +45,11 @@
       bottom: -40px;
       right: 70px;
     }
+  }
+}
+
+._lang__img {
+  &--vivble {
+    display: block;
   }
 }

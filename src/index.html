@@ -28,13 +28,11 @@
               <div class="settings__options select-lang">
                 <div class="settings__option settings__option--UA">UA</div>
                 <div class="settings__option settings__option--EN">EN</div>
-                <div class="settings__option settings__option--GE">GE</div>
               </div>
               <div class="settings__current-lang current-lang">UA</div>
             </div>
             <div class="settings__log-out">
               <a href="https://dashboard.prostopay.net/" target="_blank">
-                <!-- <a href="services.html" id="services-link"> -->
                 <img
                   src="./images/Log-out.png"
                   alt="Log out"
@@ -60,10 +58,45 @@
             </div>
           </div>
           <div class="header__video">
-            <div class="header__video--link" id="video-open">
-            <img src="./images/play-circle.png" alt="ProstoPay video" class="header__video--icon">
-            </div>
+            <a href="#video" class="header__video--link video-open">
+              <img src="./images/play-circle.png" alt="ProstoPay video" class="header__video--icon">
+            </ф>
           </div>
+        </div>
+      </div>
+    </header>
+
+    <header class="header-mobile">
+      <div class="header-mobile__content">
+        <div class="header-mobile__logo-wrap">
+          <img src="./images/prostop-pay-logo.svg" alt="ProstoPay Logo" class="header-mobile__logo">
+          <h1 class="header-mobile__text">
+            Те, що треба для вендингу і не тільки для вендингу.
+          </h1>
+        </div>
+        <img src="./images/vending-mashine.svg" alt="vending machine" class="header-mobile__img">
+        <div class="header-mobile__button button__large _lang__header-button">Зв’язатися з нами</div>
+
+        <div class="header__video header-mobile__video">
+          <a href="#video" class="header__video--link video-open">
+            <img src="./images/play-circle.png" alt="ProstoPay video" class="header-mobile__video--icon">
+          </a>
+        </div>
+
+      </div>
+      <div class="header-mobile__bottom-nav">
+        <img src="./images/prostop-pay-logo.svg" alt="ProstoPay Logo" class="header-mobile__bottom-nav-logo">
+        <div class="settings__lang">
+          <img
+            src="./images/language.png"
+            alt="Select language"
+            class="settings__lang--img"
+          >
+          <div class="settings__options select-lang">
+            <div class="settings__option settings__option--UA">UA</div>
+            <div class="settings__option settings__option--EN">EN</div>
+          </div>
+          <div class="settings__current-lang current-lang">UA</div>
         </div>
       </div>
     </header>
@@ -71,65 +104,21 @@
     <section class="page__section--video video" id="video">
       <iframe class="video__item" src="https://www.youtube.com/embed/EzmDDfB9UiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="video__hide-button">
-        <img src="./images/close-video-icon.png" alt="Close video image" class="video__hide-button--image" id="video-close">
+        <img src="./images/close-video-icon.png" alt="Close video image" class="video__hide-button--image video-close" id="video-close">
       </div>
     </section>
 
-
-    <div class="page__menu menu" id="menu">
-      <div class="menu__dropdown-wrap">
-        <div class="menu__content">
-          <div class="menu__logo">
-            <a href="#">
-              <img src="./images/logo.png" alt="ProstoPay Logo" class="menu__logo-img">
-            </a>
-          </div>
-
-          <nav class="nav nav--onDesktop">
-            <ul class="nav__list">
-              <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
-              <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
-              <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
-              <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
-            </ul>
-          </nav>
-
-          <div class="menu__settings-wrap">
-            <div class="menu__settings settings" >
-              <div class="settings__lang">
-                <img
-                  src="./images/language.png"
-                  alt="Select language"
-                  class="settings__lang--img"
-                >
-                <div class="settings__options select-lang">
-                  <div class="settings__option settings__option--UA">UA</div>
-                  <div class="settings__option settings__option--EN">EN</div>
-                  <div class="settings__option settings__option--GE">GE</div>
-                </div>
-                <div class="settings__current-lang current-lang">UA</div>
-              </div>
-              <div class="settings__log-out">
-                <a href="https://dashboard.prostopay.net/" target="_blank">
-                  <!-- <a href="services.html" id="services-link"> -->
-                  <img
-                    src="./images/Log-out.png"
-                    alt="Log out"
-                    class="settings__log-out--img"
-                  >
-                </a>
-              </div>
+    <div class="page__menu-wrap" id="menu">
+      <div class="page__menu menu">
+        <div class="menu__dropdown-wrap">
+          <div class="menu__content">
+            <div class="menu__logo">
+              <a href="#">
+                <img src="./images/logo.png" alt="ProstoPay Logo" class="menu__logo-img">
+              </a>
             </div>
-          </div>
 
-          <div class="menu__menu-mobile" id="dropdownOpen">
-            <img src="./images/menu-mobile-icon.png" alt="Menu mobile icon" >
-          </div>
-        </div>
-
-        <div class="dropdown" id="dropdownMenu">
-          <div class="dropdown__navigation">
-            <nav class="dropdown__nav nav nav--onIPad">
+            <nav class="nav nav--onDesktop">
               <ul class="nav__list">
                 <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
                 <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
@@ -137,33 +126,75 @@
                 <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
               </ul>
             </nav>
-            <div class="dropdown__settigs settings settings--onIPad settings--onDropdown">
-              <div class="settings__lang">
-                <img
-                  src="./images/language.png"
-                  alt="Select language"
-                  class="settings__lang--img"
-                >
-                <div class="settings__options select-lang">
-                  <div class="settings__option settings__option--UA">UA</div>
-                  <div class="settings__option settings__option--EN">EN</div>
-                  <div class="settings__option settings__option--GE">GE</div>
-                </div>
-                <div class="settings__current-lang current-lang">UA</div>
-              </div>
-              <div class="settings__log-out">
-                <a href="https://dashboard.prostopay.net/" target="_blank">
-                  <!-- <a href="services.html" id="services-link"> -->
+
+            <div class="menu__settings-wrap">
+              <div class="menu__settings settings" >
+                <div class="settings__lang">
                   <img
-                    src="./images/Log-out.png"
-                    alt="Log out"
-                    class="settings__log-out--img"
+                    src="./images/language.png"
+                    alt="Select language"
+                    class="settings__lang--img"
                   >
-                </a>
+                  <div class="settings__options select-lang">
+                    <div class="settings__option settings__option--UA">UA</div>
+                    <div class="settings__option settings__option--EN">EN</div>
+                  </div>
+                  <div class="settings__current-lang current-lang">UA</div>
+                </div>
+                <div class="settings__log-out">
+                  <a href="https://dashboard.prostopay.net/" target="_blank">
+                    <img
+                      src="./images/Log-out.png"
+                      alt="Log out"
+                      class="settings__log-out--img"
+                    >
+                  </a>
+                </div>
               </div>
             </div>
+
+            <div class="menu__menu-mobile" id="dropdownOpen">
+              <img src="./images/menu-mobile-icon.png" alt="Menu mobile icon" >
+            </div>
           </div>
-          <div class=" dropdown__button button__large _lang__header-button">Зв’язатися з нами</div>
+
+          <div class="dropdown" id="dropdownMenu">
+            <div class="dropdown__navigation">
+              <nav class="dropdown__nav nav nav--onIPad">
+                <ul class="nav__list">
+                  <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+                  <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
+                  <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
+                  <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+                </ul>
+              </nav>
+              <div class="dropdown__settigs settings settings--onIPad settings--onDropdown">
+                <div class="settings__lang">
+                  <img
+                    src="./images/language.png"
+                    alt="Select language"
+                    class="settings__lang--img"
+                  >
+                  <div class="settings__options select-lang">
+                    <div class="settings__option settings__option--UA">UA</div>
+                    <div class="settings__option settings__option--EN">EN</div>
+                  </div>
+                  <div class="settings__current-lang current-lang">UA</div>
+                </div>
+                <div class="settings__log-out">
+                  <a href="https://dashboard.prostopay.net/" target="_blank">
+                    <!-- <a href="services.html" id="services-link"> -->
+                    <img
+                      src="./images/Log-out.png"
+                      alt="Log out"
+                      class="settings__log-out--img"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class=" dropdown__button button__large _lang__header-button">Зв’язатися з нами</div>
+          </div>
         </div>
       </div>
     </div>
@@ -179,7 +210,8 @@
 
       <section class="page__section--why-prostoPay why-prostoPay">
           <h2 class="why-prostoPay__title _lang__why-prostoPay-title">Чому ми?</h2>
-          <img src="./images/whyProstoPay.png" alt="Prosto Pay benefits" class="why-prostoPay__img">
+          <img src="./images/whyProstoPay.png" alt="Prosto Pay benefits" class="why-prostoPay__img  _lang__img _lang__img--vivble UA">
+          <img src="./images/whyProstoPay_EN.png" alt="Prosto Pay benefits" class="why-prostoPay__img  _lang__img EN">
           <div class="why-prostoPay__benefit benefit">
             <p class="benefit__title">80%</p>
             <p class="benefit__description _lang__why-prostoPay-benefit">менше простоїв</p>
@@ -325,36 +357,9 @@
 
     </main>
 
-    <footer class="page__footer footer">
-      <nav class="nav nav--footer-top">
-        <ul class="nav__list">
-          <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
-          <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
-          <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
-          <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
-        </ul>
-      </nav>
-      <!-- <div class="footer__links-top">
-        <a href="#about" class="footer__link">Про нас</a>
-        <a href="#services-block" class="footer__link">Сервіси</a>
-        <a href="#products" class="footer__link">Продукти</a>
-        <a href="#contacts" class="footer__link">Контакти</a>
-      </div> -->
-      <div class="footer__social">
-        <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
-        <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
-        <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
-      </div>
-      <div class="footer__content">
-        <a href="">
-          <img
-            src="./images/logo.png"
-            alt="ProstoPay logo"
-            class="footer__logo"
-          >
-        </a>
-        <p class="footer__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
-        <nav class="nav nav--footer">
+    <footer class="page__footer-wrap">
+      <div class="page__footer footer">
+        <nav class="nav nav--footer-top">
           <ul class="nav__list">
             <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
             <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
@@ -362,10 +367,34 @@
             <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
           </ul>
         </nav>
+        <div class="footer__social">
+          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
+          <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
+          <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+        </div>
+        <div class="footer__content">
+          <a href="">
+            <img
+              src="./images/logo.png"
+              alt="ProstoPay logo"
+              class="footer__logo"
+            >
+          </a>
+          <p class="footer__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
+          <nav class="nav nav--footer">
+            <ul class="nav__list">
+              <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+              <li><a href="#services-block" class="nav__link _lang__services">Сервіси</a></li>
+              <li><a href="#products" class="nav__link _lang__products">Продукти</a></li>
+              <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+            </ul>
+          </nav>
+        </div>
+        <p class="footer__copyright _lang__footer-copyright">
+          © 2016 - 2022 ТОВ "Простопей". Всі права захищено.
+        </p>
       </div>
-      <p class="footer__copyright _lang__footer-copyright">
-        © 2016 - 2022 ТОВ "Простопей". Всі права захищено.
-      </p>
+
     </footer>
 
     <script type="text/javascript" src="scripts/main.js"></script>
