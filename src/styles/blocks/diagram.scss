@@ -8,12 +8,16 @@
     height: 292px;
   }
 
+  @include mobile {
+    width: 276px;
+    height: 182px;
+  }
+
   & img {
     cursor: pointer;
   }
 
   &__connectors {
-    // cursor: default !important;
     width: 664px;
     height: 342px;
     position: relative;
@@ -27,7 +31,30 @@
       width: 398px;
       height: 205px;
     }
+
+    @include mobile {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        display: block;
+        top: 56%;
+        width: 294px;
+        height: 172px;
+      }
+    }
   }
+
+  // &__connectors-mobile {
+  //   display: none;
+
+  //   @include mobile {
+  //     display: block;
+  //   }
+  // }
 
   &__fiscal-img {
     position: absolute;
@@ -42,6 +69,13 @@
       height: 62px;
       top: 150px;
       left: -5px;
+    }
+
+    @include mobile {
+      width: 42px;
+      height: 42px;
+      top: 60px;
+      left: 211px;
     }
 
     &:hover {
@@ -64,6 +98,13 @@
       left: 120px;
     }
 
+    @include mobile {
+      width: 50px;
+      height: 50px;
+      top: -9px;
+      left: 103px;
+    }
+
     &:hover {
       transform: scale(0.9);
     }
@@ -82,6 +123,13 @@
       height: 65px;
       top: 55px;
       left: 400px;
+    }
+
+    @include iPad {
+      width: 40px;
+      height: 40px;
+      top: 160px;
+      left: 24px;
     }
 
     &:hover {
@@ -104,6 +152,13 @@
       left: 305px;
     }
 
+    @include mobile {
+      width: 50px;
+      height: 50px;
+      top: 92px;
+      left: 37px;
+    }
+
     &:hover {
       transform: scale(0.9);
     }
@@ -122,6 +177,13 @@
       height: 55px;
       top: 220px;
       left: 165px;
+    }
+
+    @include mobile {
+      width: 35px;
+      height: 35px;
+      top: 153px;
+      left: 201px;
     }
 
     &:hover {

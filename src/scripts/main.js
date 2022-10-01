@@ -128,7 +128,7 @@ menu.style.top = '-400px';
     if (scrollTop < 500) {
       menu.style.top = '-400px';
       menu.style.position = 'absolute';
-      menu.style.zIndex = '-8';
+      menu.style.zIndex = '-4';
     } else {
       menu.style.position = 'sticky';
     }
