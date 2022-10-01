@@ -48,14 +48,6 @@
     }
   }
 
-  // &__connectors-mobile {
-  //   display: none;
-
-  //   @include mobile {
-  //     display: block;
-  //   }
-  // }
-
   &__fiscal-img {
     position: absolute;
     width: 120px;
@@ -218,6 +210,13 @@
       top: -10px;
       left: 10px;
     }
+
+    @include mobile {
+      top: -10px;
+      left: 10px;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__feedback-link {
@@ -227,6 +226,13 @@
     @include iPad {
       top: 35px;
       left: 320px;
+    }
+
+    @include mobile {
+      top: 152px;
+      left: 72px;
+      font-size: 14px;
+      line-height: 16px;
     }
   }
 
@@ -238,6 +244,13 @@
       top: 130px;
       left: 200px;
     }
+
+    @include mobile {
+      top: 40px;
+      left: 12px;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__analytics-link {
@@ -247,6 +260,13 @@
     @include iPad {
       top: 205px;
       left: 370px;
+    }
+
+    @include mobile {
+      top: 104px;
+      left: 98px;
+      font-size: 14px;
+      line-height: 16px;
     }
   }
 
@@ -258,6 +278,13 @@
       top: 245px;
       left: 230px;
     }
+
+    @include mobile {
+      top: 188px;
+      left: 135px;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__fiscal-link {
@@ -267,6 +294,13 @@
     @include iPad {
       top: 215px;
       left: 20px;
+    }
+
+    @include mobile {
+      top: 70px;
+      left: 121px;
+      font-size: 14px;
+      line-height: 16px;
     }
   }
 

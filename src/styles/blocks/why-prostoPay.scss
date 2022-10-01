@@ -41,6 +41,11 @@
     @include iPad {
       padding-top: 10px;
     }
+
+
+    @include mobile {
+      width: 120%;
+    }
   }
 
   &__benefit {
