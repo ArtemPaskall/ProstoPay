@@ -25,16 +25,30 @@ function changeURLLanguage(child) {
 function changeImages() {
   let hash = window.location.hash;
   hash = hash.substring(1);
+
+  if (hash === '' || hash === undefined) {
+    hash = 'UA';
+  }
+
   let imageWhyProsto = document.querySelectorAll('._lang__img');
 
   imageWhyProsto.forEach(item => {
-    item.classList.remove('_lang__img--vivble');
+    item.classList.remove('_lang__img--visible');
 
-    if(item.classList.contains(hash)) {
-      item.classList.add('_lang__img--vivble');
+    if (window.innerWidth >= 768)  {
+      if(item.classList.contains(hash) && item.classList.contains('wide-screen')) {
+        item.classList.add('_lang__img--visible');
+      }
+    } else {
+      if(item.classList.contains(hash) && item.classList.contains('mobile')) {
+        item.classList.add('_lang__img--visible');
+      }
     }
   })
 }
+
+changeImages();
+window.addEventListener('resize', changeImages);
 
 function changeLanguage(prevHash) {
   let hash = window.location.hash;
@@ -80,7 +94,7 @@ const closeButton = document.getElementById('video-close');
 const video = document.getElementById('video');
 
 showButtons.forEach(showButton => {
-  showButton.addEventListener('click', showVideo)
+  showButton.addEventListener('click', showVideo);
 })
 
 function showVideo() {

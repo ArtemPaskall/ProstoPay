@@ -42,9 +42,13 @@
       padding-top: 10px;
     }
 
-
     @include mobile {
       width: 120%;
+      display: none;
+    }
+
+    &--mobile {
+      width: 370px;
     }
   }
 
@@ -67,7 +71,7 @@
 }
 
 ._lang__img {
-  &--vivble {
+  &--visible {
     display: block;
   }
 }

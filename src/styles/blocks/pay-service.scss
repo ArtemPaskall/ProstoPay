@@ -20,6 +20,10 @@
 
     position: relative;
     bottom: -9px;
+
+    @include mobile {
+      bottom: 0;
+    }
   }
 
   &__content {
@@ -34,6 +38,10 @@
 
     @include iPad {
       height: 70px;
+    }
+
+    @include mobile {
+      height: fit-content;
     }
   }
 
@@ -66,6 +74,10 @@
         width: 107px;
         height: 35px;
       }
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &--visa {
@@ -75,6 +87,11 @@
       @include iPad {
         width: 100px;
         height: 28px;
+      }
+
+      @include mobile {
+        width: 80px;
+        height: 20px;
       }
     }
 

@@ -1,14 +1,14 @@
 .main-block {
   max-width: 1280px;
   position: relative;
-  min-width: 320px;
+  min-width: $min-screen;
 
   @include iPad {
     max-width: $ipad-width;
   }
 
   @include mobile {
-    max-width: 320px;
+    max-width: $min-screen;
     z-index: -3;
   }
 
@@ -34,10 +34,10 @@
 
     @include mobile {
       display: block;
-      width: 320px;
+      width: $min-screen;
       padding: 0 11.48% 0 7.26%;
       position: absolute;
-      top: -50px;
+      top: -60px;
       z-index: -2;
     }
   }

@@ -10,7 +10,7 @@
 
   @include mobile {
     width: 276px;
-    height: 182px;
+    height: 262px;
   }
 
   & img {
@@ -41,7 +41,7 @@
 
       @include mobile {
         display: block;
-        top: 56%;
+        top: 39%;
         width: 294px;
         height: 172px;
       }
@@ -93,8 +93,8 @@
     @include mobile {
       width: 50px;
       height: 50px;
-      top: -9px;
-      left: 103px;
+      top: -15px;
+      left: 100px;
     }
 
     &:hover {
@@ -246,8 +246,8 @@
     }
 
     @include mobile {
-      top: 40px;
-      left: 12px;
+      top: 55px;
+      left: -10px;
       font-size: 14px;
       line-height: 16px;
     }
@@ -312,6 +312,11 @@
     @include iPad {
       top: 350px;
       left: 550px;
+    }
+
+    @include mobile {
+      top: 287px;
+      left: 147px;
     }
   }
 }

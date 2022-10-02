@@ -5,7 +5,7 @@
     font-family: "Commissioner", sans-serif;
     font-weight: 400;
     color: $text-color;
-    min-width: 320px;
+    min-width: $min-screen;
     height: 1px;
   }
 
@@ -45,6 +45,10 @@
 
       @include iPad {
         margin-top: 25px;
+      }
+
+      @include mobile {
+        margin-top: 0;
       }
     }
 

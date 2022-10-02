@@ -10,6 +10,10 @@
     padding-top: 35px;
   }
 
+  @include mobile {
+    padding-top: 20px;
+  }
+
   &__title {
     text-align: center;
     font-weight: 700;
