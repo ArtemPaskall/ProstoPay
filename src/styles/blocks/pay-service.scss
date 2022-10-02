@@ -7,6 +7,10 @@
     max-width: 706px;
   }
 
+  @include mobile {
+    // max-width: 100%;
+  }
+
   &__title {
     padding-left: 27.27%;
     font-size: 20px;
@@ -42,6 +46,8 @@
 
     @include mobile {
       height: fit-content;
+      padding: 15px 0;
+      width: auto;
     }
   }
 
@@ -66,6 +72,10 @@
       padding-right: 30px;
     }
 
+    @include mobile {
+      padding-right: 25px;
+    }
+
     &--apple {
       width: 186px;
       height: 56px;
@@ -87,11 +97,6 @@
       @include iPad {
         width: 100px;
         height: 28px;
-      }
-
-      @include mobile {
-        width: 80px;
-        height: 20px;
       }
     }
 
@@ -138,5 +143,11 @@
       width: 100%;
       max-width: 767.99;
     }
+  }
+
+  &__button {
+    position: relative;
+    // top: 20px;
+    right: 20px;
   }
 }

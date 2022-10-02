@@ -38,6 +38,10 @@
     @include iPad {
       margin-top: 20px;
     }
+
+    @include mobile {
+      margin-top: 27px;
+    }
   }
 
   &__benefit {
