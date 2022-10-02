@@ -120,18 +120,23 @@
     }
   }
 
-  // &__background {
-  //   position: absolute;
-  //   // width: 1187px;
-  //   width: 150%;
-  //   height: 100px;
-  //   background: linear-gradient(90deg, #DFE6F4 0%, rgba(237, 239, 252, 0.5) 70.89%);
-  //   z-index: -3;
-  //   margin: 0 0 0 8%;
-  //   top: 29px;
+  &__background {
+    position: absolute;
+    // width: 1187px;
+    width: 150%;
+    height: 100px;
+    background: linear-gradient(90deg, #DFE6F4 0%, rgba(237, 239, 252, 0.5) 70.89%);
+    z-index: -3;
+    margin: 0 0 0 8%;
+    top: 29px;
 
-  //   @include iPad {
-  //     height: 60px;
-  //   }
-  // }
+    @include iPad {
+      height: 60px;
+    }
+
+    @include mobile {
+      width: 100%;
+      max-width: 767.99;
+    }
+  }
 }

@@ -63,8 +63,6 @@ function changeLanguage(prevHash) {
   const currentLang = document.querySelectorAll('.current-lang');
   currentLang.forEach(item => item.innerHTML = hash)
 
-
-
   // console.log(visibleImage);
   // const link = document.getElementById('services');
   // console.log(link);
