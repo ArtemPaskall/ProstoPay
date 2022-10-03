@@ -1,5 +1,6 @@
 .contacts {
   position: relative;
+  left: 70px;
 
   &__content {
     display: flex;
@@ -15,6 +16,10 @@
     flex-direction: row;
     align-items: center;
     margin-top: 10px;
+
+    @include mobile {
+      margin-top: 0;
+    }
   }
 
   &__phone--number {
@@ -37,12 +42,22 @@
 
     @include iPad {
       font-size: 18px;
-    line-height: 20px;
+      line-height: 20px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+      line-height: 18px;
     }
 
     &--left {
       width: 120px;
       height: 50px;
+
+      @include mobile {
+        width: 80px;
+        height: 35px;
+      }
     }
 
     &--right {
@@ -62,14 +77,29 @@
     }
   }
 
+  &__background {
+    display: none;
+
+    @include mobile {
+      display: block;
+      position: absolute;
+      z-index: -3;
+      left: -11px;
+      top: -13px;
+    }
+  }
+
   &__button {
     position: absolute;
-    right: 62px;
+    right: 128px;
     top: 65px;
 
     @include iPad {
-      right: 12px;
-      top: 65px;
+      right: 81px;
+      top: 74px;
+    }
+    @include mobile {
+     display: none;
     }
   }
 }

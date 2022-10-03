@@ -149,7 +149,6 @@ menu.style.top = '-400px';
   lastScrollTop = scrollTop;
 });
 
-
 // Menu hide
 const menuIcon = document.getElementById('dropdownOpen')
 const dropdownMenu = document.getElementById('dropdownMenu')

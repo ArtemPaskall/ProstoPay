@@ -2,7 +2,11 @@
   max-width: 1280px;
   position: relative;
   min-width: $min-screen;
-  overflow: hidden;
+
+  @include mobile {
+    // overflow: hidden;
+  }
+
 
   @include iPad {
     max-width: $ipad-width;
@@ -51,6 +55,10 @@
     @include iPad {
       right: 135px;
       bottom: 190px;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 }

@@ -4,7 +4,7 @@
   z-index: -1;
 
   @include iPad {
-    max-width: $ipad-width
+    max-width: $ipad-width;
   }
 
   &__item {
@@ -18,12 +18,26 @@
     cursor: pointer;
 
     right: 25px;
-    bottom: 45px;
+    bottom: 40px;
+
+    @include mobile {
+      bottom: 45px;
+    }
 
     &--image {
       width: 80px;
       height: 80px;
       opacity: 0.6;
+
+      @include iPad {
+        width: 60px;
+        height: 60px;
+      }
+
+      @include mobile {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

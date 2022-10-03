@@ -10,6 +10,11 @@
       font-size: 36px;
       line-height: 43px;
     }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 
   &__description {
@@ -24,6 +29,13 @@
       line-height: 18px;
       max-width: 600px;
       padding-top: 10px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 17px;
+      max-width: 330px;
+      padding-top: 5px;
     }
   }
 
@@ -46,6 +58,14 @@
         font-size: 32px;
         line-height: 36px;
       }
+
+      @include mobile {
+        font-size: 24px;
+        line-height: 29px;
+        position: relative;
+        top: -22px;
+        left: 100px;
+      }
     }
 
     &-wrap {
@@ -67,6 +87,14 @@
         width: 234px;
         height: 230px;
         padding-bottom: 45px;
+      }
+
+      @include mobile {
+        position: relative;
+        top: -26px;
+        left: 30px;
+        width: 194px;
+        height: 220px;
       }
     }
 
@@ -115,6 +143,7 @@
 
   &__software {
     margin-right: 10px;
+    position: relative;
 
     &-title {
       text-align: right;
@@ -125,6 +154,14 @@
       @include iPad {
         font-size: 32px;
         line-height: 36px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+        line-height: 29px;
+        position: relative;
+        top: 286px;
+        right: 122px;
       }
     }
 
@@ -147,6 +184,14 @@
         width: 234px;
         height: 230px;
         padding-bottom: 45px;
+      }
+
+      @include mobile {
+        position: relative;
+        top: 283px;
+        right: 53px;
+        width: 194px;
+        height: 240px;
       }
     }
 
@@ -208,8 +253,12 @@
     top: 545px;
 
     @include iPad {
-       left: 110px;
-       top: 355px;
+      left: 110px;
+      top: 355px;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 }
