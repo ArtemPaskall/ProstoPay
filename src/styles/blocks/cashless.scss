@@ -1,7 +1,8 @@
-.cashless {
+.services-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 870px;
 
   &__mobile {
     margin-right: 20px;
@@ -17,7 +18,8 @@
   }
 
   &__mobile-img {
-
+    width: 150px;
+    height: 150px;
   }
 
   &__mobile-button {
@@ -44,6 +46,17 @@
     @include mobile {
       display: none;
     }
+  }
 
+  &__widescreen-title {
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  &__widescreen-text {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
+
