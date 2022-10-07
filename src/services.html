@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="page">
   <head>
@@ -6,38 +7,296 @@
     <title>ProstoPay</title>
     <link rel="stylesheet" href="./styles/main.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;700&family=Josefin+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      var parcelRequire;
+    </script>
   </head>
+
   <body class="page__body">
-    <header class="page__header header">
-      <div class="header__content">
-        <div class="container container--header">
-          <div class="settings header__nav" >
 
-            <div class="settings__lang">
-              <img src="./images/language.png" alt="Select language" class="settings__lang--img">
-                <div class="settings__options" id="select-lang">
-                  <div class="settings__option settings__option--UA">UA</div>
-                  <div class="settings__option settings__option--EN">EN</div>
-                  <div class="settings__option settings__option--GE">GE</div>
-                </div>
-              <div class="settings__current-lang" id="current-lang">UA</div>
+    <section  class="page__touch-form touch-form" id="pop-up-form">
+      <a href="#"><img src="./images/close-cross.svg" alt="Close cross" class="touch-form__close-cross"></a>
+      <h1 class="touch-form__title">Почнемо?</h1>
+      <p class="touch-form__description">Заповніть форму і ми зв’яжемося з вами найближчим часом</p>
+      <form action="#" class="touch-form__form">
+        <div class="touch-form__person-data">
+          <div class="touch-form__block touch-form__block--left">
+            <input type="text" class="touch-form__data-field" placeholder="І'мя">
+            <input type="text" class="touch-form__data-field" placeholder="Телефон/Email">
+          </div>
+          <div class="touch-form__block touch-form__block-right">
+            <input type="text" class="touch-form__data-field" placeholder="Країна">
+            <input type="text" class="touch-form__data-field" placeholder="Кількість апаратів">
+          </div>
+        </div>
+        <p class="touch-form__interest">Чим ми вас зацікавили?</p>
+        <div class="touch-form__type-fields">
+          <label for="telemetry" class="touch-form__label-interest">
+            <input  type="checkbox" class="touch-form__checkbox-interest" id="telemetry" name="telemetry">
+            <div class="touch-form__checkbox"></div>
+            Телеметрія
+          </label>
 
-            </div>
-            <div class="settings__log-out">
-              <a href="https://dashboard.prostopay.net/">
-                <img src="./images/Log-out.png" alt="Log out" class="settings__log-out--img">
+          <label for="cashless" class="touch-form__label-interest">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="cashless" name="cashless">
+            <div class="touch-form__checkbox"></div>
+            Безготівкова оплата
+          </label>
+
+          <label for="remote" class="touch-form__label-interest">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="remote" name="remote">
+            <div class="touch-form__checkbox"></div>
+            Віддалений контроль
+          </label>
+
+          <label for="fiscal" class="touch-form__label-interest">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="fiscal" name="fiscal">
+            <div class="touch-form__checkbox"></div>
+            Фіскалізація
+          </label>
+
+          <label for="feedback" class="touch-form__label-interest">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="feedback" name="feedback">
+            <div class="touch-form__checkbox"></div>
+            Відгуки клієнтів
+          </label>
+
+        </div>
+        <div class="touch-form__button-wrap">
+          <textarea name="question" id="question" class="touch-form__textarea" placeholder="Можливо вас цікавить ще щось?"></textarea>
+          <button type="submit" class="touch-form__button button__small">Відправити</button>
+        </div>
+      </form>
+
+    </section>
+
+    <div class="page__menu-wrap" id="menu">
+      <div class="page__menu menu">
+        <div class="menu__dropdown-wrap">
+          <div class="menu__content">
+            <div class="menu__logo">
+              <a href="index.html">
+                <img src="./images/logo.png" alt="ProstoPay Logo" class="menu__logo-img">
               </a>
             </div>
 
-         </div>
+            <nav class="nav nav--onDesktop">
+              <ul class="nav__list">
+                <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+                <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
+                <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
+                <li><a href="index.html#services" class="nav__link  _lang__contacts">Контакти</a></li>
+              </ul>
+            </nav>
 
+            <div class="menu__settings-wrap">
+              <div class="menu__settings settings" >
+                <div class="settings__lang">
+                  <img
+                    src="./images/language.png"
+                    alt="Select language"
+                    class="settings__lang--img"
+                  >
+                  <div class="settings__options select-lang">
+                    <div class="settings__option settings__option--UA">UA</div>
+                    <div class="settings__option settings__option--EN">EN</div>
+                  </div>
+                  <div class="settings__current-lang current-lang">UA</div>
+                </div>
+                <div class="settings__log-out">
+                  <a href="https://dashboard.prostopay.net/" target="_blank">
+                    <img
+                      src="./images/Log-out.png"
+                      alt="Log out"
+                      class="settings__log-out--img"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu__menu-mobile" id="dropdownOpen">
+              <img src="./images/menu-mobile-icon.png" alt="Menu mobile icon" >
+            </div>
+          </div>
+
+          <div class="dropdown" id="dropdownMenu">
+            <div class="dropdown__navigation">
+              <nav class="dropdown__nav nav nav--onIPad">
+                <ul class="nav__list">
+                  <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+                  <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
+                  <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
+                  <li><a href="index.html" class="nav__link  _lang__contacts">Контакти</a></li>
+                </ul>
+              </nav>
+              <div class="dropdown__settigs settings settings--onIPad settings--onDropdown">
+                <div class="settings__lang">
+                  <img
+                    src="./images/language.png"
+                    alt="Select language"
+                    class="settings__lang--img"
+                  >
+                  <div class="settings__options select-lang">
+                    <div class="settings__option settings__option--UA">UA</div>
+                    <div class="settings__option settings__option--EN">EN</div>
+                  </div>
+                  <div class="settings__current-lang current-lang">UA</div>
+                </div>
+                <div class="settings__log-out">
+                  <a href="https://dashboard.prostopay.net/" target="_blank">
+                    <img
+                      src="./images/Log-out.png"
+                      alt="Log out"
+                      class="settings__log-out--img"
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class=" dropdown__button button__large _lang__header-button">Зв’язатися з нами</div>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
 
+    <main class="page__main  main-block">
 
-    <script type="text/javascript" src="scripts/main.js"></script>
+      <section class="page__section--services services" id="services-block">
+        <h2 class="services__title _lang__services-title">Наші сервіси</h2>
+
+        <div class="services__diagram diagram">
+          <img src="./images/connectors.png" alt="Diagram with services" class="diagram__connectors">
+          <img src="./images/connectors-mobile.svg" alt="Diagram with services" class="diagram__connectors diagram__connectors--mobile">
+          <a href="#">
+            <img src="./images/tax-icon.png" alt="Tax icon" class="diagram__fiscal-img">
+          </a>
+          <a href="#">
+            <img src="./images/cashless.png" alt="Cashless image" class="diagram__cashless-img">
+          </a>
+          <a href="#">
+            <img src="./images/feedback.png" alt="Customer feedback image" class="diagram__feedback-img">
+          </a>
+          <a href="#">
+            <img src="./images/analytics.png" alt="Analytics image" class="diagram__analytics-img">
+          </a>
+          <a href="#">
+            <img src="./images/remote.png" alt="Remote control image" class="diagram__remote-img">
+          </a>
+
+          <a href="#" class="diagram__cashless-link diagram__link _lang__cashless">Безготівкова <br /> оплата</a>
+          <a href="#" class="diagram__feedback-link diagram__link _lang__feedback">Відгуки <br /> клієнтів</a>
+          <a href="#" class="diagram__monitoring-link diagram__link _lang__monitoring">Онлайн <br /> моніторинг</a>
+          <a href="#" class="diagram__analytics-link diagram__link _lang__analytics">Аналітика</a>
+          <a href="#" class="diagram__remote-link diagram__link _lang__remote">Дистанційне <br /> керування</a>
+          <a href="#" class="diagram__fiscal-link diagram__link _lang__fiscal">Фіскалізація</a>
+        </div>
+
+        <a href="#" class="button__more diagram__button _lang__more-button">Більше</a>
+      </section>
+
+      <section class="page__section--cashless cashless">
+        <div class="cashless__mobile">
+          <h2 class="cashless__mobile-title">Безготівкова оплата</h2>
+          <img src="./images/cashless.png" alt="Cashless image" class="cashless__mobile-img">
+          <div class="cashless__mobile-button button__more">Більше</div>
+          <div class="cashless__mobile-text">
+            Згідно  дослідженнями ринку за останні роки використання готівки різко скоротилось у всьому світі, в той час як використання карток все більше зміщується
+            в сторону мобільних/цифрових гаманців. І ця тенденція продовжується, тому давайте спільно долучимось до платіжної революції.
+
+            ProstoPay фокусується на найбільш зручних способах мобільних оплат і пропонує 2 платіжні методи:
+            WEB-оплата. Сплачуйте за допомогою QR-коду або NFC-мітки на апараті. Вам не потрібно завантажувати жодного додатку, щоб придбати горнятко кави. Все у браузері смартфона - розрахунок в один клік за допомогою Apple Pay, Google Pay або інших популярних локальних гаманців.
+            Додаток для оплат. Ви постійний клієнт автоматів? Вітаємо, ви любите смачні продукти та цінуєте свій час! І ми вас підтримуємо: просто завантажте додаток ProstoPay та отримайте ще простіший спосіб оплати з додатковими можливостями. Бонуси вже на підході!
+
+            Інші способи безготівкової оплати:
+            RFID-картки (картки-перепустки, дисконтні картки тощо). Рішення для всіх організацій з картковою системою доступу, наприклад, офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay. Звісно, працівники також можуть поповнювати картку самостійно.
+            QR-чеки. Бажаєте контролювати продажі ваших настільних кавомашин з вільним доступом клієнтів в рітейлі? Ми допоможемо це зробити. Клієнт робить замовлення на касі та отримує чек з надрукованим QR-кодом. Після сканування QR-чеку на кавомашині клієнт насолоджується напоєм. Таке рішення унеможливлює помилки покупця та запобігає шахрайству.  
+          </div>
+        </div>
+        <div  class="cashless__widescreen">
+          <h2>Безготівкова оплата</h2>
+          <div>
+            Згідно  дослідженнями ринку за останні роки використання готівки різко скоротилось у всьому світі, в той час як використання карток все більше зміщується
+            в сторону мобільних/цифрових гаманців. І ця тенденція продовжується, тому давайте спільно долучимось до платіжної революції.
+
+            ProstoPay фокусується на найбільш зручних способах мобільних оплат і пропонує 2 платіжні методи:
+            WEB-оплата. Сплачуйте за допомогою QR-коду або NFC-мітки на апараті. Вам не потрібно завантажувати жодного додатку, щоб придбати горнятко кави. Все у браузері смартфона - розрахунок в один клік за допомогою Apple Pay, Google Pay або інших популярних локальних гаманців.
+            Додаток для оплат. Ви постійний клієнт автоматів? Вітаємо, ви любите смачні продукти та цінуєте свій час! І ми вас підтримуємо: просто завантажте додаток ProstoPay та отримайте ще простіший спосіб оплати з додатковими можливостями. Бонуси вже на підході!
+
+            Інші способи безготівкової оплати:
+            RFID-картки (картки-перепустки, дисконтні картки тощо). Рішення для всіх організацій з картковою системою доступу, наприклад, офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay. Звісно, працівники також можуть поповнювати картку самостійно.
+            QR-чеки. Бажаєте контролювати продажі ваших настільних кавомашин з вільним доступом клієнтів в рітейлі? Ми допоможемо це зробити. Клієнт робить замовлення на касі та отримує чек з надрукованим QR-кодом. Після сканування QR-чеку на кавомашині клієнт насолоджується напоєм. Таке рішення унеможливлює помилки покупця та запобігає шахрайству.  
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page__footer-wrap">
+      <div class="page__footer footer">
+        <nav class="nav nav--footer-top">
+          <ul class="nav__list">
+            <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+            <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
+            <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
+            <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="footer__social">
+          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
+          <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
+          <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+        </div>
+        <div class="footer__content">
+          <a href="">
+            <img
+              src="./images/logo.png"
+              alt="ProstoPay logo"
+              class="footer__logo"
+            >
+          </a>
+          <p class="footer__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
+          <nav class="nav nav--footer">
+            <ul class="nav__list">
+              <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+              <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
+              <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
+              <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+            </ul>
+          </nav>
+        </div>
+        <p class="footer__copyright _lang__footer-copyright">
+          © 2016 - 2022 ТОВ "Простопей". Всі права захищено.
+        </p>
+      </div>
+
+    </footer>
+
+    <footer class="page__footer-mobile-wrap">
+      <div class="page__footer-mobile footer-mobile">
+        <a href="#">
+          <img src="./images/logo.png" alt="ProstoPay logo" class="footer-mobile__logo">
+        </a>
+        <p class="footer-mobile__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
+        <div class="header__button button__large _lang__header-button">Зв’язатися з нами</div>
+        <div class="footer-mobile__social">
+          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer-mobile__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
+          <a href="https://www.linkedin.com/company/prostopay/" class="footer-mobile__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
+          <a href="https://www.facebook.com/prostopay" class="footer-mobile__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+        </div>
+        <p class="footer-mobile__copyright _lang__footer-copyright">
+          © 2016 - 2022 ТОВ "Простопей". Всі права захищено.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="scripts/main.js"></script>
+
   </body>
 </html>

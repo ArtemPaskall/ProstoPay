@@ -15,6 +15,10 @@
   opacity: 0;
   z-index: -5;
 
+  @include mobile {
+    padding: 0 20px;
+  }
+
   &__navigation {
     height: 160px;
     display: flex;
@@ -31,5 +35,6 @@
     position: relative;
     opacity: 1;
     z-index: 1;
+    transition: opacity 0.3s;
   }
 }

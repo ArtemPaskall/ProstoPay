@@ -34,7 +34,7 @@
 
   &__item {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 26px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -99,7 +99,7 @@
       top: 74px;
     }
     @include mobile {
-     display: none;
+      display: none;
     }
   }
 }

@@ -6,7 +6,7 @@
     font-weight: 400;
     color: $text-color;
     min-width: $min-screen;
-    height: 1px;
+    // height: 1px;
   }
 
   &__menu-wrap {
@@ -40,9 +40,12 @@
       margin: 0 auto;
     }
 
+    &--cashless {
+      margin: 110px auto 0;
+    }
+
     &--pay-service {
       margin-top: 66px;
-      margin-top: 46px;
 
       @include iPad {
         margin-top: 25px;
@@ -87,6 +90,7 @@
 
       @include mobile {
         margin-top: 60px;
+        // margin-top: 20px;
       }
     }
   }
@@ -132,5 +136,10 @@
 
   &__footer-mobile {
     margin: 0 auto;
+  }
+
+  &__touch-form {
+    margin: 0 auto;
+
   }
 }

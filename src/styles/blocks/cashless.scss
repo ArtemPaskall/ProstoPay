@@ -1,0 +1,49 @@
+.cashless {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__mobile {
+    margin-right: 20px;
+
+  }
+
+  &__mobile-title {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__mobile-img {
+
+  }
+
+  &__mobile-button {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__mobile-text {
+    display: none;
+
+    @include mobile {
+      display: block;
+      position: relative;
+
+    }
+  }
+
+  &__widescreen {
+    display: block;
+
+    @include mobile {
+      display: none;
+    }
+
+  }
+}
