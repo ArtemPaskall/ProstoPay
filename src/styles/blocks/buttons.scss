@@ -74,13 +74,44 @@
     }
   }
 
-  &__small {
+  &__medium {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
     width: 192px;
+    height: 51px;
+
+    font-size: 21px;
+    line-height: 26px;
+
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(270deg, #FFC014 5.76%, #F76700 92.6%);
+    border-radius: 18px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $text-color;
+    }
+
+    @include mobile {
+      height: 40px;
+      font-size: 18px;
+      line-height: 20px;
+      border-radius: 14px;
+    }
+  }
+
+  &__small {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 152px;
     height: 51px;
 
     font-size: 21px;

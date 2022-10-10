@@ -64,4 +64,16 @@
       transform: rotate(90deg) scale(1.1);
     }
   }
+
+  &__button {
+    margin: 100px auto 0;
+
+    @include iPad {
+      margin-top: 55px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
 }

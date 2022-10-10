@@ -73,71 +73,6 @@ function changeImages() {
 changeImages();
 window.addEventListener('resize', changeImages);
 
-// Change links depend on language
-
-
-// Hide and show video section
-// const showButtons = document.querySelectorAll('.video-open');
-// const closeButton = document.getElementById('video-close');
-// const video = document.getElementById('video');
-
-// showButtons.forEach(showButton => {
-//   showButton.addEventListener('click', showVideo);
-// })
-
-// function showVideo() {
-//   const videoSection = document.querySelector('.page__section--video')
-
-//   if (!videoSection.classList.contains('page__section--video-open')) {
-//     videoSection.classList.add('page__section--video-open')
-//     setTimeout(() => {
-//       video.style.zIndex = "1";
-//     }, 400)
-
-//     setTimeout(() => {
-//       videoSection.style.position = "relative"
-//     }, 150)
-//   }
-// }
-
-// closeButton.addEventListener('click', hideVideo)
-
-// function hideVideo() {
-//   video.style.zIndex = "-1";
-//   const videoSection = document.querySelector('.page__section--video')
-//   videoSection.classList.remove('page__section--video-open')
-//   videoSection.style.position = "absolute"
-// }
-
-// Hide header menu on scroll down, show on scroll up
-
-// let lastScrollTop = 0;
-// const menu = document.getElementById('menu');
-// window.addEventListener('scroll', function() {
-// let scrollTop = window.pageYOffset  || document.documentElement.scrollTop;
-
-// let menustyle = this.getComputedStyle(menu);
-// let height = menustyle.height;
-// menu.style.position = 'absolute';
-// menu.style.top = '-400px';
-
-//   if (scrollTop > lastScrollTop) {
-//     menu.style.top = '-' + height;
-//   } else {
-//     menu.style.top = "0";
-//     menu.style.zIndex = '1';
-//     if (scrollTop < 200) {
-//       menu.style.top = '-400px';
-//       menu.style.position = 'absolute';
-//       menu.style.zIndex = '-4';
-//     } else {
-//       menu.style.position = 'sticky';
-//     }
-//   }
-
-//   lastScrollTop = scrollTop;
-// });
-
 // Menu hide
 const menuIcon = document.getElementById('dropdownOpen')
 const dropdownMenu = document.getElementById('dropdownMenu')
@@ -156,7 +91,7 @@ menuIcon.addEventListener('click', function() {
 })
 
 // Function show 'pop-up-form' overlay
-  const touchButtons = document.querySelectorAll('.button__large');
+  const touchButtons = document.querySelectorAll('.button__form');
   const closePopup = document.querySelector('.touch-form__close-cross');
 
   touchButtons.forEach(button => button.addEventListener('click', togglePopup));
@@ -165,3 +100,24 @@ menuIcon.addEventListener('click', function() {
   function togglePopup() {
     document.getElementById('pop-up-form').classList.toggle('touch-form--active');
   }
+
+  // Open and hide text on Services mobile
+
+  const openButtons = document.querySelectorAll('.services-section__text-open-btn');
+
+  openButtons.forEach(child => {
+    child.addEventListener('click', function() {
+      let parent = child.closest('.services-section__mobile')
+      let textMobile = parent.querySelector('.services-section__mobile-text')
+
+      if (textMobile.classList.contains('services-section__mobile-text--close')) {
+        textMobile.classList.remove('services-section__mobile-text--close');
+        textMobile.classList.add('services-section__mobile-text--open');
+        child.innerHTML = 'Менше'
+      } else {
+        textMobile.classList.remove('services-section__mobile-text--open');
+        textMobile.classList.add('services-section__mobile-text--close');
+        child.innerHTML = 'Більше'
+      }
+    })
+  })

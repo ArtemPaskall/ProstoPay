@@ -1,0 +1,131 @@
+.products-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 834px;
+
+  @include iPad {
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  @include mobile {
+    margin-right: 20px;
+    margin-left: 20px;
+    max-width: 380px;
+  }
+
+  &--right-hand {
+    align-items: flex-end;
+  }
+
+  &--left-hand {
+    align-items: flex-start;
+
+    & .products-section__content{
+      border-top-right-radius: 20px;
+      border-top-left-radius: 0;
+    }
+
+    @include mobile {
+      align-items: flex-end;
+
+      & .products-section__content{
+        border-top-right-radius: 0;
+        border-top-left-radius: 20px;
+      }
+    }
+  }
+
+  &__title-wrap {
+    background: #F6F7FD;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 279px;
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+      // width: 179px;
+      width: fit-content;
+      height: fit-content;
+      padding: 5px 20px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 400;
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 27px;
+    }
+
+    &--app-and-web {
+      font-size: 26px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F6F7FD;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    padding: 40px;
+
+    &--prosto-service {
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 24px;
+    margin-right: 50px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 20px;
+      order: 2;
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+
+    &--seriesA {
+      width: 254px;
+      height: 180px;
+    }
+  }
+
+  &__buttons-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+}

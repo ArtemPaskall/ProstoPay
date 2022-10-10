@@ -9,7 +9,7 @@
   justify-content: flex-start;
   align-items: center;
 
-  position: fixed;
+  position: absolute;
   top: 10%;
   left: 55px;
   right: 55px;
@@ -30,6 +30,7 @@
   z-index: -4;
 
   &--active {
+    position: fixed;
     transform: scale(1);
     opacity: 1;
     z-index: 2;
