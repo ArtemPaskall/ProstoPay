@@ -75,10 +75,6 @@
       margin: 35px auto 0;
     }
 
-    &--products {
-      margin: 50px auto 0;
-    }
-
     &--pay-service {
       margin-top: 66px;
 
@@ -92,14 +88,14 @@
     }
 
     &--products {
-      margin-top: 75px;
+      margin: 75px auto 0;
 
       @include iPad {
         margin-top: 25px;
       }
 
       @include mobile {
-        margin-top: 10px;
+        margin-top: 25px;
       }
     }
 
@@ -180,6 +176,7 @@
 
       &--products {
         top: 55px;
+        z-index: -4;
       }
     }
   }
@@ -189,6 +186,10 @@
   }
 
   &__touch-form {
+    margin: 0 auto;
+  }
+
+  &__try-it {
     margin: 0 auto;
   }
 }

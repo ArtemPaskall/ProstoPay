@@ -18,7 +18,7 @@
     </script>
   </head>
 
-  <body class="page__body">
+  <body class="page__body page__body--services">
 
     <section  class="page__touch-form touch-form" id="pop-up-form">
       <a href="#"><img src="./images/close-cross.svg" alt="Close cross" class="touch-form__close-cross"></a>
@@ -160,7 +160,7 @@
                 </div>
               </div>
             </div>
-            <div class=" dropdown__button button__large _lang__header-button">Зв’язатися з нами</div>
+            <div class=" dropdown__button button__form button__large _lang__header-button">Зв’язатися з нами</div>
           </div>
         </div>
       </div>
@@ -202,7 +202,7 @@
             </p>
             <img src="./images/hardware-img.svg" alt="Dashboard image" class="products-section__img products-section__img--seriesA">
           </div>
-          <div class="products-section__button button__small">Замовити</div>
+          <div class="products-section__button button__form button__small">Замовити</div>
         </div>
       </section>
 
@@ -243,7 +243,7 @@
             </p>
             <img src="./images/hardware-img.svg" alt="Dashboard image" class="products-section__img products-section__img--seriesA">
           </div>
-          <div class="products-section__button button__small">Замовити</div>
+          <div class="products-section__button button__form button__small">Замовити</div>
         </div>
       </section>
 
@@ -262,11 +262,33 @@
             </p>
             <img src="./images/app-and-web.svg" alt="Dashboard image">
           </div>
-          <div class="products-section__button button__small">Спробувати</div>
+          <div class="products-section__button button__try-it button__small">Спробувати</div>
         </div>
       </section>
 
-      <div class="products-page__button button__medium">Зв'язатися</div>
+      <section  class="page__try-it try-it" id="try-it">
+        <a href="#"><img src="./images/close-cross.svg" alt="Close cross" class="try-it__close-cross"></a>
+        <div class="try-it__content">
+          <h3 class="try-it__title">WEB Pay</h3>
+          <p class="try-it__description">Клієнт взаємодіє зі стікером, який розміщений на апараті</p>
+          <p class="try-it__press">НАТИСНИ</p>
+          <div class="try-it__demo-video-wrap">
+            <img src="./images/web-pay-qr.svg" alt="QR-код" class="try-it__QR-image">
+            <iframe class="try-it__video-item try-it__demo-video" src="https://www.youtube.com/embed/EzmDDfB9UiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="try-it__video-close-button">Close</div>
+          </div>
+        </div>
+        <div class="try-it__video">
+          <div class="try-it__wrap">
+            <h3 class="try-it__video-title">ВІДЕО</h3>
+            <img src="./images/youtube-icon.svg" alt="YouTube" class="try-it__youtube-logo">
+          </div>
+          <iframe class="try-it__video-item try-it__video-item--1" src="https://www.youtube.com/embed/EzmDDfB9UiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="try-it__video-item try-it__video-item--2" src="https://www.youtube.com/embed/EzmDDfB9UiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <div class="products-page__button button__form button__medium">Зв'язатися</div>
     </main>
 
     <footer class="page__footer-wrap page__footer-wrap--services">
@@ -309,7 +331,7 @@
 
     </footer>
 
-    <footer class="page__footer-mobile-wrap">
+    <footer class="page__footer-mobile-wrap page__footer-mobile-wrap--products">
       <div class="page__footer-mobile footer-mobile">
         <a href="#">
           <img src="./images/logo.png" alt="ProstoPay logo" class="footer-mobile__logo">
@@ -327,7 +349,6 @@
       </div>
     </footer>
 
-    <!-- <script type="text/javascript" src="scripts/main.js"></script> -->
-    <script type=module src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

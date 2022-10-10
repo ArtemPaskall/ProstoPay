@@ -15,6 +15,12 @@
     max-width: 380px;
   }
 
+  &--2 {
+    position: relative;
+    top: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
   &--right-hand {
     align-items: flex-end;
   }
@@ -22,7 +28,7 @@
   &--left-hand {
     align-items: flex-start;
 
-    & .products-section__content{
+    & .products-section__content {
       border-top-right-radius: 20px;
       border-top-left-radius: 0;
     }
@@ -30,7 +36,7 @@
     @include mobile {
       align-items: flex-end;
 
-      & .products-section__content{
+      & .products-section__content {
         border-top-right-radius: 0;
         border-top-left-radius: 20px;
       }
@@ -83,6 +89,10 @@
     &--prosto-service {
       padding-bottom: 0;
     }
+
+    @include mobile {
+      padding: 20px;
+    }
   }
 
   &__wrap {
@@ -107,6 +117,7 @@
       line-height: 20px;
       order: 2;
       margin-right: 0;
+      margin-top: 10px;
     }
   }
 

@@ -1,0 +1,259 @@
+.try-it {
+  background: rgba(218, 227, 247, 0.9);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 18px;
+  padding-bottom: 30px;
+
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: absolute;
+  left: 55px;
+  right: 55px;
+  top: 50px;
+
+  @include iPad {
+    left: 35px;
+    right: 35px;
+  }
+
+  @include mobile {
+    max-width: 380px;
+    top: 5%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  opacity: 0;
+  transform: scale(0.01);
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: -4;
+
+  &--active {
+    position: fixed;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  &__close-cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include mobile {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 120px;
+
+    @media (max-width: 1150px) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: 850px) {
+      margin-right: 30px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    margin-top: 30px;
+
+    @include iPad {
+      font-size: 36px;
+      line-height: 43px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 250px;
+    text-align: center;
+    margin-top: 60px;
+
+    @include iPad {
+      margin-top: 30px;
+    }
+
+    @include mobile {
+      margin-top: 15px;
+    }
+  }
+
+  &__press {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 15px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__demo-video-wrap {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include iPad {
+      width: 300px;
+    }
+  }
+
+  &__QR-image {
+    width: 290px;
+    margin-top: 15px;
+    cursor: pointer;
+
+    @include iPad {
+      width: 170px;
+    }
+
+    @include iPad {
+      display: none;
+    }
+
+    &--close {
+      display: none;
+    }
+  }
+
+  &__demo-video {
+    display: none;
+    margin-top: 25px;
+
+    @include iPad {
+      margin-top: 15px;
+    }
+
+    @include iPad {
+      display: block;
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__video-close-button {
+    display: none;
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+
+    @include mobile {
+      margin-top: 15px;
+    }
+  }
+
+  &__video-title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    @include iPad {
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__youtube-logo {
+    opacity: 1;
+
+    @media (max-width: 900px) {
+      opacity: 0;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include mobile {
+      display: none;
+    }
+
+  }
+
+  &__video-item {
+    width: 400px;
+    height: 220px;
+    border-radius: 20px;
+
+    @include iPad {
+      width: 300px;
+      height: 170px;
+    }
+
+    &--1 {
+      margin-top: 40px;
+
+      @include iPad {
+        margin-top: 25px;
+      }
+
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+
+    &--2 {
+      margin-top: 25px;
+
+      @include mobile {
+        margin-top: 15px;
+      }
+    }
+  }
+}

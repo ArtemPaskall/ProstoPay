@@ -101,6 +101,35 @@ menuIcon.addEventListener('click', function() {
     document.getElementById('pop-up-form').classList.toggle('touch-form--active');
   }
 
+  // Function show 'try-it' overlay
+  const tryItButtons = document.querySelectorAll('.button__try-it');
+  const closeTryIt = document.querySelector('.try-it__close-cross');
+
+  tryItButtons.forEach(button => button.addEventListener('click', toggleTryIt));
+  closeTryIt.addEventListener('click', toggleTryIt);
+
+  function toggleTryIt() {
+    document.getElementById('try-it').classList.toggle('try-it--active');
+  }
+
+    // Function show 'demo-video' overlay
+    const showVideo = document.querySelector('.try-it__QR-image');
+    const videoIframe = document.querySelector('.try-it__demo-video');
+    const closeVideo = document.querySelector('.try-it__video-close-button');
+
+    showVideo.addEventListener('click', function() {
+      showVideo.classList.add('try-it__QR-image--close');
+      videoIframe.classList.add('try-it__demo-video--show')
+      closeVideo.classList.add('try-it__video-close-button--show')
+    });
+
+    closeVideo.addEventListener('click', function() {
+      showVideo.classList.remove('try-it__QR-image--close');
+      videoIframe.classList.remove('try-it__demo-video--show')
+      closeVideo.classList.remove('try-it__video-close-button--show')
+    });
+
+
   // Open and hide text on Services mobile
 
   const openButtons = document.querySelectorAll('.services-section__text-open-btn');
