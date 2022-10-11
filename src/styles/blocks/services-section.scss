@@ -10,11 +10,11 @@
 
   @include mobile {
     width: 360px;
+    display: block;
   }
 
   &__mobile {
     margin-right: 20px;
-    // width: 100%;
   }
 
   &__mobile-title {

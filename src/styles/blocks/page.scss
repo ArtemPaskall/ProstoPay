@@ -43,10 +43,6 @@
       margin: 0 auto;
     }
 
-    &--product {
-      margin-top: 10px;
-    }
-
     &--cashless {
       margin: 110px auto 0;
 
@@ -91,7 +87,7 @@
       }
     }
 
-    &--products {
+    &--product {
       margin: 75px auto 0;
 
       @include iPad {
@@ -99,7 +95,19 @@
       }
 
       @include mobile {
+        margin-top: 10px;
+      }
+    }
+
+    &--products {
+      margin: 50px auto 0;
+
+      @include iPad {
         margin-top: 25px;
+      }
+
+      @include mobile {
+        margin-top: 10px;
       }
     }
 
