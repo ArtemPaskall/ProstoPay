@@ -1,7 +1,7 @@
 .services-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 870px;
 
   @include iPad {
@@ -77,6 +77,11 @@
       z-index: 1;
       transition: opacity 0.3s;
     }
+  }
+
+  &__list {
+    list-style: disc;
+    padding-left: 15px;
   }
 
   &__widescreen {

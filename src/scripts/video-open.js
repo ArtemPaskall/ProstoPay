@@ -9,7 +9,7 @@ showButtons.forEach(showButton => {
 });
 
 function showVideo() {
-  const videoSection = document.querySelector('.page__section--video')
+  const videoSection = document.querySelector('.page__section--video');
 
   if (!videoSection.classList.contains('page__section--video-open')) {
     videoSection.classList.add('page__section--video-open');
@@ -24,7 +24,7 @@ function showVideo() {
   }
 }
 
-closeButton.addEventListener('click', hideVideo)
+closeButton.addEventListener('click', hideVideo);
 
 function hideVideo() {
   video.style.zIndex = '-1';

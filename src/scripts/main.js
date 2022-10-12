@@ -2,7 +2,10 @@ import { translationArr } from './translate';
 
 // Select language and translate content;
 
-const allLang = ['UA', 'EN'];
+if (!document.cookie) {
+  document.cookie = 'UA';
+}
+
 const langSwitchers = document.querySelectorAll('.select-lang');
 
 langSwitchers.forEach(select => {
@@ -14,29 +17,18 @@ langSwitchers.forEach(select => {
 function changeURLLanguage(child) {
   const lang = child.innerHTML;
 
-  window.location.href = window.location.pathname + '#' + lang;
   document.cookie = lang;
   changeLanguage();
   changeImages();
+  translateButtonsMore();
 }
 
-changeLanguage();
-
 function changeLanguage() {
-  let hash = window.location.hash;
-
-  hash = hash.substring(1);
-  document.cookie = hash;
-
-  if (!allLang.includes(hash.toLocaleUpperCase())) {
-    window.location.href = window.location.pathname + '#UA';
-    window.location.reload();
-  }
-
+  const lang = document.cookie;
   const currentLang = document.querySelectorAll('.current-lang');
 
   currentLang.forEach(item => {
-    item.innerHTML = hash;
+    item.innerHTML = lang;
   });
 
   for (const key in translationArr) {
@@ -44,13 +36,40 @@ function changeLanguage() {
 
     if (element) {
       element.forEach(item => {
-        if (translationArr[key][hash] !== undefined) {
-          item.innerHTML = translationArr[key][hash];
+        if (translationArr[key][lang] !== undefined) {
+          item.innerHTML = translationArr[key][lang];
         }
       });
     }
   }
 }
+
+function translateButtonsMore() {
+  const moreButtons = document.querySelectorAll('.services-section__text-open-btn');
+  const lang = document.cookie;
+
+  moreButtons.forEach(button => {
+    if (lang === 'EN') {
+      if (button.innerHTML === 'Більше') {
+        button.innerHTML = 'See more';
+      }
+
+      if (button.innerHTML === 'Менше') {
+        button.innerHTML = 'Less';
+      }
+    } else {
+      if (button.innerHTML === 'See more') {
+        button.innerHTML = 'Більше';
+      }
+
+      if (button.innerHTML === 'Less') {
+        button.innerHTML = 'Менше';
+      }
+    }
+  });
+}
+
+changeLanguage();
 
 // Сhange the image depending on the language
 function changeImages() {
@@ -72,9 +91,9 @@ function changeImages() {
     }
   });
 }
-
 changeImages();
 window.addEventListener('resize', changeImages);
+window.addEventListener('resize', translateButtonsMore);
 
 // Menu hide
 const menuIcon = document.getElementById('dropdownOpen');
@@ -139,7 +158,6 @@ if (closeVideo) {
 }
 
 // Open and hide text on Services mobile
-
 const openButtons = document.querySelectorAll('.services-section__text-open-btn');
 
 if (openButtons) {
@@ -151,11 +169,21 @@ if (openButtons) {
       if (textMobile.classList.contains('services-section__mobile-text--close')) {
         textMobile.classList.remove('services-section__mobile-text--close');
         textMobile.classList.add('services-section__mobile-text--open');
-        child.innerHTML = 'Менше';
+
+        if (document.cookie === 'UA') {
+          child.innerHTML = 'Менше';
+        } else {
+          child.innerHTML = 'Less';
+        }
       } else {
         textMobile.classList.remove('services-section__mobile-text--open');
         textMobile.classList.add('services-section__mobile-text--close');
-        child.innerHTML = 'Більше';
+
+        if (document.cookie === 'UA') {
+          child.innerHTML = 'Більше';
+        } else {
+          child.innerHTML = 'See more';
+        }
       }
     });
   });

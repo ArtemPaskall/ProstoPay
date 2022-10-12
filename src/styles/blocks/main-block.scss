@@ -2,7 +2,6 @@
   max-width: 1280px;
   position: relative;
   min-width: $min-screen;
-  // overflow: hidden;
 
   @include mobile {
     overflow: hidden;

@@ -38,31 +38,31 @@
         <p class="touch-form__interest">Чим ми вас зацікавили?</p>
         <div class="touch-form__type-fields">
           <label for="telemetry" class="touch-form__label-interest">
-            <input  type="checkbox" class="touch-form__checkbox-interest" id="telemetry" name="telemetry">
+            <input  type="checkbox" class="touch-form__checkbox-interest" id="telemetry-input" name="telemetry">
             <div class="touch-form__checkbox"></div>
             Телеметрія
           </label>
 
           <label for="cashless" class="touch-form__label-interest">
-            <input type="checkbox" class="touch-form__checkbox-interest" id="cashless" name="cashless">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="cashless-input" name="cashless">
             <div class="touch-form__checkbox"></div>
             Безготівкова оплата
           </label>
 
           <label for="remote" class="touch-form__label-interest">
-            <input type="checkbox" class="touch-form__checkbox-interest" id="remote" name="remote">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="remote-input" name="remote">
             <div class="touch-form__checkbox"></div>
             Віддалений контроль
           </label>
 
           <label for="fiscal" class="touch-form__label-interest">
-            <input type="checkbox" class="touch-form__checkbox-interest" id="fiscal" name="fiscal">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="fiscal-input" name="fiscal">
             <div class="touch-form__checkbox"></div>
             Фіскалізація
           </label>
 
           <label for="feedback" class="touch-form__label-interest">
-            <input type="checkbox" class="touch-form__checkbox-interest" id="feedback" name="feedback">
+            <input type="checkbox" class="touch-form__checkbox-interest" id="feedback-input" name="feedback">
             <div class="touch-form__checkbox"></div>
             Відгуки клієнтів
           </label>
@@ -82,16 +82,16 @@
           <div class="menu__content">
             <div class="menu__logo">
               <a href="index.html">
-                <img src="./images/logo.png" alt="ProstoPay Logo" class="menu__logo-img">
+                <img src="./images/logo.svg" alt="ProstoPay Logo" class="menu__logo-img">
               </a>
             </div>
 
             <nav class="nav nav--onDesktop">
               <ul class="nav__list">
-                <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+                <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
                 <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
                 <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-                <li><a href="index.html#services" class="nav__link  _lang__contacts">Контакти</a></li>
+                <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
               </ul>
             </nav>
 
@@ -130,10 +130,10 @@
             <div class="dropdown__navigation">
               <nav class="dropdown__nav nav nav--onIPad">
                 <ul class="nav__list">
-                  <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+                  <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
                   <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
                   <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-                  <li><a href="index.html" class="nav__link  _lang__contacts">Контакти</a></li>
+                  <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
                 </ul>
               </nav>
               <div class="dropdown__settigs settings settings--onIPad settings--onDropdown">
@@ -174,199 +174,250 @@
         <div class="services__diagram diagram">
           <img src="./images/connectors.png" alt="Diagram with services" class="diagram__connectors">
           <img src="./images/connectors-mobile.svg" alt="Diagram with services" class="diagram__connectors diagram__connectors--mobile">
-          <a href="#">
+          <a href="#fiskal">
             <img src="./images/tax-icon.png" alt="Tax icon" class="diagram__fiscal-img">
           </a>
-          <a href="#">
+          <a href="#cashless">
             <img src="./images/cashless.png" alt="Cashless image" class="diagram__cashless-img">
           </a>
-          <a href="#">
+          <a href="#feedback">
             <img src="./images/feedback.png" alt="Customer feedback image" class="diagram__feedback-img">
           </a>
-          <a href="#">
+          <a href="#monitoring">
             <img src="./images/analytics.png" alt="Analytics image" class="diagram__analytics-img">
           </a>
-          <a href="#">
+          <a href="#remote">
             <img src="./images/remote.png" alt="Remote control image" class="diagram__remote-img">
           </a>
 
-          <a href="#" class="diagram__cashless-link diagram__link _lang__cashless">Безготівкова <br /> оплата</a>
-          <a href="#" class="diagram__feedback-link diagram__link _lang__feedback">Відгуки <br /> клієнтів</a>
-          <a href="#" class="diagram__monitoring-link diagram__link _lang__monitoring">Онлайн <br /> моніторинг</a>
-          <a href="#" class="diagram__analytics-link diagram__link _lang__analytics">Аналітика</a>
-          <a href="#" class="diagram__remote-link diagram__link _lang__remote">Дистанційне <br /> керування</a>
-          <a href="#" class="diagram__fiscal-link diagram__link _lang__fiscal">Фіскалізація</a>
+          <a href="#cashless" class="diagram__cashless-link diagram__link _lang__cashless">Безготівкова <br /> оплата</a>
+          <a href="#feedback" class="diagram__feedback-link diagram__link _lang__feedback">Відгуки <br /> клієнтів</a>
+          <a href="#monitoring" class="diagram__monitoring-link diagram__link _lang__monitoring">Онлайн <br /> моніторинг</a>
+          <a href="#analytics" class="diagram__analytics-link diagram__link _lang__analytics">Аналітика</a>
+          <a href="#remote" class="diagram__remote-link diagram__link _lang__remote">Дистанційне <br /> керування</a>
+          <a href="#fiskal" class="diagram__fiscal-link diagram__link _lang__fiscal">Фіскалізація</a>
         </div>
-
-        <a href="" class="button__more diagram__button _lang__more-button">Більше</a>
       </section>
 
-      <section class="page__section--cashless services-section">
+      <section class="page__section--cashless services-section" id="cashless">
         <div class="services-section__mobile">
-          <h2 class="services-section__mobile-title">Безготівкова оплата</h2>
+          <h2 class="services-section__mobile-title _lang__cashless-title">Безготівкова оплата</h2>
           <img src="./images/cashless-color.svg" alt="Cashless image" class="services-section__mobile-img">
           <div class="services-section__mobile-button">
             <div class="button__more services-section__text-open-btn">Більше</div>
           </div>
           <div class="services-section__mobile-text services-section__mobile-text--close">
-            Згідно  дослідженнями ринку за останні роки використання готівки різко скоротилось у всьому світі, в той час як використання карток все більше зміщується
-            в сторону мобільних/цифрових гаманців. І ця тенденція продовжується, тому давайте спільно долучимось до платіжної революції.
+            <p class="_lang__cashless-p1">
+              Згідно  дослідженнями ринку за останні роки використання готівки різко скоротилось у всьому світі, в той час як використання карток все більше зміщується
+              в сторону мобільних/цифрових гаманців. І ця тенденція продовжується, тому давайте спільно долучимось до платіжної революції.
+            </p>
             <br />
-            ProstoPay фокусується на найбільш зручних способах мобільних оплат і пропонує 2 платіжні методи:
-            WEB-оплата. Сплачуйте за допомогою QR-коду або NFC-мітки на апараті. Вам не потрібно завантажувати жодного додатку, щоб придбати горнятко кави. Все у браузері смартфона - розрахунок в один клік за допомогою Apple Pay, Google Pay або інших популярних локальних гаманців.
-            Додаток для оплат. Ви постійний клієнт автоматів? Вітаємо, ви любите смачні продукти та цінуєте свій час! І ми вас підтримуємо: просто завантажте додаток ProstoPay та отримайте ще простіший спосіб оплати з додатковими можливостями. Бонуси вже на підході!
+            <p class="_lang__cashless-p2">
+              ProstoPay фокусується на найбільш зручних способах мобільних оплат і пропонує 2 платіжні методи:
+            </p>
+            <p class="_lang__cashless-p3">
+              <strong>WEB-оплата.</strong> Сплачуйте за допомогою QR-коду або NFC-мітки на апараті. Вам не потрібно завантажувати жодного додатку, щоб придбати горнятко кави. Все у браузері смартфона - розрахунок в один клік за допомогою Apple Pay, Google Pay або інших популярних локальних гаманців.
+            </p>
+            <p class="_lang__cashless-p4">
+              <strong>Додаток для оплат.</strong> Ви постійний клієнт автоматів? Вітаємо, ви любите смачні продукти та цінуєте свій час! І ми вас підтримуємо: просто завантажте додаток ProstoPay та отримайте ще простіший спосіб оплати з додатковими можливостями. Бонуси вже на підході!
+            </p>
             <br />
-            Інші способи безготівкової оплати:
-            RFID-картки (картки-перепустки, дисконтні картки тощо). Рішення для всіх організацій з картковою системою доступу, наприклад, офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay. Звісно, працівники також можуть поповнювати картку самостійно.
-            QR-чеки. Бажаєте контролювати продажі ваших настільних кавомашин з вільним доступом клієнтів в рітейлі? Ми допоможемо це зробити. Клієнт робить замовлення на касі та отримує чек з надрукованим QR-кодом. Після сканування QR-чеку на кавомашині клієнт насолоджується напоєм. Таке рішення унеможливлює помилки покупця та запобігає шахрайству.
+            <p class="_lang__cashless-p5">
+              Інші способи безготівкової оплати:
+            </p>
+            <p class="_lang__cashless-p6">
+              <strong>RFID-картки (картки-перепустки, дисконтні картки тощо).</strong>Рішення для всіх організацій з картковою системою доступу, наприклад, офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay. Звісно, працівники також можуть поповнювати картку самостійно.
+            </p>
+            <p class="_lang__cashless-p7">
+              <strong>QR-чеки.</strong> Бажаєте контролювати продажі ваших настільних кавомашин з вільним доступом клієнтів в рітейлі? Ми допоможемо це зробити. Клієнт робить замовлення на касі та отримує чек з надрукованим QR-кодом. Після сканування QR-чеку на кавомашині клієнт насолоджується напоєм. Таке рішення унеможливлює помилки покупця та запобігає шахрайству.
+            </p>
           </div>
         </div>
         <div class="services-section__widescreen">
-          <h2 class="services-section__widescreen-title">Безготівкова оплата</h2>
+          <h2 class="services-section__widescreen-title _lang__cashless-title">Безготівкова оплата</h2>
           <div class="services-section__widescreen-text">
-            Згідно  дослідженнями ринку за останні роки використання готівки різко скоротилось у всьому світі, в той час як використання карток все більше зміщується
-            в сторону мобільних/цифрових гаманців. І ця тенденція продовжується, тому давайте спільно долучимось до платіжної революції.
+            <p class="_lang__cashless-p1">
+              Згідно  дослідженнями ринку за останні роки використання готівки різко скоротилось у всьому світі,
+              в той час як використання карток все більше зміщується
+              в сторону мобільних/цифрових гаманців. І ця тенденція продовжується,
+              тому давайте спільно долучимось до платіжної революції.
+            </p>
             <br />
-            ProstoPay фокусується на найбільш зручних способах мобільних оплат і пропонує 2 платіжні методи:
-            WEB-оплата. Сплачуйте за допомогою QR-коду або NFC-мітки на апараті. Вам не потрібно завантажувати жодного додатку, щоб придбати горнятко кави. Все у браузері смартфона - розрахунок в один клік за допомогою Apple Pay, Google Pay або інших популярних локальних гаманців.
-            Додаток для оплат. Ви постійний клієнт автоматів? Вітаємо, ви любите смачні продукти та цінуєте свій час! І ми вас підтримуємо: просто завантажте додаток ProstoPay та отримайте ще простіший спосіб оплати з додатковими можливостями. Бонуси вже на підході!
+            <p class="_lang__cashless-p2">
+              ProstoPay фокусується на найбільш зручних способах мобільних оплат і пропонує 2 платіжні методи:
+            </p>
+            <p class="_lang__cashless-p3">
+              <strong>WEB-оплата.</strong> Сплачуйте за допомогою QR-коду або NFC-мітки на апараті. Вам не потрібно завантажувати жодного додатку,
+              щоб придбати горнятко кави. Все у браузері смартфона - розрахунок в один клік за допомогою Apple Pay,
+              Google Pay або інших популярних локальних гаманців.
+            </p>
+            <p class="_lang__cashless-p4">
+              <strong>Додаток для оплат.</strong> Ви постійний клієнт автоматів? Вітаємо, ви любите смачні продукти та цінуєте свій час!
+              І ми вас підтримуємо: просто завантажте додаток ProstoPay
+              та отримайте ще простіший спосіб оплати з додатковими можливостями. Бонуси вже на підході!
+            </p>
             <br />
-            Інші способи безготівкової оплати:
-            RFID-картки (картки-перепустки, дисконтні картки тощо). Рішення для всіх організацій з картковою системою доступу, наприклад, офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay. Звісно, працівники також можуть поповнювати картку самостійно.
-            QR-чеки. Бажаєте контролювати продажі ваших настільних кавомашин з вільним доступом клієнтів в рітейлі? Ми допоможемо це зробити. Клієнт робить замовлення на касі та отримує чек з надрукованим QR-кодом. Після сканування QR-чеку на кавомашині клієнт насолоджується напоєм. Таке рішення унеможливлює помилки покупця та запобігає шахрайству.
+            <p class="_lang__cashless-p5">
+              Інші способи безготівкової оплати:
+            </p>
+            <p class="_lang__cashless-p6">
+              <strong>RFID-картки (картки-перепустки, дисконтні картки тощо).</strong> Рішення для всіх організацій з картковою системою доступу, наприклад, офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay. Звісно, працівники також можуть поповнювати картку самостійно.
+            </p>
+            <p class="_lang__cashless-p7">
+              <strong>QR-чеки.</strong> Бажаєте контролювати продажі ваших настільних кавомашин з вільним доступом клієнтів в рітейлі? Ми допоможемо це зробити. Клієнт робить замовлення на касі та отримує чек з надрукованим QR-кодом. Після сканування QR-чеку на кавомашині клієнт насолоджується напоєм. Таке рішення унеможливлює помилки покупця та запобігає шахрайству.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="page__section--monitoring services-section">
+      <section class="page__section--monitoring services-section" id="monitoring">
         <div class="services-section__mobile">
-          <h2 class="services-section__mobile-title">Онлайн моніторинг</h2>
+          <h2 class="services-section__mobile-title _lang__monitoring-title">Онлайн моніторинг</h2>
           <img src="./images/monitoring-color.svg" alt="Cashless image" class="services-section__mobile-img">
           <div class="services-section__mobile-button">
             <div class="button__more services-section__text-open-btn">Більше</div>
           </div>
           <div class="services-section__mobile-text services-section__mobile-text--close">
-            Завдяки онлайн моніторингу ви завжди можете слідкувати за вашим парком апаратів, отримуючи дані за допомогою WEB-кабінету та через сервісний застосунок ProstoService:
-            Помилки апаратів
-            Помилки платіжних систем
-            Наявність живлення
-            Температура
-            Статус дверей
-            Контроль залишків інгредієнтів та продуктів
-            Дані з платіжних протоколів
-            Дані EVA-DTS з інформацією про продажі, оплати, стан обладнання, обслуговування тощо
+            <p class="_lang__monitoring-p1">
+              Завдяки онлайн моніторингу ви завжди можете слідкувати за вашим парком апаратів,
+              отримуючи дані за допомогою WEB-кабінету та через сервісний застосунок ProstoService:
+            </p>
+            <ul class="services-section__list">
+              <li class="_lang__monitoring-li1">Помилки апаратів</li>
+              <li class="_lang__monitoring-li2">Помилки платіжних систем</li>
+              <li class="_lang__monitoring-li3">Наявність живлення</li>
+              <li class="_lang__monitoring-li4">Температура</li>
+              <li class="_lang__monitoring-li5">Статус дверей</li>
+              <li class="_lang__monitoring-li6">Контроль залишків інгредієнтів та продуктів</li>
+              <li class="_lang__monitoring-li7">Дані з платіжних протоколів</li>
+              <li class="_lang__monitoring-li8">Дані <strong>EVA-DTS</strong> з інформацією про продажі, оплати, стан обладнання, обслуговування тощо</li>
+            </ul>
           </div>
         </div>
         <div class="services-section__widescreen">
-          <h2 class="services-section__widescreen-title">Онлайн моніторинг</h2>
+          <h2 class="services-section__widescreen-title _lang__monitoring-title">Онлайн моніторинг</h2>
           <div class="services-section__widescreen-text">
-            Завдяки онлайн моніторингу ви завжди можете слідкувати за вашим парком апаратів, отримуючи дані за допомогою WEB-кабінету та через сервісний застосунок ProstoService:
-            Помилки апаратів
-            Помилки платіжних систем
-            Наявність живлення
-            Температура
-            Статус дверей
-            Контроль залишків інгредієнтів та продуктів
-            Дані з платіжних протоколів
-            Дані EVA-DTS з інформацією про продажі, оплати, стан обладнання, обслуговування тощо
+            <p class="_lang__monitoring-p1">
+              Завдяки онлайн моніторингу ви завжди можете слідкувати за вашим парком апаратів, отримуючи дані за допомогою WEB-кабінету та через сервісний застосунок ProstoService:
+            </p>
+            <ul class="services-section__list">
+              <li class="_lang__monitoring-li1">Помилки апаратів</li>
+              <li class="_lang__monitoring-li2">Помилки платіжних систем</li>
+              <li class="_lang__monitoring-li3">Наявність живлення</li>
+              <li class="_lang__monitoring-li4">Температура</li>
+              <li class="_lang__monitoring-li5">Статус дверей</li>
+              <li class="_lang__monitoring-li6">Контроль залишків інгредієнтів та продуктів</li>
+              <li class="_lang__monitoring-li7">Дані з платіжних протоколів</li>
+              <li class="_lang__monitoring-li8">Дані <strong>EVA-DTS</strong> з інформацією про продажі, оплати, стан обладнання, обслуговування тощо</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="page__section--feedback services-section">
+      <section class="page__section--feedback services-section" id="feedback">
         <div class="services-section__mobile">
-          <h2 class="services-section__mobile-title">Відгуки клієнтів</h2>
+          <h2 class="services-section__mobile-title _lang__feedback-title">Відгуки клієнтів</h2>
           <img src="./images/feedback.png" alt="Cashless image" class="services-section__mobile-img">
           <div class="services-section__mobile-button">
             <div class="button__more services-section__text-open-btn">Більше</div>
           </div>
-          <div class="services-section__mobile-text services-section__mobile-text--close">
+          <div class="services-section__mobile-text services-section__mobile-text--close _lang__feedback-text">
             Незалежно від того, в якій галузі ви працюєте, клієнти є найважливішою частиною бізнесу. Комунікація з клієнтами ще важливіша в сфері самообслуговування, наприклад, в кавових та торгових апаратах. ProstoPay надає зручний сервіс для отримання зворотного зв'язку від клієнтів, використовуючи лише смартфон. За допомогою функції відгуків ви будете знати, що відбувається, що зроблено добре, а що потрібно покращити, і зможете поступово вдосконалювати свій сервіс.
           </div>
         </div>
         <div class="services-section__widescreen">
-          <h2 class="services-section__widescreen-title">Відгуки клієнтів</h2>
-          <div class="services-section__widescreen-text">
+          <h2 class="services-section__widescreen-title _lang__feedback-title">Відгуки клієнтів</h2>
+          <div class="services-section__widescreen-text _lang__feedback-text">
             Незалежно від того, в якій галузі ви працюєте, клієнти є найважливішою частиною бізнесу. Комунікація з клієнтами ще важливіша в сфері самообслуговування, наприклад, в кавових та торгових апаратах. ProstoPay надає зручний сервіс для отримання зворотного зв'язку від клієнтів, використовуючи лише смартфон. За допомогою функції відгуків ви будете знати, що відбувається, що зроблено добре, а що потрібно покращити, і зможете поступово вдосконалювати свій сервіс.
           </div>
         </div>
       </section>
 
-      <section class="page__section--analytics services-section">
+      <section class="page__section--analytics services-section" id="analytics">
         <div class="services-section__mobile">
-          <h2 class="services-section__mobile-title">Аналітика</h2>
+          <h2 class="services-section__mobile-title _lang__analytics-title">Аналітика</h2>
           <img src="./images/monitoring-color.svg" alt="Cashless image" class="services-section__mobile-img">
           <div class="services-section__mobile-button">
             <div class="button__more services-section__text-open-btn">Більше</div>
           </div>
           <div class="services-section__mobile-text services-section__mobile-text--close">
-            Динаміка продажів у графіках та таблицях
-            Розбивка по товарах, часу споживання тощо
-            Контроль залишків (інформація в реальному часі про кількість інгредієнтів та продуктів в апараті)
-            Аналітика простоїв та втрат
-            Порівняння продажів по апаратам/клієнтам
-            Перевірка цін, щоб уникати помилок персоналу
-            Дані про джерела оплати (готівка та різні безготівкові способи)
-            Інтерфейси API для інтеграції з обліковими системами
-            Інші дані для ефективного управління бізнесом          </div>
+            <ul class="services-section__list">
+              <li class="_lang__analytics-li1">Динаміка продажів у графіках та таблицях</li>
+              <li class="_lang__analytics-li2">Розбивка по товарах, часу споживання тощо</li>
+              <li class="_lang__analytics-li3">Контроль залишків (інформація в реальному часі про кількість інгредієнтів та продуктів в апараті)</li>
+              <li class="_lang__analytics-li4">Аналітика простоїв та втрат</li>
+              <li class="_lang__analytics-li5">Порівняння продажів по апаратам/клієнтам</li>
+              <li class="_lang__analytics-li6">Перевірка цін, щоб уникати помилок персоналу</li>
+              <li class="_lang__analytics-li7">Дані про джерела оплати (готівка та різні безготівкові способи)</li>
+              <li class="_lang__analytics-li8">Інтерфейси API для інтеграції з обліковими системами</li>
+              <li class="_lang__analytics-li9">Інші дані для ефективного управління бізнесом </li>
+            </ul>
+          </div>
         </div>
         <div class="services-section__widescreen">
-          <h2 class="services-section__widescreen-title">Аналітика</h2>
+          <h2 class="services-section__widescreen-title _lang__analytics-title">Аналітика</h2>
           <div class="services-section__widescreen-text">
-            Динаміка продажів у графіках та таблицях
-            Розбивка по товарах, часу споживання тощо
-            Контроль залишків (інформація в реальному часі про кількість інгредієнтів та продуктів в апараті)
-            Аналітика простоїв та втрат
-            Порівняння продажів по апаратам/клієнтам
-            Перевірка цін, щоб уникати помилок персоналу
-            Дані про джерела оплати (готівка та різні безготівкові способи)
-            Інтерфейси API для інтеграції з обліковими системами
-            Інші дані для ефективного управління бізнесом          </div>
+            <ul class="services-section__list">
+              <li class="_lang__analytics-li1">Динаміка продажів у графіках та таблицях</li>
+              <li class="_lang__analytics-li2">Розбивка по товарах, часу споживання тощо</li>
+              <li class="_lang__analytics-li3">Контроль залишків (інформація в реальному часі про кількість інгредієнтів та продуктів в апараті)</li>
+              <li class="_lang__analytics-li4">Аналітика простоїв та втрат</li>
+              <li class="_lang__analytics-li5">Порівняння продажів по апаратам/клієнтам</li>
+              <li class="_lang__analytics-li6">Перевірка цін, щоб уникати помилок персоналу</li>
+              <li class="_lang__analytics-li7">Дані про джерела оплати (готівка та різні безготівкові способи)</li>
+              <li class="_lang__analytics-li8">Інтерфейси API для інтеграції з обліковими системами</li>
+              <li class="_lang__analytics-li9">Інші дані для ефективного управління бізнесом </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="page__section--remote services-section">
+      <section class="page__section--remote services-section" id="remote">
         <div class="services-section__mobile">
-          <h2 class="services-section__mobile-title">Дистанційне керування</h2>
+          <h2 class="services-section__mobile-title _lang__remote-title">Дистанційне керування</h2>
           <img src="./images/remote-color.svg" alt="Cashless image" class="services-section__mobile-img">
           <div class="services-section__mobile-button">
             <div class="button__more services-section__text-open-btn">Більше</div>
           </div>
           <div class="services-section__mobile-text services-section__mobile-text--close">
-            Віддаленне управління налаштуваннями (для деяких брендів)
-            Перезавантаження
-            Віддалений продаж товару
-            Гнучке керування цінами
-            Скидання помилок
+            <ul class="services-section__list">
+              <li class="_lang__remote-li1">Віддаленне управління налаштуваннями (для деяких брендів)</li>
+              <li class="_lang__remote-li2">Перезавантаження</li>
+              <li class="_lang__remote-li3">Віддалений продаж товару</li>
+              <li class="_lang__remote-li4">Гнучке керування цінами</li>
+              <li class="_lang__remote-li5">Скидання помилок</li>
+            </ul>
           </div>
         </div>
         <div class="services-section__widescreen">
-          <h2 class="services-section__widescreen-title">Дистанційне керування</h2>
+          <h2 class="services-section__widescreen-title _lang__remote-title">Дистанційне керування</h2>
           <div class="services-section__widescreen-text">
-            Віддаленне управління налаштуваннями (для деяких брендів)
-            Перезавантаження
-            Віддалений продаж товару
-            Гнучке керування цінами
-            Скидання помилок
+            <ul class="services-section__list">
+              <li class="_lang__remote-li1">Віддаленне управління налаштуваннями (для деяких брендів)</li>
+              <li class="_lang__remote-li2">Перезавантаження</li>
+              <li class="_lang__remote-li3">Віддалений продаж товару</li>
+              <li class="_lang__remote-li4">Гнучке керування цінами</li>
+              <li class="_lang__remote-li5">Скидання помилок</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="page__section--fiscal services-section">
+      <section class="page__section--fiscal services-section" id="fiskal">
         <div class="services-section__mobile">
-          <h2 class="services-section__mobile-title">Фіскалізація</h2>
+          <h2 class="services-section__mobile-title _lang__fiskal-title">Фіскалізація</h2>
           <img src="./images/tax-icon.png" alt="Cashless image" class="services-section__mobile-img">
           <div class="services-section__mobile-button">
             <div class="button__more services-section__text-open-btn">Більше</div>
           </div>
-          <div class="services-section__mobile-text services-section__mobile-text--close">
+          <div class="services-section__mobile-text services-section__mobile-text--close _lang__fiskal-text">
             Кавовий та вендинговий бізнес працює на створення послуг та продуктів для задоволення потреб клієнтів. Для керівництва важливіше приділяти увагу розвитку бізнеса, а не юридичним складнощам. ProstoPay може допомогти кавовому та вендинговому бізнесу вести справи відповідно до фіскальних вимог та надсилати дані до податкових органів у разі необхідності.
             В Україні з 2022 року вступили в дію  зміни до Закону про реєстрацію розрахункових операцій (РРО). Щоб допомогти нашим клієнтам, ми реалізували сервіс Програмного РРО (фіскалізації) для вендингових та торгових апаратів.
           </div>
         </div>
         <div class="services-section__widescreen">
-          <h2 class="services-section__widescreen-title">Фіскалізація</h2>
-          <div class="services-section__widescreen-text">
+          <h2 class="services-section__widescreen-title _lang__fiskal-title">Фіскалізація</h2>
+          <div class="services-section__widescreen-text _lang__fiskal-text">
             Кавовий та вендинговий бізнес працює на створення послуг та продуктів для задоволення потреб клієнтів. Для керівництва важливіше приділяти увагу розвитку бізнеса, а не юридичним складнощам. ProstoPay може допомогти кавовому та вендинговому бізнесу вести справи відповідно до фіскальних вимог та надсилати дані до податкових органів у разі необхідності.
             В Україні з 2022 року вступили в дію  зміни до Закону про реєстрацію розрахункових операцій (РРО). Щоб допомогти нашим клієнтам, ми реалізували сервіс Програмного РРО (фіскалізації) для вендингових та торгових апаратів.
           </div>
@@ -374,28 +425,28 @@
       </section>
 
 
-      <div class="services__button button__medium">Зв'язатися</div>
+      <div class="services__button button__form button__large _lang__services-button">Зв'язатися</div>
     </main>
 
     <footer class="page__footer-wrap page__footer-wrap--services">
       <div class="page__footer footer">
         <nav class="nav nav--footer-top">
           <ul class="nav__list">
-            <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+            <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
             <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
             <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-            <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+            <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
           </ul>
         </nav>
         <div class="footer__social">
-          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
-          <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
-          <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.svg" alt="YouTube image"></a>
+          <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.svg" alt="LinkedIn image"></a>
+          <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.svg" alt="Facebook image"></a>
         </div>
         <div class="footer__content">
           <a href="">
             <img
-              src="./images/logo.png"
+              src="./images/logo.svg"
               alt="ProstoPay logo"
               class="footer__logo"
             >
@@ -403,10 +454,10 @@
           <p class="footer__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
           <nav class="nav nav--footer">
             <ul class="nav__list">
-              <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+              <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
               <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
               <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-              <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+              <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
             </ul>
           </nav>
         </div>
@@ -420,14 +471,14 @@
     <footer class="page__footer-mobile-wrap page__footer-mobile-wrap--services">
       <div class="page__footer-mobile footer-mobile">
         <a href="#">
-          <img src="./images/logo.png" alt="ProstoPay logo" class="footer-mobile__logo">
+          <img src="./images/logo.svg" alt="ProstoPay logo" class="footer-mobile__logo">
         </a>
         <p class="footer-mobile__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
         <div class="header__button button__large button__form _lang__header-button">Зв’язатися з нами</div>
         <div class="footer-mobile__social">
-          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer-mobile__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
-          <a href="https://www.linkedin.com/company/prostopay/" class="footer-mobile__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
-          <a href="https://www.facebook.com/prostopay" class="footer-mobile__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer-mobile__social--link"><img src="./images/youtube-img.svg" alt="YouTube image"></a>
+          <a href="https://www.linkedin.com/company/prostopay/" class="footer-mobile__social--link"><img src="./images/linkedin-img.svg" alt="LinkedIn image"></a>
+          <a href="https://www.facebook.com/prostopay" class="footer-mobile__social--link"><img src="./images/facebook-img.svg" alt="Facebook image"></a>
         </div>
         <p class="footer-mobile__copyright _lang__footer-copyright">
           © 2016 - 2022 ТОВ "Простопей". Всі права захищено.
@@ -435,7 +486,7 @@
       </div>
     </footer>
 
-    <script type="module" src="scripts/main.js"></script>
+    <script defer type="module" src="scripts/main.js"></script>
 
   </body>
 </html>

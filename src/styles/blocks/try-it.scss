@@ -141,7 +141,7 @@
       width: 170px;
     }
 
-    @include iPad {
+    @include mobile {
       display: none;
     }
 
@@ -158,7 +158,7 @@
       margin-top: 15px;
     }
 
-    @include iPad {
+    @include mobile {
       display: block;
     }
 

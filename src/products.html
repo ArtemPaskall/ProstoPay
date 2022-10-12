@@ -82,16 +82,16 @@
           <div class="menu__content">
             <div class="menu__logo">
               <a href="#">
-                <img src="./images/logo.png" alt="ProstoPay Logo" class="menu__logo-img">
+                <img src="./images/logo.svg" alt="ProstoPay Logo" class="menu__logo-img">
               </a>
             </div>
 
             <nav class="nav nav--onDesktop">
               <ul class="nav__list">
-                <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
-                <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
-                <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-                <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+                  <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
+              <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
+              <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
+              <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
               </ul>
             </nav>
 
@@ -130,10 +130,10 @@
             <div class="dropdown__navigation">
               <nav class="dropdown__nav nav nav--onIPad">
                 <ul class="nav__list">
-                  <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+                  <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
                   <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
                   <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-                  <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+                  <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
                 </ul>
               </nav>
               <div class="dropdown__settigs settings settings--onIPad settings--onDropdown">
@@ -167,52 +167,57 @@
     </div>
 
     <main class="page__main  main-block">
-      <h1 class="products-page__title">Продукти</h1>
-      <p class="products-page__description">Ми розробляємо IoT і платіжні рішення для вендингу, кавомашин та інших видів роздрібного бізнесу</p>
+      <h1 class="products-page__title  _lang__products-title">Продукти</h1>
+      <p class="products-page__description _lang__products-description">Ми розробляємо IoT і платіжні рішення для вендингу, кавомашин та інших видів роздрібного бізнесу</p>
       <div class="products-page__sub-title-wraper">
         <h2 class="products-page__sub-title">Hardware</h2>
         <h2 class="products-page__sub-title">Software</h2>
       </div>
 
 
-      <section class="page__section--products products-section products-section--right-hand">
+      <section class="page__section--products products-section products-section--right-hand" id="dashboard">
         <div class="products-section__title-wrap">
-          <h3 class="products-section__title">WEB-кабінет</h3>
+          <h3 class="products-section__title _lang__products-dashboard">WEB-кабінет</h3>
         </div>
         <div class="products-section__content">
           <div class="products-section__wrap">
-            <p class="products-section__text">Основне місце для моніторингу бізнес-потоків, відповідних  даних та підтримки операційної ефективності. Основні показники розміщені на WEB-сторінці: аналітичні графіки, інформація про продажі, моніторинг обладнання, залишків товарів та інгредієнтів, коштів тощо.
+            <p class="products-section__text _lang__dashboard-text">Основне місце для моніторингу бізнес-потоків, відповідних  даних та підтримки операційної ефективності. Основні показники розміщені на WEB-сторінці: аналітичні графіки, інформація про продажі, моніторинг обладнання, залишків товарів та інгредієнтів, коштів тощо.
               Рівень доступу легко змінюється в залежності від ролі та зони відповідальності вашого співробітника.</p>
             <img src="./images/dashboard.svg" alt="Dashboard image">
           </div>
         </div>
       </section>
 
-      <section class="page__section--products products-section products-section--left-hand">
+      <section class="page__section--products products-section products-section--left-hand" id="seriesA">
         <div class="products-section__title-wrap">
-          <h3 class="products-section__title">Серія A</h3>
+          <h3 class="products-section__title _lang__seriesA-title">Серія A</h3>
         </div>
         <div class="products-section__content">
           <div class="products-section__wrap">
-            <p class="products-section__text">
-              Це наш перший пристрій. Пристрій Серії A  забезпечує:
-              Безготівкові платіжні методи
-              Розширена телеметрія з додатковими датчиками
-              Деякі функції віддаленого контролю
-            </p>
+            <div class="products-section__text products-section__text--series">
+              <p class="_lang__seriesA-text">
+                Це наш перший пристрій. Пристрій Серії A  забезпечує:
+              </p>
+              <ul class="products-section__list">
+                <li class="_lang__seriesA-li1">Безготівкові платіжні методи</li>
+                <li class="_lang__seriesA-li2">Розширена телеметрія з додатковими датчиками</li>
+                <li class="_lang__seriesA-li3">Деякі функції віддаленого контролю</li>
+              </ul>
+            </div>
+
             <img src="./images/hardware-img.svg" alt="Dashboard image" class="products-section__img products-section__img--seriesA">
           </div>
-          <div class="products-section__button button__form button__small">Замовити</div>
+          <div class="products-section__button button__form button__small _lang__button-order">Замовити</div>
         </div>
       </section>
 
-      <section class="page__section--products products-section products-section--right-hand">
+      <section class="page__section--products products-section products-section--right-hand" id="prosto-service">
         <div class="products-section__title-wrap">
           <h3 class="products-section__title">Prosto Service</h3>
         </div>
         <div class="products-section__content products-section__content--prosto-service">
           <div class="products-section__wrap">
-            <p class="products-section__text">
+            <p class="products-section__text _lang__prosto-service-text">
               Потужний додаток для внутрішнього використання вашим персоналом.
               Ви отримуєте швидкий доступ до ключових показників бізнесу. ProstoService допомагає операторам,
               мерчендайзерам та техніхам виконувати щоденні операції. У додатку ви можете контролювати обладнання,
@@ -228,32 +233,36 @@
         </div>
       </section>
 
-      <section class="page__section--products products-section products-section--left-hand">
+      <section class="page__section--products products-section products-section--left-hand" id="seriesL">
         <div class="products-section__title-wrap">
-          <h3 class="products-section__title">Серія L</h3>
+          <h3 class="products-section__title  _lang__seriesL-title">Серія L</h3>
         </div>
         <div class="products-section__content">
           <div class="products-section__wrap">
-            <p class="products-section__text">
-              Маленький, але потужний. Серія L забезпечує:
-              Телеметрія
-              Віддалене перезавантаження
-              Скидання помилок
-              Відслідковування місцезнаходження
-            </p>
+            <div class="products-section__text products-section__text--series">
+              <p class="_lang__seriesL-text">
+                Маленький, але потужний. Серія L забезпечує:
+              </p>
+              <ul class="products-section__list">
+                <li class="_lang__seriesL-li1">Телеметрія</li>
+                <li class="_lang__seriesL-li2">Віддалене перезавантаження</li>
+                <li class="_lang__seriesL-li3">Скидання помилок</li>
+                <li class="_lang__seriesL-li4">Відслідковування місцезнаходження</li>
+              </ul>
+            </div>
             <img src="./images/hardware-img.svg" alt="Dashboard image" class="products-section__img products-section__img--seriesA">
           </div>
-          <div class="products-section__button button__form button__small">Замовити</div>
+          <div class="products-section__button button__form button__small _lang__button-order">Замовити</div>
         </div>
       </section>
 
-      <section class="page__section--products products-section products-section--right-hand">
+      <section class="page__section--products products-section products-section--right-hand" id="App&WEB">
         <div class="products-section__title-wrap">
           <h3 class="products-section__title products-section__title--app-and-web">App&WEB payments</h3>
         </div>
         <div class="products-section__content">
           <div class="products-section__wrap">
-            <p class="products-section__text">
+            <p class="products-section__text _lang__app-and-web-text">
               WEB-оплата - найцікавіший спосіб безготівкової оплати в сучасному світі.
               Клієнти просто сканують QR-код або торкаються NFC-мітки смартфоном і здійснюють оплату в один клік в браузері.
               Крім того, ми створюємо інтеграцію з деякими популярними платіжними додатками на локальних ринках,
@@ -262,7 +271,7 @@
             </p>
             <img src="./images/app-and-web.svg" alt="Dashboard image">
           </div>
-          <div class="products-section__button button__try-it button__small">Спробувати</div>
+          <div class="products-section__button button__try-it button__small _lang__button-toTry">Спробувати</div>
         </div>
       </section>
 
@@ -288,28 +297,28 @@
         </div>
       </section>
 
-      <div class="products-page__button button__form button__medium">Зв'язатися</div>
+      <div class="products-page__button button__form button__large _lang__services-button">Зв'язатися</div>
     </main>
 
     <footer class="page__footer-wrap page__footer-wrap--services">
       <div class="page__footer footer">
         <nav class="nav nav--footer-top">
           <ul class="nav__list">
-            <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+            <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
             <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
             <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-            <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+            <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
           </ul>
         </nav>
         <div class="footer__social">
-          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
-          <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
-          <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer__social--link"><img src="./images/youtube-img.svg" alt="YouTube image"></a>
+          <a href="https://www.linkedin.com/company/prostopay/" class="footer__social--link"><img src="./images/linkedin-img.svg" alt="LinkedIn image"></a>
+          <a href="https://www.facebook.com/prostopay" class="footer__social--link"><img src="./images/facebook-img.svg" alt="Facebook image"></a>
         </div>
         <div class="footer__content">
-          <a href="">
+          <a href="index.html">
             <img
-              src="./images/logo.png"
+              src="./images/logo.svg"
               alt="ProstoPay logo"
               class="footer__logo"
             >
@@ -317,10 +326,10 @@
           <p class="footer__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
           <nav class="nav nav--footer">
             <ul class="nav__list">
-              <li><a href="#about" class="nav__link _lang__about-us">Про нас</a></li>
+              <li><a href="index.html#about" class="nav__link _lang__about-us">Про нас</a></li>
               <li><a href="services.html" class="nav__link _lang__services">Сервіси</a></li>
               <li><a href="products.html" class="nav__link _lang__products">Продукти</a></li>
-              <li><a href="#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
+              <li><a href="index.html#contacts" class="nav__link  _lang__contacts">Контакти</a></li>
             </ul>
           </nav>
         </div>
@@ -334,14 +343,14 @@
     <footer class="page__footer-mobile-wrap page__footer-mobile-wrap--products">
       <div class="page__footer-mobile footer-mobile">
         <a href="#">
-          <img src="./images/logo.png" alt="ProstoPay logo" class="footer-mobile__logo">
+          <img src="./images/logo.svg" alt="ProstoPay logo" class="footer-mobile__logo">
         </a>
         <p class="footer-mobile__text _lang__footer-text">ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.</p>
         <div class="header__button button__large _lang__header-button">Зв’язатися з нами</div>
         <div class="footer-mobile__social">
-          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer-mobile__social--link"><img src="./images/youtube-img.png" alt="YouTube image"></a>
-          <a href="https://www.linkedin.com/company/prostopay/" class="footer-mobile__social--link"><img src="./images/linkedin-img.png" alt="LinkedIn image"></a>
-          <a href="https://www.facebook.com/prostopay" class="footer-mobile__social--link"><img src="./images/facebook-img.png" alt="Facebook image"></a>
+          <a href="https://www.youtube.com/channel/UCCyPJy7QEHjxSGUuY0mUv3Q" class="footer-mobile__social--link"><img src="./images/youtube-img.svg" alt="YouTube image"></a>
+          <a href="https://www.linkedin.com/company/prostopay/" class="footer-mobile__social--link"><img src="./images/linkedin-img.svg" alt="LinkedIn image"></a>
+          <a href="https://www.facebook.com/prostopay" class="footer-mobile__social--link"><img src="./images/facebook-img.svg" alt="Facebook image"></a>
         </div>
         <p class="footer-mobile__copyright _lang__footer-copyright">
           © 2016 - 2022 ТОВ "Простопей". Всі права захищено.
@@ -349,6 +358,6 @@
       </div>
     </footer>
 
-    <script type="module" src="scripts/main.js"></script>
+    <script defer type="module" src="scripts/main.js"></script>
   </body>
 </html>
