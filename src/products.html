@@ -22,8 +22,8 @@
 
     <section  class="page__touch-form touch-form" id="pop-up-form">
       <a href="#"><img src="./images/close-cross.svg" alt="Close cross" class="touch-form__close-cross"></a>
-      <h1 class="touch-form__title">Почнемо?</h1>
-      <p class="touch-form__description">Заповніть форму і ми зв’яжемося з вами найближчим часом</p>
+      <h1 class="touch-form__title _lang__form-title">Почнемо?</h1>
+      <p class="touch-form__description _lang__form-description">Заповніть форму і ми зв’яжемося з вами найближчим часом</p>
       <form action="#" class="touch-form__form">
         <div class="touch-form__person-data">
           <div class="touch-form__block touch-form__block--left">
@@ -35,46 +35,48 @@
             <input type="text" class="touch-form__data-field" placeholder="Кількість апаратів">
           </div>
         </div>
-        <p class="touch-form__interest">Чим ми вас зацікавили?</p>
+        <p class="touch-form__interest _lang__form-interest">Чим ми вас зацікавили?</p>
         <div class="touch-form__type-fields">
           <label for="telemetry" class="touch-form__label-interest">
             <input  type="checkbox" class="touch-form__checkbox-interest" id="telemetry" name="telemetry">
             <div class="touch-form__checkbox"></div>
-            Телеметрія
+            <span class="_lang__form-telemetry">Телеметрія</span>
+
           </label>
 
           <label for="cashless" class="touch-form__label-interest">
             <input type="checkbox" class="touch-form__checkbox-interest" id="cashless" name="cashless">
             <div class="touch-form__checkbox"></div>
-            Безготівкова оплата
+            <span class="_lang__form-cashless">Безготівкова оплата</span>
           </label>
 
           <label for="remote" class="touch-form__label-interest">
             <input type="checkbox" class="touch-form__checkbox-interest" id="remote" name="remote">
             <div class="touch-form__checkbox"></div>
-            Віддалений контроль
+            <span class="_lang__form-remote">Віддалений контроль</span>
           </label>
 
           <label for="fiscal" class="touch-form__label-interest">
             <input type="checkbox" class="touch-form__checkbox-interest" id="fiscal" name="fiscal">
             <div class="touch-form__checkbox"></div>
-            Фіскалізація
+            <span class="_lang__form-fiscal">Фіскалізація</span>
           </label>
 
           <label for="feedback" class="touch-form__label-interest">
             <input type="checkbox" class="touch-form__checkbox-interest" id="feedback" name="feedback">
             <div class="touch-form__checkbox"></div>
-            Відгуки клієнтів
+            <span class="_lang__form-feedback">Відгуки клієнтів</span>
           </label>
 
         </div>
         <div class="touch-form__button-wrap">
           <textarea name="question" id="question" class="touch-form__textarea" placeholder="Можливо вас цікавить ще щось?"></textarea>
-          <button type="submit" class="touch-form__button button__small">Відправити</button>
+          <button type="submit" class="touch-form__button button__medium _lang__form-button">Відправити</button>
         </div>
       </form>
 
     </section>
+
 
     <div class="page__menu-wrap" id="menu">
       <div class="page__menu menu">
@@ -279,17 +281,18 @@
         <a href="#"><img src="./images/close-cross.svg" alt="Close cross" class="try-it__close-cross"></a>
         <div class="try-it__content">
           <h3 class="try-it__title">WEB Pay</h3>
-          <p class="try-it__description">Клієнт взаємодіє зі стікером, який розміщений на апараті</p>
-          <p class="try-it__press">НАТИСНИ</p>
+          <p class="try-it__description _lang__try-it-description">Клієнт взаємодіє зі стікером, який розміщений на апараті</p>
+          <p class="try-it__press _lang__try-it-press">НАТИСНИ</p>
           <div class="try-it__demo-video-wrap">
-            <img src="./images/web-pay-qr.svg" alt="QR-код" class="try-it__QR-image">
+            <img src="./images/web-pay-qr.svg" alt="QR-код" class="try-it__QR-image UA">
+            <img src="./images/web-pay-qr-EN.svg" alt="QR-код" class="try-it__QR-image EN">
             <iframe class="try-it__video-item try-it__demo-video" src="https://www.youtube.com/embed/EzmDDfB9UiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="try-it__video-close-button">Close</div>
           </div>
         </div>
         <div class="try-it__video">
           <div class="try-it__wrap">
-            <h3 class="try-it__video-title">ВІДЕО</h3>
+            <h3 class="try-it__video-title _lang__try-it-video">ВІДЕО</h3>
             <img src="./images/youtube-icon.svg" alt="YouTube" class="try-it__youtube-logo">
           </div>
           <iframe class="try-it__video-item try-it__video-item--1" src="https://www.youtube.com/embed/EzmDDfB9UiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

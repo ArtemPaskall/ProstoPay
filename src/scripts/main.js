@@ -21,6 +21,8 @@ function changeURLLanguage(child) {
   changeLanguage();
   changeImages();
   translateButtonsMore();
+  translatePlaceholders();
+  tryItImageChange();
 }
 
 function changeLanguage() {
@@ -41,6 +43,62 @@ function changeLanguage() {
         }
       });
     }
+  }
+}
+
+translatePlaceholders();
+
+function translatePlaceholders() {
+  const lang = document.cookie;
+  const inputs = document.getElementsByClassName('touch-form__data-field');
+  const textArea = document.getElementById('question');
+
+  if (lang === 'EN') {
+    for (const input of inputs) {
+      if (input.placeholder === 'І\'мя') {
+        input.placeholder = 'Name';
+      }
+
+      if (input.placeholder === 'Країна') {
+        input.placeholder = 'Country';
+      }
+
+      if (input.placeholder === 'Телефон/Email') {
+        input.placeholder = 'Phone/Email';
+      }
+
+      if (input.placeholder === 'Кількість апаратів') {
+        input.placeholder = 'Number of machines';
+      }
+    }
+  }
+
+  if (lang === 'UA') {
+    for (const input of inputs) {
+      if (input.placeholder === 'Name') {
+        input.placeholder = 'І\'мя';
+      }
+
+      if (input.placeholder === 'Country') {
+        input.placeholder = 'Країна';
+      }
+
+      if (input.placeholder === 'Phone/Email') {
+        input.placeholder = 'Телефон/Email';
+      }
+
+      if (input.placeholder === 'Number of machine') {
+        input.placeholder = 'Кількість апаратів';
+      }
+    }
+  }
+
+  if (lang === 'EN') {
+    textArea.placeholder = 'Are you interested in something else?';
+  }
+
+  if (lang === 'UA') {
+    textArea.placeholder = 'Можливо вас цікавить ще щось?';
   }
 }
 
@@ -72,6 +130,7 @@ function translateButtonsMore() {
 changeLanguage();
 
 // Сhange the image depending on the language
+
 function changeImages() {
   const lang = document.cookie;
 
@@ -136,26 +195,49 @@ function toggleTryIt() {
   document.getElementById('try-it').classList.toggle('try-it--active');
 }
 
+// Function change image depend on language on 'try-it' overlay
+
+function tryItImageChange() {
+  const images = document.querySelectorAll('.try-it__QR-image');
+  const lang = document.cookie;
+
+  images.forEach(image => {
+    image.classList.add('try-it__QR-image--close');
+
+    if (image.classList.contains(lang)) {
+      image.classList.remove('try-it__QR-image--close');
+    }
+  });
+};
+
+tryItImageChange();
+
 // Function show 'demo-video' overlay
-const showVideo = document.querySelector('.try-it__QR-image');
+const showVideoButtons = document.querySelectorAll('.try-it__QR-image');
 const videoIframe = document.querySelector('.try-it__demo-video');
 const closeVideo = document.querySelector('.try-it__video-close-button');
 
-if (showVideo) {
-  showVideo.addEventListener('click', function() {
-    showVideo.classList.add('try-it__QR-image--close');
-    videoIframe.classList.add('try-it__demo-video--show');
-    closeVideo.classList.add('try-it__video-close-button--show');
-  });
-}
+showVideoButtons.forEach(showVideo => {
+  if (showVideo) {
+    showVideo.addEventListener('click', function() {
+      showVideo.classList.add('try-it__QR-image--close');
+      videoIframe.classList.add('try-it__demo-video--show');
+      closeVideo.classList.add('try-it__video-close-button--show');
+    });
+  }
 
-if (closeVideo) {
-  closeVideo.addEventListener('click', function() {
-    showVideo.classList.remove('try-it__QR-image--close');
-    videoIframe.classList.remove('try-it__demo-video--show');
-    closeVideo.classList.remove('try-it__video-close-button--show');
-  });
-}
+  if (closeVideo) {
+    closeVideo.addEventListener('click', function() {
+      const lang = document.cookie;
+
+      if (showVideo.classList.contains(lang)) {
+        showVideo.classList.remove('try-it__QR-image--close');
+      }
+      videoIframe.classList.remove('try-it__demo-video--show');
+      closeVideo.classList.remove('try-it__video-close-button--show');
+    });
+  }
+});
 
 // Open and hide text on Services mobile
 const openButtons = document.querySelectorAll('.services-section__text-open-btn');

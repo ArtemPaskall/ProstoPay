@@ -393,4 +393,52 @@ export const translationArr = {
      + 'Також ми можемо розробляти додатки для ваших потреб на основі нашої технології.',
     'EN': 'WEB-payment is the most exciting way to pay cashless in the modern world. Customers just scan QR-code or tap NFC tag by smartphone and pay in one click in the browser. Alternatively, we build the integration with some popular payment apps on local markets allowing customers to pay in one-click using these apps. Please take in mind, we can develop any app based on our technology.',
   },
+  'form-title': {
+    'UA': 'Почнемо?',
+    'EN': 'Let’s start',
+  },
+  'form-description': {
+    'UA': 'Заповніть форму і ми зв’яжемося з вами найближчим часом',
+    'EN': 'Just fill out the form below and we will contact you shortly',
+  },
+  'form-interest': {
+    'UA': 'Чим ми вас зацікавили?',
+    'EN': 'How can we assist you?',
+  },
+  'form-telemetry': {
+    'UA': 'Телеметрія',
+    'EN': 'Telemetry',
+  },
+  'form-cashless': {
+    'UA': 'Безготівкова оплата',
+    'EN': 'Cashless',
+  },
+  'form-remote': {
+    'UA': 'Віддалений контроль',
+    'EN': 'Remote Control',
+  },
+  'form-fiscal': {
+    'UA': 'Фіскалізація',
+    'EN': 'Fiscal Services',
+  },
+  'form-feedback': {
+    'UA': 'Відгуки клієнтів',
+    'EN': 'Customer Feedback',
+  },
+  'form-button': {
+    'UA': 'Відправити',
+    'EN': 'Send',
+  },
+  'try-it-description ': {
+    'UA': 'Клієнт взаємодіє зі стікером, який розміщений на апараті',
+    'EN': 'Customer interacts with a sticker placed at the coffee/vending machine ',
+  },
+  'try-it-press': {
+    'UA': 'НАТИСНИ',
+    'EN': 'Press',
+  },
+  'try-it-video': {
+    'UA': 'ВІДЕО',
+    'EN': 'Video',
+  },
 };
