@@ -127,7 +127,7 @@ function translateButtonsMore() {
   });
 }
 
-changeLanguage();
+// changeLanguage();
 
 // Сhange the image depending on the language
 

@@ -3,9 +3,9 @@
   position: relative;
   min-width: $min-screen;
 
-  @include mobile {
-    overflow: hidden;
-  }
+  // @include mobile {
+  //   overflow: hidden;
+  // }
 
   @include iPad {
     max-width: $ipad-width;
@@ -13,7 +13,7 @@
 
   @include mobile {
     max-width: $min-screen;
-    z-index: -3;
+    // z-index: -3;
   }
 
   &__img {
