@@ -12,7 +12,8 @@
     "deploy": "mate-scripts deploy",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
-    "test": "npm run lint && npm run test:only"
+    "test": "npm run lint && npm run test:only",
+    "open": "start http://localhost:1234"
   },
   "keywords": [],
   "author": "Mate Academy",
@@ -29,6 +30,7 @@
     "eslint-plugin-node": "^9.0.1",
     "gh-pages": "2.0.0",
     "gulp-htmllint": "0.0.16",
+    "http-server": "^14.1.1",
     "node-sass": "^4.14.1",
     "parcel": "^1.12.4",
     "stylelint": "^13.5.0",

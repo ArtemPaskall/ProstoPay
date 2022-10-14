@@ -3,9 +3,9 @@
   position: relative;
   min-width: $min-screen;
 
-  // @include mobile {
-  //   overflow: hidden;
-  // }
+  @include mobile {
+    overflow: hidden;
+  }
 
   @include iPad {
     max-width: $ipad-width;
