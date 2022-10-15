@@ -30,7 +30,8 @@
   z-index: -4;
 
   &--active {
-    position: fixed;
+    // position: fixed;
+    position: absolute;
     transform: scale(1);
     opacity: 1;
     z-index: 2;
