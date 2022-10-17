@@ -19,8 +19,6 @@ window.addEventListener('scroll', function() {
   if (scrollTop > lastScrollTop) {
     const touchForm2 = document.getElementById('touch-form-2');
 
-    console.log(touchForm2);
-
     if (touchForm2.classList.contains('touch-form--active')) {
       menu.style.position = 'sticky';
     } else {

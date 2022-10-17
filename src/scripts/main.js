@@ -2,6 +2,15 @@ import { translationArr } from './translate';
 
 // Select language and translate content;
 
+// const userLang = navigator.language || navigator.userLanguage;
+
+// console.log("The language is: " + userLang);
+
+// window.localStorage.setItem('lang', userLang);
+// const lang = window.localStorage.getItem('lang');
+
+// console.log(lang);
+
 if (!document.cookie) {
   document.cookie = 'UA';
 }
@@ -317,3 +326,16 @@ if (openButtons) {
     });
   });
 }
+
+// Show and hide 'Partners layout'
+const showButton = document.querySelector('.pay-service__button');
+const hideButton = document.querySelector('.partners-layout__close-cross');
+const partnerSection = document.getElementById('partners-layout');
+
+showButton.addEventListener('click', function() {
+  partnerSection.classList.add('partners-layout--show');
+});
+
+hideButton.addEventListener('click', function() {
+  partnerSection.classList.remove('partners-layout--show');
+});
