@@ -279,11 +279,13 @@ showVideoButtons.forEach(showVideo => {
 const tryItCloseButton = document.querySelector('.try-it__close-cross');
 const allVideoItems = document.querySelectorAll('.try-it__video-item');
 
-tryItCloseButton.addEventListener('click', function() {
-  allVideoItems.forEach(video => {
-    video.src = video.src;
+if (tryItCloseButton) {
+  tryItCloseButton.addEventListener('click', function() {
+    allVideoItems.forEach(video => {
+      video.src = video.src;
+    });
   });
-});
+}
 
 // Open and hide text on Services mobile
 const openButtons = document.querySelectorAll('.services-section__text-open-btn');
