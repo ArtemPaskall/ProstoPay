@@ -4,6 +4,8 @@
   justify-content: flex-start;
   max-width: 870px;
 
+  position: relative;
+
   @include iPad {
     max-width: 700px;
   }
