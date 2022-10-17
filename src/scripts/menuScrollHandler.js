@@ -4,6 +4,9 @@ let lastScrollTop = 0;
 const menu = document.getElementById('menu');
 // const touchForm2 = document.getElementById('touch-form-2');
 
+// const touchForm2 = document.getElementById('touch-form-2');
+// console.log(touchForm2);
+
 window.addEventListener('scroll', function() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -13,17 +16,14 @@ window.addEventListener('scroll', function() {
   menu.style.position = 'absolute';
   menu.style.top = '-400px';
 
-  // if (touchForm2.classList.contains('touch-form--active')) {
-  //   console.log(true);
-  // } else {
-  //   console.log(false);
-  // }
-
   if (scrollTop > lastScrollTop) {
     const touchForm2 = document.getElementById('touch-form-2');
 
+    console.log(touchForm2);
+
     if (touchForm2.classList.contains('touch-form--active')) {
       menu.style.position = 'sticky';
+    } else {
       menu.style.top = '-' + height;
     }
   } else {

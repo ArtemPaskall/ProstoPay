@@ -199,7 +199,6 @@ function closeForms() {
 }
 
 function toggleTouchForm(button) {
-
   const forms = document.querySelectorAll('.touch-form');
   let buttonNumber;
 

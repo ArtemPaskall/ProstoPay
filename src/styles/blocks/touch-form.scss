@@ -33,6 +33,11 @@
     }
   }
 
+  &--services-bottom {
+    top: initial;
+    bottom: -250px;
+  }
+
   opacity: 0;
   transform: scale(0.01);
   transition: transform 0.3s, opacity 0.3s;
