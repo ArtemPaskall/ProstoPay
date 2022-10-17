@@ -87,7 +87,7 @@ function translatePlaceholders() {
         input.placeholder = 'Телефон/Email';
       }
 
-      if (input.placeholder === 'Number of machine') {
+      if (input.placeholder === 'Number of machines') {
         input.placeholder = 'Кількість апаратів';
       }
     }
@@ -171,14 +171,49 @@ menuIcon.addEventListener('click', function() {
 });
 
 // Function show 'pop-up-form' overlay
+
+// const touchButtons = document.querySelectorAll('.button__form');
+// const closePopup = document.querySelector('.touch-form__close-cross');
+
+// touchButtons.forEach(button => button.addEventListener('click', togglePopup));
+// closePopup.addEventListener('click', togglePopup);
+
+// function togglePopup() {
+//   document.getElementById('pop-up-form').classList.toggle('touch-form--active');
+// }
+
 const touchButtons = document.querySelectorAll('.button__form');
-const closePopup = document.querySelector('.touch-form__close-cross');
+const closePopup = document.querySelectorAll('.touch-form__close-cross');
 
-touchButtons.forEach(button => button.addEventListener('click', togglePopup));
-closePopup.addEventListener('click', togglePopup);
+touchButtons.forEach(button => button.addEventListener('click', () => toggleTouchForm(button)));
+closePopup.forEach(button => button.addEventListener('click', closeForms));
 
-function togglePopup() {
-  document.getElementById('pop-up-form').classList.toggle('touch-form--active');
+function closeForms() {
+  const forms = document.querySelectorAll('.touch-form');
+
+  forms.forEach(form => {
+    if (form.classList.contains('touch-form--active')) {
+      form.classList.toggle('touch-form--active');
+    }
+  });
+}
+
+function toggleTouchForm(button) {
+
+  const forms = document.querySelectorAll('.touch-form');
+  let buttonNumber;
+
+  button.className.trim().split(' ').map(item => {
+    if (item.includes('button__form--')) {
+      buttonNumber = item.slice(-1);
+    }
+  });
+
+  forms.forEach(form => {
+    if (form.classList.contains(`touch-form--${buttonNumber}`)) {
+      form.classList.toggle('touch-form--active');
+    }
+  });
 }
 
 // Function show 'try-it' overlay
@@ -234,9 +269,20 @@ showVideoButtons.forEach(showVideo => {
         showVideo.classList.remove('try-it__QR-image--close');
       }
       videoIframe.classList.remove('try-it__demo-video--show');
+      videoIframe.src = videoIframe.src;
       closeVideo.classList.remove('try-it__video-close-button--show');
     });
   }
+});
+
+// Close all videos when close try-it section
+const tryItCloseButton = document.querySelector('.try-it__close-cross');
+const allVideoItems = document.querySelectorAll('.try-it__video-item');
+
+tryItCloseButton.addEventListener('click', function() {
+  allVideoItems.forEach(video => {
+    video.src = video.src;
+  });
 });
 
 // Open and hide text on Services mobile

@@ -26,6 +26,12 @@ function showVideo() {
 
 closeButton.addEventListener('click', hideVideo);
 
+closeButton.addEventListener('click', function() {
+  const videoIframe = document.querySelector('.video__item');
+
+  videoIframe.src = videoIframe.src;
+});
+
 function hideVideo() {
   video.style.zIndex = '-1';
 

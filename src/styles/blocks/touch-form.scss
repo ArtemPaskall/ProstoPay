@@ -22,6 +22,15 @@
   @include mobile {
     max-width: 380px;
     top: 5%;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--footer-mobile {
+      top: initial;
+      bottom: 40px;
+    }
   }
 
   opacity: 0;
@@ -128,7 +137,7 @@
     border: 0;
     padding: 0 10px;
 
-    font-family: 'Commissioner', sans-serif;
+    font-family: "Commissioner", sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #6f7071;

@@ -1,12 +1,12 @@
 .contacts {
   position: relative;
-  left: 70px;
 
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: inherit;
   }
 
   &__email,
@@ -16,6 +16,9 @@
     flex-direction: row;
     align-items: center;
     margin-top: 10px;
+
+    position: relative;
+    left: 70px;
 
     @include mobile {
       margin-top: 0;
@@ -91,11 +94,11 @@
 
   &__button {
     position: absolute;
-    right: 128px;
+    right: 58px;
     top: 65px;
 
     @include iPad {
-      right: 81px;
+      right: 11px;
       top: 74px;
     }
     @include mobile {
