@@ -24,8 +24,20 @@
     top: -90px;
     z-index: -2;
 
+    &--iPad {
+      display: none;
+    }
+
     @include iPad {
       top: -53px;
+
+      &--Desktop {
+        display: none;
+      }
+
+      &--iPad {
+        display: block;
+      }
     }
 
     @include mobile {

@@ -2,18 +2,23 @@ import { translationArr } from './translate';
 
 // Select language and translate content;
 
-// const userLang = navigator.language || navigator.userLanguage;
+const userLang = navigator.language || navigator.userLanguage;
+const slavicLangList = ['UA', 'ua', 'UK', 'uk', 'BY', 'by', 'BE', 'be', 'RU', 'ru'];
+const slavicLangcheck = slavicLangList.some(el => userLang.includes(el));
 
-// console.log("The language is: " + userLang);
+let lang = window.localStorage.getItem('lang');
 
-// window.localStorage.setItem('lang', userLang);
-// const lang = window.localStorage.getItem('lang');
-
-// console.log(lang);
-
-if (!document.cookie) {
-  document.cookie = 'UA';
+if (!lang) {
+  if (slavicLangcheck) {
+    window.localStorage.setItem('lang', 'UA');
+  } else {
+    window.localStorage.setItem('lang', 'EN');
+  }
 }
+
+// if (!document.cookie) {
+//   document.cookie = 'UA';
+// }
 
 const langSwitchers = document.querySelectorAll('.select-lang');
 
@@ -24,9 +29,11 @@ langSwitchers.forEach(select => {
 });
 
 function changeURLLanguage(child) {
-  const lang = child.innerHTML;
+  const newLang = child.innerHTML;
 
-  document.cookie = lang;
+  window.localStorage.setItem('lang', newLang);
+  lang = window.localStorage.getItem('lang');
+
   changeLanguage();
   changeImages();
   translateButtonsMore();
@@ -35,7 +42,9 @@ function changeURLLanguage(child) {
 }
 
 function changeLanguage() {
-  const lang = document.cookie;
+  // const lang = document.cookie;
+  lang = window.localStorage.getItem('lang');
+
   const currentLang = document.querySelectorAll('.current-lang');
 
   currentLang.forEach(item => {
@@ -58,7 +67,9 @@ function changeLanguage() {
 translatePlaceholders();
 
 function translatePlaceholders() {
-  const lang = document.cookie;
+  // const lang = document.cookie;
+  lang = window.localStorage.getItem('lang');
+
   const inputs = document.getElementsByClassName('touch-form__data-field');
   const textArea = document.getElementById('question');
 
@@ -113,7 +124,9 @@ function translatePlaceholders() {
 
 function translateButtonsMore() {
   const moreButtons = document.querySelectorAll('.services-section__text-open-btn');
-  const lang = document.cookie;
+  // const lang = document.cookie;
+
+  lang = window.localStorage.getItem('lang');
 
   moreButtons.forEach(button => {
     if (lang === 'EN') {
@@ -136,12 +149,13 @@ function translateButtonsMore() {
   });
 }
 
-// changeLanguage();
+changeLanguage();
 
 // Сhange the image depending on the language
 
 function changeImages() {
-  const lang = document.cookie;
+  // const lang = document.cookie;
+  lang = window.localStorage.getItem('lang');
 
   const imageWhyProsto = document.querySelectorAll('._lang__img');
 
@@ -242,7 +256,9 @@ function toggleTryIt() {
 
 function tryItImageChange() {
   const images = document.querySelectorAll('.try-it__QR-image');
-  const lang = document.cookie;
+  // const lang = document.cookie;
+
+  lang = window.localStorage.getItem('lang');
 
   images.forEach(image => {
     image.classList.add('try-it__QR-image--close');
@@ -271,7 +287,8 @@ showVideoButtons.forEach(showVideo => {
 
   if (closeVideo) {
     closeVideo.addEventListener('click', function() {
-      const lang = document.cookie;
+      // const lang = document.cookie;
+      lang = window.localStorage.getItem('lang');
 
       if (showVideo.classList.contains(lang)) {
         showVideo.classList.remove('try-it__QR-image--close');
@@ -332,10 +349,14 @@ const showButton = document.querySelector('.pay-service__button');
 const hideButton = document.querySelector('.partners-layout__close-cross');
 const partnerSection = document.getElementById('partners-layout');
 
-showButton.addEventListener('click', function() {
-  partnerSection.classList.add('partners-layout--show');
-});
+if (showButton) {
+  showButton.addEventListener('click', function() {
+    partnerSection.classList.add('partners-layout--show');
+  });
+};
 
-hideButton.addEventListener('click', function() {
-  partnerSection.classList.remove('partners-layout--show');
-});
+if (showButton) {
+  hideButton.addEventListener('click', function() {
+    partnerSection.classList.remove('partners-layout--show');
+  });
+};
