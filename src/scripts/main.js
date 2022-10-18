@@ -373,6 +373,23 @@ if (openButtons) {
   });
 }
 
+const openImages = document.querySelectorAll('.services-section__mobile-img');
+
+openImages.forEach(img => {
+  img.addEventListener('click', function() {
+    const parent = img.closest('.services-section__mobile');
+    const textMobile = parent.querySelector('.services-section__mobile-text');
+
+    if (textMobile.classList.contains('services-section__mobile-text--close')) {
+      textMobile.classList.remove('services-section__mobile-text--close');
+      textMobile.classList.add('services-section__mobile-text--open');
+    } else {
+      textMobile.classList.remove('services-section__mobile-text--open');
+      textMobile.classList.add('services-section__mobile-text--close');
+    }
+  });
+});
+
 // Show and hide 'Partners layout'
 const showButton = document.querySelector('.pay-service__button');
 const hideButton = document.querySelector('.partners-layout__close-cross');

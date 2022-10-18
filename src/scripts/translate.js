@@ -468,4 +468,8 @@ export const translationArr = {
     'UA': 'ВІДЕО',
     'EN': 'Video',
   },
+  'our-partners': {
+    'UA': 'Наші партнери',
+    'EN': 'Our partners',
+  },
 };

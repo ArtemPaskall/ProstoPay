@@ -70,7 +70,7 @@
   }
 
   &__copyright {
-    font-weight: 300;
+    font-weight: 200;
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
@@ -78,6 +78,6 @@
     @include iPad {
       font-size: 16px;
       line-height: 20px;
-      }
+    }
   }
 }

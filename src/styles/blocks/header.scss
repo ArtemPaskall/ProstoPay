@@ -47,12 +47,13 @@
     @include iPad {
       max-width: 300px;
     }
-
   }
 
   &__text {
     color: white;
     margin-top: 40px;
+    font-size: 22px;
+    line-height: 27px;
   }
 
   &__button {
