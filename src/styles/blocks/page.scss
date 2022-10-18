@@ -124,6 +124,12 @@
       }
     }
 
+    &--about-EN {
+      @include mobile {
+        margin-top: 325px;
+      }
+    }
+
     &--contacts {
       margin-top: 186px;
 
@@ -135,6 +141,12 @@
       @include mobile {
         // margin-top: 35px;
         margin-top: 40px;
+      }
+    }
+
+    &--contacts-EN {
+      @include mobile {
+        margin-top: 72px;
       }
     }
   }

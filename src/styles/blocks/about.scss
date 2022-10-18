@@ -46,6 +46,14 @@
     }
   }
 
+  &__text-p {
+    padding-top: 18px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
   &__benefit {
     position: absolute;
     bottom: -30px;

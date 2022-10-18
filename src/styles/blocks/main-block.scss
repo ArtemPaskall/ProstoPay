@@ -63,9 +63,13 @@
     right: 210px;
     bottom: 270px;
 
+    &--EN {
+      bottom: 230px;
+    }
+
     @include iPad {
       right: 135px;
-      bottom: 190px;
+      bottom: 194px;
     }
 
     @include mobile {
