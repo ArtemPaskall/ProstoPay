@@ -243,7 +243,6 @@ function toggleTryIt() {
 
 function tryItImageChange() {
   const images = document.querySelectorAll('.try-it__QR-image');
-  // const lang = document.cookie;
 
   lang = window.localStorage.getItem('lang');
 
