@@ -16,7 +16,7 @@ window.addEventListener('scroll', function() {
     menu.style.top = '-' + height;
   } else {
     menu.style.top = '0';
-    menu.style.zIndex = '1';
+    menu.style.zIndex = '2';
     menu.style.position = 'sticky';
   }
 

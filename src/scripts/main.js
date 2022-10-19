@@ -35,7 +35,10 @@ function changeURLLanguage(child) {
   translateButtonsMore();
   translatePlaceholders();
   tryItImageChange();
+  // emailSwitch();
 }
+
+changeLanguage();
 
 function changeLanguage() {
   lang = window.localStorage.getItem('lang');
@@ -120,6 +123,8 @@ function translatePlaceholders() {
   }
 }
 
+translateButtonsMore();
+
 function translateButtonsMore() {
   const moreButtons = document.querySelectorAll('.services-section__text-open-btn');
 
@@ -145,9 +150,6 @@ function translateButtonsMore() {
     }
   });
 }
-
-translateButtonsMore();
-changeLanguage();
 
 // Сhange the image depending on the language
 
@@ -364,3 +366,20 @@ if (showButton) {
     partnerSection.classList.remove('partners-layout--show');
   });
 };
+
+// Switch email depend on language
+// emailSwitch();
+
+// function emailSwitch() {
+//   const forms = document.querySelectorAll('.touch-form__form');
+
+//   lang = window.localStorage.getItem('lang');
+
+//   forms.forEach(el => {
+//     if (lang === 'EN') {
+//       el.action = 'a';
+//     } else {
+//       el.action = 'b';
+//     }
+//   });
+// }

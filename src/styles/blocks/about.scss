@@ -40,9 +40,10 @@
     @include mobile {
       font-size: 13px;
       line-height: 130%;
-      max-width: 340px;
+      // max-width: 340px;
+      max-width: 310px;
       position: relative;
-      left: -15px;
+      // left: -15px;
     }
   }
 

@@ -468,6 +468,10 @@ export const translationArr = {
     'UA': 'ВІДЕО',
     'EN': 'Video',
   },
+  'try-it-close-button': {
+    'UA': 'Закрити',
+    'EN': 'Close',
+  },
   'our-partners': {
     'UA': 'Наші партнери',
     'EN': 'Our partners',
