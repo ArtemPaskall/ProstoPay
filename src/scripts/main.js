@@ -35,11 +35,9 @@ function changeURLLanguage(child) {
   translateButtonsMore();
   translatePlaceholders();
   tryItImageChange();
-  // versionEN();
 }
 
 function changeLanguage() {
-  // const lang = document.cookie;
   lang = window.localStorage.getItem('lang');
 
   const currentLang = document.querySelectorAll('.current-lang');
@@ -64,11 +62,10 @@ function changeLanguage() {
 translatePlaceholders();
 
 function translatePlaceholders() {
-  // const lang = document.cookie;
   lang = window.localStorage.getItem('lang');
 
   const inputs = document.getElementsByClassName('touch-form__data-field');
-  const textArea = document.getElementById('question');
+  const textAreas = document.getElementsByClassName('touch-form__textarea');
 
   if (lang === 'EN') {
     for (const input of inputs) {
@@ -111,17 +108,20 @@ function translatePlaceholders() {
   }
 
   if (lang === 'EN') {
-    textArea.placeholder = 'Are you interested in something else?';
+    for (const area of textAreas) {
+      area.placeholder = 'Are you interested in something else?';
+    }
   }
 
   if (lang === 'UA') {
-    textArea.placeholder = 'Можливо вас цікавить ще щось?';
+    for (const area of textAreas) {
+      area.placeholder = 'Можливо вас цікавить ще щось?';
+    }
   }
 }
 
 function translateButtonsMore() {
   const moreButtons = document.querySelectorAll('.services-section__text-open-btn');
-  // const lang = document.cookie;
 
   lang = window.localStorage.getItem('lang');
 
@@ -152,7 +152,6 @@ changeLanguage();
 // Сhange the image depending on the language
 
 function changeImages() {
-  // const lang = document.cookie;
   lang = window.localStorage.getItem('lang');
 
   const imageWhyProsto = document.querySelectorAll('._lang__img');
@@ -175,35 +174,6 @@ changeImages();
 window.addEventListener('resize', changeImages);
 window.addEventListener('resize', translateButtonsMore);
 
-// Set different classes for EN and UA
-
-// function versionEN() {
-//   const parentDiv = document.querySelector('.about__text');
-//   const benefitBlock = document.querySelector('.main-block__benefit');
-//   const aboutBlock = document.querySelector('.page__section--about');
-//   const contactsBlock = document.querySelector('.page__section--contacts');
-
-//   lang = window.localStorage.getItem('lang');
-
-//   if (lang === 'EN') {
-//     for (const p of parentDiv.children) {
-//       p.classList.add('about__text-p');
-//     }
-//     benefitBlock.classList.add('main-block__benefit--EN');
-//     aboutBlock.classList.add('page__section--about-EN');
-//     contactsBlock.classList.add('page__section--contacts-EN');
-//   } else {
-//     for (const p of parentDiv.children) {
-//       p.classList.remove('about__text-p');
-//     }
-//     benefitBlock.classList.remove('main-block__benefit--EN');
-//     aboutBlock.classList.remove('page__section--about-EN');
-//     contactsBlock.classList.remove('page__section--contacts-EN');
-//   }
-// }
-
-// versionEN();
-
 // Menu hide
 const menuIcon = document.getElementById('dropdownOpen');
 const dropdownMenu = document.getElementById('dropdownMenu');
@@ -221,16 +191,6 @@ menuIcon.addEventListener('click', function() {
 });
 
 // Function show 'pop-up-form' overlay
-
-// const touchButtons = document.querySelectorAll('.button__form');
-// const closePopup = document.querySelector('.touch-form__close-cross');
-
-// touchButtons.forEach(button => button.addEventListener('click', togglePopup));
-// closePopup.addEventListener('click', togglePopup);
-
-// function togglePopup() {
-//   document.getElementById('pop-up-form').classList.toggle('touch-form--active');
-// }
 
 const touchButtons = document.querySelectorAll('.button__form');
 const closePopup = document.querySelectorAll('.touch-form__close-cross');
@@ -314,7 +274,6 @@ showVideoButtons.forEach(showVideo => {
 
   if (closeVideo) {
     closeVideo.addEventListener('click', function() {
-      // const lang = document.cookie;
       lang = window.localStorage.getItem('lang');
 
       if (showVideo.classList.contains(lang)) {
