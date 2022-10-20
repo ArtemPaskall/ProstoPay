@@ -21,8 +21,10 @@
   }
 
   @include mobile {
-    // max-width: 380px;
+    max-width: 380px;
     top: 5%;
+    left: initial;
+    right: initial;
 
     &--mobile {
       display: none;
