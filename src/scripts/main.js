@@ -171,7 +171,18 @@ function changeImages() {
       }
     }
   });
+
+  const superLineMobile = document.querySelectorAll('.main-block__img-mobile');
+
+  superLineMobile.forEach(line => {
+    line.classList.remove('main-block__img-mobile--visible');
+
+    if (line.classList.contains(lang)) {
+      line.classList.add('main-block__img-mobile--visible');
+    }
+  });
 }
+
 changeImages();
 window.addEventListener('resize', changeImages);
 window.addEventListener('resize', translateButtonsMore);

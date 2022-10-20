@@ -49,12 +49,16 @@
     display: none;
 
     @include mobile {
-      display: block;
+      display: none;
       width: $min-screen;
       padding: 0 11.48% 0 7.26%;
       position: absolute;
       top: -60px;
       z-index: -2;
+
+      &--visible {
+        display: block;
+      }
     }
   }
 
