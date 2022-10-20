@@ -9,28 +9,28 @@
   justify-content: flex-start;
   align-items: center;
 
-  position: absolute;
-  top: 10%;
-  left: 55px;
-  right: 55px;
+  // position: absolute;
+  // top: 10%;
+  // left: 55px;
+  // right: 55px;
 
-  @include iPad {
-    left: 35px;
-    right: 35px;
-  }
+  // @include iPad {
+  //   left: 35px;
+  //   right: 35px;
+  // }
 
   @include mobile {
     max-width: 380px;
-    top: 5%;
+    // top: 5%;
 
-    &--mobile {
-      display: none;
-    }
+    // &--mobile {
+    //   display: none;
+    // }
 
-    &--footer-mobile {
-      top: initial;
-      bottom: 40px;
-    }
+    // &--footer-mobile {
+    //   top: initial;
+    //   bottom: 40px;
+    // }
   }
 
   &--services-bottom {
