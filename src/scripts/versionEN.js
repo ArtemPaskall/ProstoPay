@@ -1,3 +1,5 @@
+// Style changes for English version
+
 const langSwitchers = document.querySelectorAll('.select-lang');
 let lang;
 

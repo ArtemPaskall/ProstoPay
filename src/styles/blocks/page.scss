@@ -7,10 +7,6 @@
     color: $text-color;
     min-width: $min-screen;
     position: relative;
-
-    &--services {
-      // height: 1px;
-    }
   }
 
   &__header-mobile {
@@ -110,10 +106,6 @@
       @include iPad {
         margin-top: 25px;
       }
-
-      @include mobile {
-        // margin-top: 10px;
-      }
     }
 
     &--about {
@@ -139,12 +131,10 @@
       margin-top: 186px;
 
       @include iPad {
-        // margin-top: 40px;
         margin-top: 90px;
       }
 
       @include mobile {
-        // margin-top: 35px;
         margin-top: 40px;
       }
     }
@@ -158,7 +148,6 @@
 
   &__main {
     margin: 0 auto;
-    // overflow: auto;
   }
 
   &__footer-wrap {
@@ -196,11 +185,9 @@
 
     @include mobile {
       display: block;
-      // height: 360px;
       background: linear-gradient(120.09deg, #1B3F92 15.36%, #5C81ED 85.12%);
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       position: relative;
-      // top: 120px;
 
       &--services {
         top: 55px;
@@ -208,7 +195,6 @@
 
       &--products {
         top: 55px;
-        // z-index: -4;
       }
     }
   }

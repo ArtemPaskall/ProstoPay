@@ -152,6 +152,7 @@ function translateButtonsMore() {
 }
 
 // Сhange the image depending on the language
+changeImages();
 
 function changeImages() {
   lang = window.localStorage.getItem('lang');
@@ -183,7 +184,6 @@ function changeImages() {
   });
 }
 
-changeImages();
 window.addEventListener('resize', changeImages);
 window.addEventListener('resize', translateButtonsMore);
 
@@ -253,6 +253,7 @@ function toggleTryIt() {
 }
 
 // Function change image depend on language on 'try-it' overlay
+tryItImageChange();
 
 function tryItImageChange() {
   const images = document.querySelectorAll('.try-it__QR-image');
@@ -267,8 +268,6 @@ function tryItImageChange() {
     }
   });
 };
-
-tryItImageChange();
 
 // Function show 'demo-video' overlay
 const showVideoButtons = document.querySelectorAll('.try-it__QR-image');
@@ -292,7 +291,10 @@ showVideoButtons.forEach(showVideo => {
         showVideo.classList.remove('try-it__QR-image--close');
       }
       videoIframe.classList.remove('try-it__demo-video--show');
-      videoIframe.src = videoIframe.src;
+
+      const reloadVideo = videoIframe.src;
+
+      videoIframe.src = reloadVideo;
       closeVideo.classList.remove('try-it__video-close-button--show');
     });
   }
@@ -305,7 +307,9 @@ const allVideoItems = document.querySelectorAll('.try-it__video-item');
 if (tryItCloseButton) {
   tryItCloseButton.addEventListener('click', function() {
     allVideoItems.forEach(video => {
-      video.src = video.src;
+      const reloadVideo = video.src;
+
+      video.src = reloadVideo;
     });
   });
 }

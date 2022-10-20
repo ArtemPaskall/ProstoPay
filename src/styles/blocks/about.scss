@@ -30,7 +30,6 @@
     max-width: 880px;
     font-size: 20px;
     line-height: 120%;
-    // text-indent: 40px;
 
     @include iPad {
       font-size: 14px;
@@ -41,7 +40,6 @@
       font-size: 13px;
       line-height: 130%;
       max-width: 340px;
-      // max-width: 310px;
       position: relative;
       left: -15px;
     }

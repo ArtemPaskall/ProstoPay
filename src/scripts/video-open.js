@@ -1,5 +1,4 @@
 // Hide and show video section
-
 const showButtons = document.querySelectorAll('.video-open');
 const closeButton = document.getElementById('video-close');
 const video = document.getElementById('video');
@@ -26,12 +25,6 @@ function showVideo() {
 
 closeButton.addEventListener('click', hideVideo);
 
-closeButton.addEventListener('click', function() {
-  const videoIframe = document.querySelector('.video__item');
-
-  videoIframe.src = videoIframe.src;
-});
-
 function hideVideo() {
   video.style.zIndex = '-1';
 
@@ -40,3 +33,13 @@ function hideVideo() {
   videoSection.classList.remove('page__section--video-open');
   videoSection.style.position = 'absolute';
 }
+
+// Stop video player when hide video
+
+closeButton.addEventListener('click', function() {
+  const videoIframe = document.querySelector('.video__item');
+
+  const reloadVideo = videoIframe.src;
+
+  videoIframe.src = reloadVideo;
+});

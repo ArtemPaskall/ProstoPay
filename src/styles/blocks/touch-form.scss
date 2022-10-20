@@ -54,7 +54,6 @@
   z-index: -4;
 
   &--active {
-    // position: fixed;
     position: absolute;
     transform: scale(1);
     opacity: 1;
@@ -169,7 +168,6 @@
       height: 35px;
       border-radius: 12px;
       font-size: 16px;
-      // width: 340px;
       width: 280px;
 
     }
@@ -192,11 +190,9 @@
     grid-template-columns: repeat(3, auto);
     margin-top: 10px;
     row-gap: 10px;
-    // column-gap: 30px;
     column-gap: 10px;
 
     @include mobile {
-      // max-width: 380px;
       max-width: 310px;
       grid-template-columns: repeat(2, auto);
       padding: 0 20px;
@@ -295,7 +291,6 @@
     }
 
     @include mobile {
-      // max-width: 340px;
       max-width: 280px;
       margin: 15px auto;
     }

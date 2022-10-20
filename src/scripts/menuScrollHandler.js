@@ -2,10 +2,6 @@
 
 let lastScrollTop = 0;
 const menu = document.getElementById('menu');
-// const touchForm2 = document.getElementById('touch-form-2');
-
-// const touchForm2 = document.getElementById('touch-form-2');
-// console.log(touchForm2);
 
 window.addEventListener('scroll', function() {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
