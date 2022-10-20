@@ -379,18 +379,18 @@ if (showButton) {
 };
 
 // Switch email depend on language
-// emailSwitch();
+emailSwitch();
 
-// function emailSwitch() {
-//   const forms = document.querySelectorAll('.touch-form__form');
+function emailSwitch() {
+  const forms = document.querySelectorAll('.touch-form__form');
 
-//   lang = window.localStorage.getItem('lang');
+  lang = window.localStorage.getItem('lang');
 
-//   forms.forEach(el => {
-//     if (lang === 'EN') {
-//       el.action = 'a';
-//     } else {
-//       el.action = 'b';
-//     }
-//   });
-// }
+  forms.forEach(el => {
+    if (lang === 'EN') {
+      el.action = 'https://formsubmit.co/9ac3bb0099f26da215a604d9ba0c10e9';
+    } else {
+      el.action = 'https://formsubmit.co/51caef3694f7691cae1d35f0ffc5e349';
+    }
+  });
+}
