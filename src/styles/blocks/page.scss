@@ -12,6 +12,10 @@
     }
   }
 
+  &__header-mobile {
+    margin: 0 auto;
+  }
+
   &__menu-wrap {
     background: linear-gradient(106.35deg, #1B3F92 23.87%, #5C81ED 101.29%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -214,20 +218,6 @@
 
   &__touch-form {
     margin: 0 auto;
-
-    position: absolute;
-    top: 10%;
-    left: 55px;
-    right: 55px;
-
-    @include iPad {
-      left: 35px;
-      right: 35px;
-    }
-
-    @include mobile {
-      top: 5%;
-    }
   }
 
   &__try-it {
