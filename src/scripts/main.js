@@ -35,7 +35,7 @@ function changeURLLanguage(child) {
   translateButtonsMore();
   translatePlaceholders();
   tryItImageChange();
-  // emailSwitch();
+  emailSwitch();
 }
 
 changeLanguage();
