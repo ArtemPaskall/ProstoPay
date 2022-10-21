@@ -104,7 +104,6 @@ export const translationArr = {
   'about-text-p2': {
     'UA': '&emsp; Ми почали в 2016 році з простим рішенням для RFID-карт на автоматах з продажу снеків.'
      + ' Це був лише початок, далі ми продовжили зростати, створюючи нові IoT-пристрої та програмні продукти.'
-    //  + ' Власна команда розробників (і фізичних пристроїв, і програмних продуктів) надає різноманітні гнучкі клієнтоорієнтовані рішення.'
      + ' Сьогодні наші продукти підтримують телеметрію та безготівкові платежі для кави, снеків, автоматів з розливу води, їжї, іграшок, автомийок та на інших торгових апаратах.',
     'EN': '&emsp; We started in 2016 as an ordinary RFID card solution for <strong>snack vending machines</strong>.'
      + ' It was just the beginning and we continued to develop our product. We’ve been growing, creating new IoT devices and software.'
