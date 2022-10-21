@@ -135,13 +135,14 @@
       }
 
       @include mobile {
-        margin-top: 40px;
+        // margin-top: 40px;
       }
     }
 
     &--contacts-EN {
       @include mobile {
-        margin-top: 72px;
+        // margin-top: 72px;
+        margin-top: 36px;
       }
     }
   }
