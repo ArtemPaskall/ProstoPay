@@ -36,12 +36,13 @@ function changeURLLanguage(child) {
   translatePlaceholders();
   tryItImageChange();
   emailSwitch();
+  editDiagram();
 }
 
 changeLanguage();
 
 function changeLanguage() {
-  lang = window.localStorage.getItem('lang');
+  // lang = window.localStorage.getItem('lang');
 
   const currentLang = document.querySelectorAll('.current-lang');
 
@@ -65,14 +66,14 @@ function changeLanguage() {
 translatePlaceholders();
 
 function translatePlaceholders() {
-  lang = window.localStorage.getItem('lang');
+  // lang = window.localStorage.getItem('lang');
 
   const inputs = document.getElementsByClassName('touch-form__data-field');
   const textAreas = document.getElementsByClassName('touch-form__textarea');
 
   if (lang === 'EN') {
     for (const input of inputs) {
-      if (input.placeholder === 'І\'мя') {
+      if (input.placeholder === 'Ім\'я') {
         input.placeholder = 'Name';
       }
 
@@ -93,7 +94,7 @@ function translatePlaceholders() {
   if (lang === 'UA') {
     for (const input of inputs) {
       if (input.placeholder === 'Name') {
-        input.placeholder = 'І\'мя';
+        input.placeholder = 'Ім\'я';
       }
 
       if (input.placeholder === 'Country') {
@@ -128,7 +129,7 @@ translateButtonsMore();
 function translateButtonsMore() {
   const moreButtons = document.querySelectorAll('.services-section__text-open-btn');
 
-  lang = window.localStorage.getItem('lang');
+  // lang = window.localStorage.getItem('lang');
 
   moreButtons.forEach(button => {
     if (lang === 'EN') {
@@ -155,7 +156,7 @@ function translateButtonsMore() {
 changeImages();
 
 function changeImages() {
-  lang = window.localStorage.getItem('lang');
+  // lang = window.localStorage.getItem('lang');
 
   const imageWhyProsto = document.querySelectorAll('._lang__img');
 
@@ -258,7 +259,7 @@ tryItImageChange();
 function tryItImageChange() {
   const images = document.querySelectorAll('.try-it__QR-image');
 
-  lang = window.localStorage.getItem('lang');
+  // lang = window.localStorage.getItem('lang');
 
   images.forEach(image => {
     image.classList.add('try-it__QR-image--close');
@@ -285,7 +286,7 @@ showVideoButtons.forEach(showVideo => {
 
   if (closeVideo) {
     closeVideo.addEventListener('click', function() {
-      lang = window.localStorage.getItem('lang');
+      // lang = window.localStorage.getItem('lang');
 
       if (showVideo.classList.contains(lang)) {
         showVideo.classList.remove('try-it__QR-image--close');
@@ -317,7 +318,7 @@ if (tryItCloseButton) {
 // Open and hide text on Services mobile
 const openButtons = document.querySelectorAll('.services-section__text-open-btn');
 
-lang = window.localStorage.getItem('lang');
+// lang = window.localStorage.getItem('lang');
 
 if (openButtons) {
   openButtons.forEach(child => {
@@ -388,7 +389,7 @@ emailSwitch();
 function emailSwitch() {
   const forms = document.querySelectorAll('.touch-form__form');
 
-  lang = window.localStorage.getItem('lang');
+  // lang = window.localStorage.getItem('lang');
 
   forms.forEach(el => {
     if (lang === 'EN') {
@@ -397,4 +398,26 @@ function emailSwitch() {
       el.action = 'https://formsubmit.co/51caef3694f7691cae1d35f0ffc5e349';
     }
   });
+}
+
+// Change diagram links style depend on language
+editDiagram();
+
+function editDiagram() {
+  const cashlessLink = document.querySelector('.diagram__cashless-link');
+  const feedbackLink = document.querySelector('.diagram__feedback-link');
+  const fiskalkLink = document.querySelector('.diagram__fiscal-link');
+  const remoteLink = document.querySelector('.diagram__remote-link');
+
+  if (lang === 'EN') {
+    cashlessLink.classList.add('diagram__cashless-link--en');
+    feedbackLink.classList.add('diagram__feedback-link--en');
+    fiskalkLink.classList.add('diagram__fiscal-link--en');
+    remoteLink.classList.add('diagram__remote-link--en');
+  } else {
+    cashlessLink.classList.remove('diagram__cashless-link--en');
+    feedbackLink.classList.remove('diagram__feedback-link--en');
+    fiskalkLink.classList.remove('diagram__fiscal-link--en');
+    remoteLink.classList.remove('diagram__remote-link--en');
+  }
 }

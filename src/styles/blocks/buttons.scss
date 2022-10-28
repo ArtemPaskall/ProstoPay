@@ -151,7 +151,10 @@
   &__title {
     font-weight: 100;
     font-size: 96px;
-    line-height: 117px;
+
+    &--span {
+      font-size: 55px;
+    }
 
     @include iPad {
       font-size: 54px;

@@ -207,9 +207,19 @@
     top: -20px;
     left: 0;
 
+    &--en {
+      top: 4px;
+      left: 40px;
+    }
+
     @include iPad {
       top: -10px;
       left: 10px;
+
+      &--en {
+        top: 2px;
+        left: 42px;
+      }
     }
 
     @include mobile {
@@ -217,6 +227,11 @@
       left: 20px;
       font-size: 14px;
       line-height: 16px;
+
+      &--en {
+        top: -16px;
+        left: 45px;
+      }
     }
   }
 
@@ -224,9 +239,19 @@
     top: 45px;
     left: 560px;
 
+    &--en {
+      top: 48px;
+      left: 542px;
+    }
+
     @include iPad {
       top: 35px;
       left: 320px;
+
+      &--en {
+        top: 40px;
+        left: 312px;
+      }
     }
 
     @include mobile {
@@ -285,6 +310,11 @@
       left: 148px;
       font-size: 14px;
       line-height: 16px;
+
+      &--en {
+        top: 180px;
+        left: 168px;
+      }
     }
   }
 
@@ -292,9 +322,19 @@
     top: 390px;
     left: 40px;
 
+    &--en {
+      top: 400px;
+      left: 28px;
+    }
+
     @include iPad {
       top: 215px;
       left: 20px;
+
+      &--en {
+        top: 218px;
+        left: 38px;
+      }
     }
 
     @include mobile {
@@ -302,6 +342,11 @@
       left: 160px;
       font-size: 14px;
       line-height: 16px;
+
+      &--en {
+        top: 78px;
+        left: 148px;
+      }
     }
   }
 

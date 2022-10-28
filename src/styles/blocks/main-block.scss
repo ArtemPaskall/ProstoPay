@@ -63,16 +63,16 @@
 
   &__benefit {
     position: absolute;
-    right: 210px;
-    bottom: 270px;
+    right: 235px;
+    bottom: 242px;
 
     &--EN {
       bottom: 230px;
     }
 
     @include iPad {
-      right: 135px;
-      bottom: 194px;
+      right: 142px;
+      bottom: 162px;
     }
 
     @include mobile {

@@ -80,8 +80,8 @@ export const translationArr = {
     'EN': 'on install',
   },
   'products-benefit-title': {
-    'UA': '20хв',
-    'EN': '20mins',
+    'UA': '20<span class="benefit__title--span">хв</span>',
+    'EN': '20<span class="benefit__title--span">mins</span>',
   },
   'about-description': {
     'UA': 'непотрібних відвідувань',
@@ -94,12 +94,12 @@ export const translationArr = {
   'about-text-p1': {
     'UA': '&emsp; ProstoPay був створений в Україні. Простота керує нашим баченням.'
      + ' Ми робимо складні ІТ-рішення простими у використанні для партнерів і клієнтів.'
-     + 'Наша місія допомагати кавовим і вендинговим компаніям вести свій бізнес на новому рівні операційної ефективності та продуктивності,'
-     + 'а також насолоджуватися зростанням доходу завдяки сучасним платіжним рішенням.',
+     + ' Наша місія допомагати кавовим і вендинговим компаніям вести свій бізнес на новому рівні операційної ефективності та продуктивності,'
+     + ' а також насолоджуватися зростанням доходу завдяки сучасним платіжним рішенням.',
     'EN': '&emsp; ProstoPay was born in Ukraine. “Prosto” means “simple” in Ukrainian. Simplicity is driving our vision -'
-     + 'to remove the barriers in coffee and snack consumption. We make complicated IT solutions easy to use for partners and customers.'
-     + 'We see our mission in helping coffee and vending companies to run their business at the new level of operational efficiency'
-     + 'and productivity and to enjoy higher sales driven by modern payment solutions.',
+     + ' to remove the barriers in coffee and snack consumption. We make complicated IT solutions easy to use for partners and customers.'
+     + ' We see our mission in helping coffee and vending companies to run their business at the new level of operational efficiency'
+     + ' and productivity and to enjoy higher sales driven by modern payment solutions.',
   },
   'about-text-p2': {
     'UA': '&emsp; Ми почали в 2016 році з простим рішенням для RFID-карт на автоматах з продажу снеків.'
@@ -107,15 +107,15 @@ export const translationArr = {
      + ' Сьогодні наші продукти підтримують телеметрію та безготівкові платежі для кави, снеків, автоматів з розливу води, їжї, іграшок, автомийок та на інших торгових апаратах.',
     'EN': '&emsp; We started in 2016 as an ordinary RFID card solution for <strong>snack vending machines</strong>.'
      + ' It was just the beginning and we continued to develop our product. We’ve been growing, creating new IoT devices and software.'
-     + 'In-house hardware & software teams provide variety of flexible client-oriented solutions.'
-     + 'Today our products support telemetry and cashless payments for <strong>coffee, snack, water, food,  toys, car washes and other vending machines</strong>.',
+     + ' In-house hardware & software teams provide variety of flexible client-oriented solutions.'
+     + ' Today our products support telemetry and cashless payments for <strong>coffee, snack, water, food,  toys, car washes and other vending machines</strong>.',
   },
   'about-text-p3': {
     'UA': '&emsp; Не варто забувати і про нашу підтримку: ProstoPay не зміг би розвиватися без швидкої та якісної підтримки клієнтів.'
      + ' Ми пишаємося тим, що завжди готові прийти на допомогу і вирішити будь-яку проблему для наших партнерів і клієнтів. Обираючи ProstoPay, ви отримуєте сучасний продукт,'
-     + 'швидку та якісну техпідтримку, конфіденційність даних та надійні і дружні відносини.',
+     + ' швидку та якісну техпідтримку, конфіденційність даних та надійні і дружні відносини.',
     'EN': '&emsp; We should not forget about our customer service team: ProstoPay couldn’t evolve without fast and quality customer support.'
-     + 'We are proud to be always ready to assist and resolve any problem for our partners and customers.',
+     + ' We are proud to be always ready to assist and resolve any problem for our partners and customers.',
   },
   'footer-text': {
     'UA': 'ProstoPay — ваш постачальник незамінних рішень для кави та вендінгу в сучасному цифровому світі.',
@@ -151,13 +151,13 @@ export const translationArr = {
   },
   'cashless-p1': {
     'UA': 'Згідно  дослідженнями ринку за останні роки використання готівки'
-    + 'різко скоротилось у всьому світі, в той час як використання карток все більше зміщується'
-    + 'в сторону мобільних/цифрових гаманців. І ця тенденція продовжується,'
-    + 'тому давайте спільно долучимось до платіжної революції.',
+    + ' різко скоротилось у всьому світі, в той час як використання карток все більше зміщується'
+    + ' в сторону мобільних/цифрових гаманців. І ця тенденція продовжується,'
+    + ' тому давайте спільно долучимось до платіжної революції.',
     'EN': 'According to market researches cash circulation dropped sharply'
      + 'all around the world in the recent years while card usage is increasingly shifting'
-     + 'to mobile/digital wallets. And this trend continues,'
-     + 'so let’s join the payment revolution together.',
+     + ' to mobile/digital wallets. And this trend continues,'
+     + ' so let’s join the payment revolution together.',
   },
   'cashless-p2': {
     'UA': 'ProstoPay фокусується на найбільш зручних способах мобільних оплат і пропонує 2 платіжні методи:',
@@ -165,26 +165,26 @@ export const translationArr = {
   },
   'cashless-p3': {
     'UA': '<strong>WEB-оплата.</strong> Сплачуйте за допомогою QR-коду або NFC-мітки на апараті.'
-     + 'Вам не потрібно завантажувати жодного додатку,'
-     + 'щоб придбати горнятко кави. Все у браузері смартфона -'
-     + 'розрахунок в один клік за допомогою Apple Pay,'
-     + 'Google Pay або інших популярних локальних гаманців.',
+     + ' Вам не потрібно завантажувати жодного додатку,'
+     + ' щоб придбати горнятко кави. Все у браузері смартфона -'
+     + ' розрахунок в один клік за допомогою Apple Pay,'
+     + ' Google Pay або інших популярних локальних гаманців.',
     'EN': '<strong>WEB-payment.</strong> Pay by QR-code or NFC tag at the machine.'
-      + 'You don’t need to download any app just to purchase a cup of coffee.'
-      + 'It is in the smartphone browser - one-click checkout using Apple Pay,'
-      + 'Google Pay or other popular local wallets.',
+      + ' You don’t need to download any app just to purchase a cup of coffee.'
+      + ' It is in the smartphone browser - one-click checkout using Apple Pay,'
+      + ' Google Pay or other popular local wallets.',
   },
   'cashless-p4': {
     'UA': '<strong>Додаток для оплат.</strong> Ви постійний клієнт автоматів?'
-     + 'Вітаємо, ви любите смачні продукти та цінуєте свій час!'
-     + 'І ми вас підтримуємо: просто завантажте додаток ProstoPay'
-     + 'та отримайте ще простіший спосіб оплати з додатковими можливостями.'
-     + 'Бонуси вже на підході!',
+     + ' Вітаємо, ви любите смачні продукти та цінуєте свій час!'
+     + ' І ми вас підтримуємо: просто завантажте додаток ProstoPay'
+     + ' та отримайте ще простіший спосіб оплати з додатковими можливостями.'
+     + ' Бонуси вже на підході!',
     'EN': '<strong>App payment.</strong> Are you a regular customer of the vending machines? Congrats,'
-     + 'you like tasty products and appreciate your time! And we support you there:'
-     + 'just download the ProstoPay app and receive even'
-     + 'easier payment method with additional features.'
-     + 'Bonuses are coming!',
+     + ' you like tasty products and appreciate your time! And we support you there:'
+     + ' just download the ProstoPay app and receive even'
+     + ' easier payment method with additional features.'
+     + ' Bonuses are coming!',
   },
   'cashless-p5': {
     'UA': 'Інші способи безготівкової оплати:',
@@ -192,10 +192,10 @@ export const translationArr = {
   },
   'cashless-p6': {
     'UA': '<strong>RFID-картки (картки-перепустки, дисконтні картки тощо).</strong>'
-     + 'Рішення для всіх організацій з картковою системою доступу, наприклад,'
-     + 'офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю'
-     + 'або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay.'
-     + 'Звісно, працівники також можуть поповнювати картку самостійно.',
+     + ' Рішення для всіх організацій з картковою системою доступу, наприклад,'
+     + ' офісів, заводів, складів тощо. Роботодавець може забезпечити співробітників повністю'
+     + ' або частково оплаченими снеками та кавою, використовуючи гнучкі тарифні плани ProstoPay.'
+     + ' Звісно, працівники також можуть поповнювати картку самостійно.',
     'EN': '<strong>RFID (Employee identification and other) cards.</strong> Solution for all organizations with card access system, e.g. offices, factories, warehouses etc. Employer could provide employees with fully paid or semi-paid snacks and coffee using ProstoPay’s flexible tariff plans. Of course, employees can also top-up the card by themselves.',
   },
   'cashless-p7': {
@@ -320,7 +320,7 @@ export const translationArr = {
   },
   'fiskal-text': {
     'UA': '            Кавовий та вендинговий бізнес працює на створення послуг та продуктів для задоволення потреб клієнтів. Для керівництва важливіше приділяти увагу розвитку бізнеса, а не юридичним складнощам. ProstoPay може допомогти кавовому та вендинговому бізнесу вести справи відповідно до фіскальних вимог та надсилати дані до податкових органів у разі необхідності.'
-    + 'В Україні з 2022 року вступили в дію  зміни до Закону про реєстрацію розрахункових операцій (РРО). Щоб допомогти нашим клієнтам, ми реалізували сервіс Програмного РРО (фіскалізації) для вендингових та торгових апаратів.',
+    + ' В Україні з 2022 року вступили в дію  зміни до Закону про реєстрацію розрахункових операцій (РРО). Щоб допомогти нашим клієнтам, ми реалізували сервіс Програмного РРО (фіскалізації) для вендингових та торгових апаратів.',
     'EN': 'The coffee and vending busineses work for creating services and delivering products to meet customer needs. Management prefers to pay attention to business, not to the legal complications. ProstoPay is able to assist coffee and vending businesses to run the service in compliance with the local fiscal requirments and to send data to the tax authorities if needed. ',
   },
   'services-button': {
@@ -333,9 +333,9 @@ export const translationArr = {
   },
   'dashboard-text': {
     'UA': 'Основне місце для моніторингу бізнес-потоків, відповідних  даних та підтримки операційної ефективності. Основні показники розміщені на WEB-сторінці: аналітичні графіки, інформація про продажі, моніторинг обладнання, залишків товарів та інгредієнтів, коштів тощо.'
-    + 'Рівень доступу легко змінюється в залежності від ролі та зони відповідальності вашого співробітника.',
+    + ' Рівень доступу легко змінюється в залежності від ролі та зони відповідальності вашого співробітника.',
     'EN': 'The main gateway to monitor the business flows and related data and to sustain operational efficiency.  Key indicators are at the WEB-page: analytical graphs, information about sales, machine monitoring, goods and ingredients stock, money etc.'
-     + 'Access level is easily managed depending on your empolyee’s role and area of responsibility.',
+     + ' Access level is easily managed depending on your empolyee’s role and area of responsibility.',
   },
   'seriesA-title': {
     'UA': 'Серія A',
@@ -363,10 +363,10 @@ export const translationArr = {
   },
   'prosto-service-text': {
     'UA': ' Потужний додаток для внутрішнього використання вашим персоналом.'
-     + 'Ви отримуєте швидкий доступ до ключових показників бізнесу. ProstoService допомагає операторам,'
-     + 'мерчендайзерам та техніхам виконувати щоденні операції. У додатку ви можете контролювати обладнання,'
-     + 'бачити основні тенденції, обліковувати  обслуговування апаратів,'
-     + 'отримувати сповіщення про помилки обладнання. Найважливіші операційні функції просто у вашому смартфоні.',
+     + ' Ви отримуєте швидкий доступ до ключових показників бізнесу. ProstoService допомагає операторам,'
+     + ' мерчендайзерам та техніхам виконувати щоденні операції. У додатку ви можете контролювати обладнання,'
+     + ' бачити основні тенденції, обліковувати  обслуговування апаратів,'
+     + ' отримувати сповіщення про помилки обладнання. Найважливіші операційні функції просто у вашому смартфоні.',
     'EN': 'Power application for the internal usage by your staff. Management gets quick access to key indicators about business activities. ProstoService helps merchandisers and technicians to perform day-to-day operations. In the app you can monitor machines, observe key trends, make records about machine servicing, get notifications about machine errors. The most important operational features are just in your smartphone.',
   },
   'seriesL-title': {
@@ -399,10 +399,10 @@ export const translationArr = {
   },
   'app-and-web-text': {
     'UA': ' WEB-оплата - найцікавіший спосіб безготівкової оплати в сучасному світі.'
-     + 'Клієнти просто сканують QR-код або торкаються NFC-мітки смартфоном і здійснюють оплату в один клік в браузері.'
-     + 'Крім того, ми створюємо інтеграцію з деякими популярними платіжними додатками на локальних ринках,'
-     + 'що дозволяє клієнтам платити в один клік за допомогою цих додатків.'
-     + 'Також ми можемо розробляти додатки для ваших потреб на основі нашої технології.',
+     + ' Клієнти просто сканують QR-код або торкаються NFC-мітки смартфоном і здійснюють оплату в один клік в браузері.'
+     + ' Крім того, ми створюємо інтеграцію з деякими популярними платіжними додатками на локальних ринках,'
+     + ' що дозволяє клієнтам платити в один клік за допомогою цих додатків.'
+     + ' Також ми можемо розробляти додатки для ваших потреб на основі нашої технології.',
     'EN': 'WEB-payment is the most exciting way to pay cashless in the modern world. Customers just scan QR-code or tap NFC tag by smartphone and pay in one click in the browser. Alternatively, we build the integration with some popular payment apps on local markets allowing customers to pay in one-click using these apps. Please take in mind, we can develop any app based on our technology.',
   },
   'form-title': {
@@ -460,5 +460,13 @@ export const translationArr = {
   'our-partners': {
     'UA': 'Наші партнери',
     'EN': 'Our partners',
+  },
+  'address': {
+    'UA': 'Адреса',
+    'EN': 'Address',
+  },
+  'phone': {
+    'UA': 'Телефон',
+    'EN': 'Phone',
   },
 };
