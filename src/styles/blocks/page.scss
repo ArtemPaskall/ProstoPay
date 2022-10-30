@@ -7,8 +7,6 @@
     color: $text-color;
     min-width: $min-screen;
     position: relative;
-
-    overflow: auto;
   }
 
   &__header-mobile {
@@ -30,7 +28,7 @@
 
     &--video {
       position: absolute;
-      transform: translateY(-100%);
+      transform: translateY(-105%);
       transition: transform 0.5s;
 
       right: 0;
@@ -153,7 +151,7 @@
   }
 
   &__footer-wrap {
-    height: 360px;
+    height: 380px;
     background: linear-gradient(120.09deg, #1B3F92 15.36%, #5C81ED 85.12%);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     position: relative;

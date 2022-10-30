@@ -73,6 +73,11 @@
     @include iPad {
       right: 142px;
       bottom: 162px;
+
+      &--EN {
+        right: 145px;
+        bottom: 196px;
+      }
     }
 
     @include mobile {

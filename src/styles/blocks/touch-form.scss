@@ -54,11 +54,14 @@
   z-index: -4;
 
   &--active {
-    position: absolute;
     position: fixed;
     transform: scale(1);
     opacity: 1;
     z-index: 2;
+
+    @include mobile {
+      position: absolute;
+    }
   }
 
   &__close-cross {
