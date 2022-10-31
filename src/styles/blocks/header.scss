@@ -4,7 +4,7 @@
   display: block;
 
   @include iPad {
-    min-height: 680px;
+    min-height: 780px;
   }
 
   @include mobile {
@@ -45,6 +45,7 @@
 
   &__logo {
     width: 100%;
+    max-width: 330px;
 
     @include iPad {
       max-width: 300px;

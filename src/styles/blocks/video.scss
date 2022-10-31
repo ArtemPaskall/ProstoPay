@@ -3,7 +3,7 @@
   z-index: -1;
 
   @include iPad {
-    max-width: $ipad-width;
+    // max-width: $ipad-width;
   }
 
   &__item {

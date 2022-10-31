@@ -52,17 +52,27 @@
       grid-template-columns: repeat(3, 60px);
       grid-template-rows: repeat(auto-fill, auto);
     }
+  }
 
-    & img {
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 65px;
+  &__img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
 
-      @include mobile {
-        width: 50px;
-      }
+    @include mobile {
+      width: 50px;
+    }
+  }
+
+  &__img {
+    &--kaspi {
+      width: 95px;
+    }
+
+    &--visa {
+      width: 95px;
     }
   }
 }

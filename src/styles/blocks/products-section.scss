@@ -131,9 +131,29 @@
 
   &__img {
 
+    &--dashboard {
+      width: 294px;
+
+      @include iPad {
+        width: 240px;
+      }
+
+      @include mobile {
+        width: 298px;
+      }
+    }
+
     &--seriesA {
       width: 254px;
       height: 180px;
+    }
+
+    &--prod-service {
+      width: 183px;
+    }
+
+    &--appAndWeb {
+      width: 183px;
     }
   }
 
