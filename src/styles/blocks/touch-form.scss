@@ -59,7 +59,7 @@
     opacity: 1;
     z-index: 2;
 
-    @include mobile {
+    @include iPad {
       position: absolute;
     }
   }
