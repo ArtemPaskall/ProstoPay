@@ -433,6 +433,7 @@ window.addEventListener('orientationchange', () => {
 });
 
 window.screen.orientation.lock('portrait');
+screen.orientation.lock('portrait');
 window.orientation.lock('portrait');
 
 window.addEventListener('resize', () => {
