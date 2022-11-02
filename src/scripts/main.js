@@ -425,39 +425,6 @@ function editDiagram() {
   }
 }
 
-// Screen orientation
-
-window.matchMedia('(orientation: portrait)').addEventListener('change', e => {
-  const portrait = e.matches;
-
-  if (portrait) {
-    console.log('portrait');
-  } else {
-    console.log('landscape');
-  }
-});
+//
 
 window.screen.orientation.lock('portrait');
-window.screen.lockOrientation('portrait');
-
-// if (window.innerHeight < window.innerWidth) {
-//   document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
-// };
-
-// window.addEventListener('resize', () => {
-//   console.log(`h: ${window.innerHeight}`);
-//   console.log(`w: ${window.innerWidth}`);
-// });
-
-window.addEventListener('orientationchange', () => {
-  const orientation = window.screen.orientation.type;
-  const portrait = orientation.includes('portrait');
-
-  if (portrait) {
-    document.getElementsByTagName('html')[0].style.transform = 'initial';
-  } else {
-    window.screen.orientation.lock('portrait');
-  }
-});
-
-// window.screen.orientation.lock('portrait');
