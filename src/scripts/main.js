@@ -258,7 +258,7 @@ tryItImageChange();
 
 function tryItImageChange() {
   const images = document.querySelectorAll('.try-it__QR-image');
-
+  console.log(images);
   // lang = window.localStorage.getItem('lang');
 
   images.forEach(image => {
@@ -404,20 +404,35 @@ function emailSwitch() {
 editDiagram();
 
 function editDiagram() {
+  const diagram = document.querySelector('.diagram');
   const cashlessLink = document.querySelector('.diagram__cashless-link');
   const feedbackLink = document.querySelector('.diagram__feedback-link');
   const fiskalkLink = document.querySelector('.diagram__fiscal-link');
   const remoteLink = document.querySelector('.diagram__remote-link');
 
-  if (lang === 'EN') {
-    cashlessLink.classList.add('diagram__cashless-link--en');
-    feedbackLink.classList.add('diagram__feedback-link--en');
-    fiskalkLink.classList.add('diagram__fiscal-link--en');
-    remoteLink.classList.add('diagram__remote-link--en');
-  } else {
-    cashlessLink.classList.remove('diagram__cashless-link--en');
-    feedbackLink.classList.remove('diagram__feedback-link--en');
-    fiskalkLink.classList.remove('diagram__fiscal-link--en');
-    remoteLink.classList.remove('diagram__remote-link--en');
+  if (diagram) {
+    if (lang === 'EN') {
+      cashlessLink.classList.add('diagram__cashless-link--en');
+      feedbackLink.classList.add('diagram__feedback-link--en');
+      fiskalkLink.classList.add('diagram__fiscal-link--en');
+      remoteLink.classList.add('diagram__remote-link--en');
+    } else {
+      cashlessLink.classList.remove('diagram__cashless-link--en');
+      feedbackLink.classList.remove('diagram__feedback-link--en');
+      fiskalkLink.classList.remove('diagram__fiscal-link--en');
+      remoteLink.classList.remove('diagram__remote-link--en');
+    }
   }
 }
+
+// Screen orientation
+window.addEventListener('orientationchange', () => {
+  console.log(`The orientation of the screen is: ${window.orientation}`);
+  window.screen.orientation.lock('portrait');
+  window.orientation.lock('portrait');
+});
+
+window.addEventListener('resize', () => {
+  console.log(`The orientation of the screen is: ${window.orientation}`);
+  window.screen.orientation.lock('portrait');
+});
