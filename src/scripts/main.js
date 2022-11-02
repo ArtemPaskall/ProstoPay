@@ -428,15 +428,21 @@ function editDiagram() {
 // Screen orientation
 window.addEventListener('orientationchange', () => {
   console.log(`The orientation of the screen is: ${window.orientation}`);
-  window.screen.orientation.lock('portrait');
-  window.orientation.lock('portrait');
+  const locked = window.screen.orientation.lock('portrait');
+
+  console.log(locked);
+  // window.orientation.lock('portrait');
 });
 
 window.screen.orientation.lock('portrait');
 screen.orientation.lock('portrait');
 window.orientation.lock('portrait');
+this.screen.orientation.lock('portrait');
 
 window.addEventListener('resize', () => {
-  console.log(`The orientation of the screen is: ${window.orientation}`);
-  window.screen.orientation.lock('portrait');
+  console.log(`The orientation of the screen is: ${window.screen.orientation}`);
+
+  // const locked = window.screen.orientation.lock('portrait');
+
+  // console.log(locked);
 });
