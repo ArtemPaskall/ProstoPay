@@ -428,6 +428,9 @@ function editDiagram() {
 // Screen orientation
 
 window.screen.orientation.lock('portrait');
-screen.orientation.lock('portrait');
 window.orientation.lock('portrait');
 this.screen.orientation.lock('portrait');
+
+if (window.innerHeight > window.innerWidth) {
+  document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
+}
