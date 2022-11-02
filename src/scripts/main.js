@@ -258,8 +258,6 @@ tryItImageChange();
 
 function tryItImageChange() {
   const images = document.querySelectorAll('.try-it__QR-image');
-  console.log(images);
-  // lang = window.localStorage.getItem('lang');
 
   images.forEach(image => {
     image.classList.add('try-it__QR-image--close');
@@ -286,7 +284,6 @@ showVideoButtons.forEach(showVideo => {
 
   if (closeVideo) {
     closeVideo.addEventListener('click', function() {
-      // lang = window.localStorage.getItem('lang');
 
       if (showVideo.classList.contains(lang)) {
         showVideo.classList.remove('try-it__QR-image--close');
@@ -318,7 +315,6 @@ if (tryItCloseButton) {
 // Open and hide text on Services mobile
 const openButtons = document.querySelectorAll('.services-section__text-open-btn');
 
-// lang = window.localStorage.getItem('lang');
 
 if (openButtons) {
   openButtons.forEach(child => {
@@ -389,8 +385,6 @@ emailSwitch();
 function emailSwitch() {
   const forms = document.querySelectorAll('.touch-form__form');
 
-  // lang = window.localStorage.getItem('lang');
-
   forms.forEach(el => {
     if (lang === 'EN') {
       el.action = 'https://formsubmit.co/9ac3bb0099f26da215a604d9ba0c10e9';
@@ -424,7 +418,3 @@ function editDiagram() {
     }
   }
 }
-
-//
-
-window.screen.orientation.lock('portrait');

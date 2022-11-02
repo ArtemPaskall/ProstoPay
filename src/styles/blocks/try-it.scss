@@ -37,6 +37,17 @@
     transform: scale(1);
     opacity: 1;
     z-index: 2;
+
+    @include iPad {
+      position: absolute;
+      top: initial;
+      bottom: -20px;
+    }
+
+    @include iPad {
+      top: initial;
+      bottom: -430px;
+    }
   }
 
   &__close-cross {

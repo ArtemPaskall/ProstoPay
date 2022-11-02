@@ -38,19 +38,32 @@
     }
   }
 
-  &--services-bottom {
-    top: initial;
-    bottom: -250px;
+  // &--services-bottom {
+  //   top: initial;
+  //   bottom: -250px;
+  // }
+
+  @include iPad {
+    &--services-bottom {
+      top: initial;
+      bottom: -250px;
+    }
+
+    &--products {
+      top: initial;
+    }
+
+    &--products-bottom {
+      top: initial;
+      bottom: -150px;
+    }
+
+    &--index-menu {
+      top: 730px;
+    }
   }
 
-  &--products {
-    top: initial;
-  }
 
-  &--products-bottom {
-    top: initial;
-    bottom: 20px;
-  }
 
   opacity: 0;
   transform: scale(0.01);

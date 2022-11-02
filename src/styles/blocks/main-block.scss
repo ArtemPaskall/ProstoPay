@@ -5,6 +5,10 @@
 
   @include mobile {
     overflow: hidden;
+
+    &--products {
+      overflow: visible;
+    }
   }
 
   @include iPad {

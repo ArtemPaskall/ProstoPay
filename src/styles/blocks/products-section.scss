@@ -165,15 +165,15 @@
   }
 
   &__pay-sysytem-link {
-    margin: 20px 25px 20px 0;
+    // margin: 20px 25px 20px 0;
 
-    &:last-child {
-      margin-right: 0;
-    }
+    // &:last-child {
+    //   margin-right: 0;
+    // }
   }
 
   &__pay-sysytem-img {
-    width: 125px;
+    width: 185px;
     transition: transform 0.3s;
 
     &:hover {
