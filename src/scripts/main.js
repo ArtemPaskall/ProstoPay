@@ -454,9 +454,9 @@ window.addEventListener('orientationchange', () => {
   const portrait = orientation.includes('portrait');
 
   if (portrait) {
-    document.getElementsByTagName('body')[0].style.transform = 'initial';
+    document.getElementsByTagName('html')[0].style.transform = 'initial';
   } else {
-    document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
+    document.getElementsByTagName('html')[0].style.transform = 'rotate(90deg)';
 
   }
 });
