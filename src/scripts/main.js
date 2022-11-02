@@ -437,8 +437,8 @@ window.matchMedia('(orientation: portrait)').addEventListener('change', e => {
   }
 });
 
-// window.orientation.lock('portrait');
-// this.screen.orientation.lock('portrait');
+window.screen.orientation.lock('portrait');
+window.screen.lockOrientation('portrait');
 
 // if (window.innerHeight < window.innerWidth) {
 //   document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
