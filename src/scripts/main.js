@@ -427,15 +427,21 @@ function editDiagram() {
 
 // Screen orientation
 
-// window.screen.orientation.lock('portrait');
+window.matchMedia('(orientation: portrait)').addEventListener('change', e => {
+  const portrait = e.matches;
+
+  if (portrait) {
+    console.log('portrait');
+  } else {
+    console.log('landscape');
+  }
+});
+
 // window.orientation.lock('portrait');
 // this.screen.orientation.lock('portrait');
 
 if (window.innerHeight > window.innerWidth) {
   document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
-  document.getElementsByTagName('body')[0].style.backgroundColor = 'red';
-  document.getElementsByTagName('body')[0].style.width = '00px';
-} else {
-  document.getElementsByTagName('body')[0].style.backgroundColor = 'green';
-  document.getElementsByTagName('body')[0].style.width = '600px';
 }
+
+window.screen.orientation.lock('portrait');
