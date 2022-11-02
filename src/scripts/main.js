@@ -444,10 +444,10 @@ window.matchMedia('(orientation: portrait)').addEventListener('change', e => {
 //   document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
 // };
 
-window.addEventListener('resize', () => {
-  console.log(`h: ${window.innerHeight}`);
-  console.log(`w: ${window.innerWidth}`);
-});
+// window.addEventListener('resize', () => {
+//   console.log(`h: ${window.innerHeight}`);
+//   console.log(`w: ${window.innerWidth}`);
+// });
 
 window.addEventListener('orientationchange', () => {
   const orientation = window.screen.orientation.type;
@@ -456,8 +456,7 @@ window.addEventListener('orientationchange', () => {
   if (portrait) {
     document.getElementsByTagName('html')[0].style.transform = 'initial';
   } else {
-    document.getElementsByTagName('html')[0].style.transform = 'rotate(90deg)';
-
+    window.screen.orientation.lock('portrait');
   }
 });
 
