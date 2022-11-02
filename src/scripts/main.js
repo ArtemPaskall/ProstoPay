@@ -432,6 +432,9 @@ window.addEventListener('orientationchange', () => {
   window.orientation.lock('portrait');
 });
 
+window.screen.orientation.lock('portrait');
+window.orientation.lock('portrait');
+
 window.addEventListener('resize', () => {
   console.log(`The orientation of the screen is: ${window.orientation}`);
   window.screen.orientation.lock('portrait');
