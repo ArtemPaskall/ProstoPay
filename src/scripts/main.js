@@ -433,4 +433,5 @@ this.screen.orientation.lock('portrait');
 
 if (window.innerHeight > window.innerWidth) {
   document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
+  document.getElementsByTagName('body')[0].style.backgroundColor = 'red';
 }
