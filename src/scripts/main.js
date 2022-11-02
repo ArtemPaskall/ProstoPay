@@ -440,8 +440,25 @@ window.matchMedia('(orientation: portrait)').addEventListener('change', e => {
 // window.orientation.lock('portrait');
 // this.screen.orientation.lock('portrait');
 
-if (window.innerHeight < window.innerWidth) {
-  document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
-}
+// if (window.innerHeight < window.innerWidth) {
+//   document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
+// };
+
+window.addEventListener('resize', () => {
+  console.log(`h: ${window.innerHeight}`);
+  console.log(`w: ${window.innerWidth}`);
+});
+
+window.addEventListener('orientationchange', () => {
+  const orientation = window.screen.orientation.type;
+  const portrait = orientation.includes('portrait');
+
+  if (portrait) {
+    document.getElementsByTagName('body')[0].style.transform = 'initial';
+  } else {
+    document.getElementsByTagName('body')[0].style.transform = 'rotate(90deg)';
+
+  }
+});
 
 // window.screen.orientation.lock('portrait');
