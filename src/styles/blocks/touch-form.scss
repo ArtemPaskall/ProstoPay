@@ -38,11 +38,6 @@
     }
   }
 
-  // &--services-bottom {
-  //   top: initial;
-  //   bottom: -250px;
-  // }
-
   @include iPad {
     &--services-bottom {
       top: initial;
@@ -60,6 +55,12 @@
 
     &--index-menu {
       top: 730px;
+    }
+  }
+
+  @include mobile {
+    &--products-bottom {
+      bottom: -320px;
     }
   }
 

@@ -364,7 +364,7 @@ export const translationArr = {
   'prosto-service-text': {
     'UA': ' Потужний додаток для внутрішнього використання вашим персоналом.'
      + ' Ви отримуєте швидкий доступ до ключових показників бізнесу. ProstoService допомагає операторам,'
-     + ' мерчендайзерам та техніхам виконувати щоденні операції. У додатку ви можете контролювати обладнання,'
+     + ' мерчендайзерам та технікам виконувати щоденні операції. У додатку ви можете контролювати обладнання,'
      + ' бачити основні тенденції, обліковувати  обслуговування апаратів,'
      + ' отримувати сповіщення про помилки обладнання. Найважливіші операційні функції просто у вашому смартфоні.',
     'EN': 'Power application for the internal usage by your staff. Management gets quick access to key indicators about business activities. ProstoService helps merchandisers and technicians to perform day-to-day operations. In the app you can monitor machines, observe key trends, make records about machine servicing, get notifications about machine errors. The most important operational features are just in your smartphone.',

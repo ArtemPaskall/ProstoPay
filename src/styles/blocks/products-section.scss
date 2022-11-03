@@ -164,17 +164,13 @@
     align-items: center;
   }
 
-  &__pay-sysytem-link {
-    // margin: 20px 25px 20px 0;
-
-    // &:last-child {
-    //   margin-right: 0;
-    // }
-  }
-
   &__pay-sysytem-img {
     width: 185px;
     transition: transform 0.3s;
+
+    @include mobile {
+      width: 150px;
+    }
 
     &:hover {
       transform: scale(1.1);
