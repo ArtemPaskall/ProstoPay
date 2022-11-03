@@ -425,7 +425,7 @@ toggleZoomScreen();
 function toggleZoomScreen() {
   // if (window.innerWidth < 767.99) {
   if (window.innerWidth < 430) {
-    document.body.style.zoom = '90%';
+    document.body.style.zoom = '80%';
   } else {
     document.body.style.zoom = '100%';
   }
