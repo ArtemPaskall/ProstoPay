@@ -42,8 +42,6 @@ function changeURLLanguage(child) {
 changeLanguage();
 
 function changeLanguage() {
-  // lang = window.localStorage.getItem('lang');
-
   const currentLang = document.querySelectorAll('.current-lang');
 
   currentLang.forEach(item => {
@@ -66,7 +64,6 @@ function changeLanguage() {
 translatePlaceholders();
 
 function translatePlaceholders() {
-  // lang = window.localStorage.getItem('lang');
 
   const inputs = document.getElementsByClassName('touch-form__data-field');
   const textAreas = document.getElementsByClassName('touch-form__textarea');
@@ -129,8 +126,6 @@ translateButtonsMore();
 function translateButtonsMore() {
   const moreButtons = document.querySelectorAll('.services-section__text-open-btn');
 
-  // lang = window.localStorage.getItem('lang');
-
   moreButtons.forEach(button => {
     if (lang === 'EN') {
       if (button.innerHTML === 'Більше') {
@@ -156,8 +151,6 @@ function translateButtonsMore() {
 changeImages();
 
 function changeImages() {
-  // lang = window.localStorage.getItem('lang');
-
   const imageWhyProsto = document.querySelectorAll('._lang__img');
 
   imageWhyProsto.forEach(item => {
@@ -225,6 +218,7 @@ function closeForms() {
 function toggleTouchForm(button) {
   const forms = document.querySelectorAll('.touch-form');
   let buttonNumber;
+  const buttonOffset = getOffset(button).top;
 
   button.className.trim().split(' ').map(item => {
     if (item.includes('button__form--')) {
@@ -235,8 +229,21 @@ function toggleTouchForm(button) {
   forms.forEach(form => {
     if (form.classList.contains(`touch-form--${buttonNumber}`)) {
       form.classList.toggle('touch-form--active');
+
+      if (buttonNumber === '2') {
+        form.style.top = `${buttonOffset - 50}px`;
+      }
     }
   });
+
+  function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY,
+    };
+  }
 }
 
 // Function show 'try-it' overlay
@@ -314,7 +321,6 @@ if (tryItCloseButton) {
 
 // Open and hide text on Services mobile
 const openButtons = document.querySelectorAll('.services-section__text-open-btn');
-
 
 if (openButtons) {
   openButtons.forEach(child => {
@@ -421,14 +427,12 @@ function editDiagram() {
 // Page scale decrease on mobile
 
 toggleZoomScreen();
+window.addEventListener('resize', toggleZoomScreen);
 
 function toggleZoomScreen() {
-  // if (window.innerWidth < 767.99) {
   if (window.innerWidth < 430) {
     document.body.style.zoom = '80%';
   } else {
     document.body.style.zoom = '100%';
   }
 };
-
-window.addEventListener('resize', toggleZoomScreen);
