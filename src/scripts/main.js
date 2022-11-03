@@ -418,3 +418,10 @@ function editDiagram() {
     }
   }
 }
+//
+
+function toggleZoomScreen() {
+  document.body.style.zoom = '80%';
+};
+
+toggleZoomScreen();
