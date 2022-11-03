@@ -418,10 +418,17 @@ function editDiagram() {
     }
   }
 }
-//
-
-function toggleZoomScreen() {
-  document.body.style.zoom = '80%';
-};
+// Page scale decrease on mobile
 
 toggleZoomScreen();
+
+function toggleZoomScreen() {
+  // if (window.innerWidth < 767.99) {
+  if (window.innerWidth < 430) {
+    document.body.style.zoom = '90%';
+  } else {
+    document.body.style.zoom = '100%';
+  }
+};
+
+window.addEventListener('resize', toggleZoomScreen);
