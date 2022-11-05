@@ -83,7 +83,7 @@ function translatePlaceholders() {
       }
 
       if (input.placeholder === 'Кількість апаратів') {
-        input.placeholder = 'Number of machines';
+        input.placeholder = 'Quantity of machines';
       }
     }
   }
@@ -430,9 +430,13 @@ toggleZoomScreen();
 window.addEventListener('resize', toggleZoomScreen);
 
 function toggleZoomScreen() {
+const headerMobile = document.getElementsByClassName('header-mobile')[0];
+
   if (window.innerWidth < 430) {
     document.body.style.zoom = '80%';
+    headerMobile.style.height = '120vh';
   } else {
     document.body.style.zoom = '100%';
+    headerMobile.style.height = '100vh';
   }
 };

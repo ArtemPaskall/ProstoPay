@@ -21,7 +21,7 @@ window.addEventListener('scroll', function() {
     menu.style.marginTop = '-1px';
   } else {
     menu.style.top = '-2px';
-    menu.style.zIndex = '1';
+    menu.style.zIndex = '2';
     menu.style.position = 'sticky';
     menu.style.boxShadow = '0 4px 4px rgba(0, 0, 0, 0.25)';
 

@@ -241,10 +241,12 @@
 
   &__more {
     position: absolute;
-    bottom: 24px;
+    bottom: 4px;
+    z-index: 1;
+    padding: 20px;
 
     @include iPad {
-      bottom: 16px;
+      bottom: -4px;
     }
   }
 
