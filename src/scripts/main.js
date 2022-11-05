@@ -430,11 +430,11 @@ toggleZoomScreen();
 window.addEventListener('resize', toggleZoomScreen);
 
 function toggleZoomScreen() {
-const headerMobile = document.getElementsByClassName('header-mobile')[0];
+  const headerMobile = document.getElementsByClassName('header-mobile')[0];
 
   if (window.innerWidth < 430) {
     document.body.style.zoom = '80%';
-    headerMobile.style.height = '120vh';
+    headerMobile.style.height = '125vh';
   } else {
     document.body.style.zoom = '100%';
     headerMobile.style.height = '100vh';
