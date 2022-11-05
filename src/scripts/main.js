@@ -431,12 +431,15 @@ window.addEventListener('resize', toggleZoomScreen);
 
 function toggleZoomScreen() {
   const headerMobile = document.getElementsByClassName('header-mobile')[0];
+  const headerMobileContent = document.getElementsByClassName('header-mobile__content')[0];
 
   if (window.innerWidth < 430) {
     document.body.style.zoom = '80%';
-    // headerMobile.style.height = '120vh';
+    headerMobile.style.height = '120vh';
+    headerMobileContent.style.zoom = '110%';
   } else {
     document.body.style.zoom = '100%';
-    // headerMobile.style.height = '100vh';
+    headerMobile.style.height = '100vh';
+    headerMobileContent.style.zoom = '100%';
   }
 };
