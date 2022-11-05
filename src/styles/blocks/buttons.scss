@@ -73,6 +73,10 @@
       border-radius: 14px;
     }
 
+    @include mobile {
+      min-height: 35px;
+    }
+
     &:hover {
       color: $text-color;
     }
