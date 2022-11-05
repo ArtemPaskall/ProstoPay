@@ -436,7 +436,7 @@ function toggleZoomScreen() {
   if (window.innerWidth < 430) {
     document.body.style.zoom = '80%';
     headerMobile.style.height = '120vh';
-    headerMobileContent.style.zoom = '110%';
+    headerMobileContent.style.zoom = '120%';
   } else {
     document.body.style.zoom = '100%';
     headerMobile.style.height = '100vh';
