@@ -64,7 +64,6 @@ function changeLanguage() {
 translatePlaceholders();
 
 function translatePlaceholders() {
-
   const inputs = document.getElementsByClassName('touch-form__data-field');
   const textAreas = document.getElementsByClassName('touch-form__textarea');
 
@@ -433,15 +432,16 @@ function toggleZoomScreen() {
   const headerMobile = document.getElementsByClassName('header-mobile')[0];
   const headerMobileContent = document.getElementsByClassName('header-mobile__content')[0];
 
-  if (window.innerWidth < 430) {
+  // if (window.innerWidth < 430) {
+  if (window.innerWidth < 650) {
     document.body.style.zoom = '80%';
     headerMobile.style.height = '120vh';
     headerMobileContent.style.zoom = '130%';
 
-    if (headerMobileContent.clientHeight < 580) {
-      headerMobile.style.height = '130vh';
-      headerMobileContent.style.zoom = '110%';
-    }
+    // if (headerMobileContent.clientHeight < 580) {
+    //   headerMobile.style.height = '130vh';
+    //   headerMobileContent.style.zoom = '110%';
+    // }
   } else {
     document.body.style.zoom = '100%';
     headerMobile.style.height = '100vh';
