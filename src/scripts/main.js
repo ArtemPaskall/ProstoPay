@@ -11,8 +11,10 @@ let lang = window.localStorage.getItem('lang');
 if (!lang) {
   if (slavicLangcheck) {
     window.localStorage.setItem('lang', 'UA');
+    startWithLanguage();
   } else {
     window.localStorage.setItem('lang', 'EN');
+    startWithLanguage();
   }
 }
 
@@ -28,6 +30,19 @@ function changeURLLanguage(child) {
   const newLang = child.innerHTML;
 
   window.localStorage.setItem('lang', newLang);
+  lang = window.localStorage.getItem('lang');
+
+  changeLanguage();
+  changeImages();
+  translateButtonsMore();
+  translatePlaceholders();
+  tryItImageChange();
+  emailSwitch();
+  editDiagram();
+}
+
+// Changing the language at the first entry
+function startWithLanguage() {
   lang = window.localStorage.getItem('lang');
 
   changeLanguage();
@@ -432,16 +447,10 @@ function toggleZoomScreen() {
   const headerMobile = document.getElementsByClassName('header-mobile')[0];
   const headerMobileContent = document.getElementsByClassName('header-mobile__content')[0];
 
-  // if (window.innerWidth < 430) {
-  if (window.innerWidth < 650) {
+  if (window.innerWidth < 430) {
     document.body.style.zoom = '80%';
     headerMobile.style.height = '120vh';
     headerMobileContent.style.zoom = '130%';
-
-    // if (headerMobileContent.clientHeight < 580) {
-    //   headerMobile.style.height = '130vh';
-    //   headerMobileContent.style.zoom = '110%';
-    // }
   } else {
     document.body.style.zoom = '100%';
     headerMobile.style.height = '100vh';
