@@ -15,9 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;700&family=Josefin+Sans:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
       var parcelRequire;
+      // var devicename = navigator.userAgent;
+      // const userAgent = document.getElementById('agent')
+      // console.log(userAgent);
     </script>
   </head>
   <body class="page__body">
+    <div id="agent"></div>
     <header class="page__header header">
       <div class="header__content">
         <div class="container container--header">
@@ -648,5 +652,13 @@
     <script defer type="module" src="scripts/versionEN.js"></script>
     <script defer type="module" src="scripts/video-open.js"></script>
     <script defer type="module" src="scripts/menuScrollHandler.js"></script>
+    <script>
+      var parcelRequire;
+      var devicename = navigator.userAgent;
+      const userAgent = document.getElementById('agent')
+
+      userAgent.innerHTML = devicename
+      console.log(userAgent);
+    </script>
   </body>
 </html>
