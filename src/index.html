@@ -660,9 +660,13 @@
       if (deviceAgent.includes('M2003J15SC')) {
         userAgent1.innerHTML = 'Redmi Note 9'
         aboutText.style.maxWidth = '350px'
-        aboutText.style.right = '20px'
+        aboutText.style.right = '27px'
+        aboutText.remove('page__section--about-EN-Redmi')
+
+        const lang = window.localStorage.getItem('lang');
         if (lang === 'EN') {
           userAgent1.innerHTML = 'English'
+          aboutText.add('page__section--about-EN-Redmi')
         }
       }
     </script>

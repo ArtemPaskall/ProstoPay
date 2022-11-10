@@ -117,7 +117,7 @@
       }
 
       @include mobile {
-        margin-top: 295px;
+        // margin-top: 295px;
         margin-top: 300px;
       }
     }
@@ -125,6 +125,12 @@
     &--about-EN {
       @include mobile {
         margin-top: 325px;
+      }
+    }
+
+    &--about-EN-Redmi {
+      @include mobile {
+        margin-top: 300px;
       }
     }
 
