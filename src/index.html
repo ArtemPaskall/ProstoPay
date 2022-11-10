@@ -655,7 +655,7 @@
       const userAgent = document.getElementById('agent')
       const userAgent1 = document.getElementById('agent1')
       const aboutText = document.getElementsByClassName('about__text')[0];
-      const aboutSection = document.getElementsByClassName('about')[0];
+      const aboutSection = document.getElementsByClassName('page__section--about')[0];
       console.log(aboutSection);
       userAgent.innerHTML = deviceAgent
 
@@ -663,12 +663,10 @@
         userAgent1.innerHTML = 'Redmi Note 9'
         aboutText.style.maxWidth = '350px'
         aboutText.style.right = '27px'
-        aboutSection.remove('page__section--about-EN-Redmi')
 
         const lang = window.localStorage.getItem('lang');
         if (lang === 'EN') {
           userAgent1.innerHTML = 'English'
-          aboutSection.add('page__section--about-EN-Redmi')
         }
       }
     </script>
