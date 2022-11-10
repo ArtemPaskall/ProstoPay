@@ -19,6 +19,7 @@
   </head>
   <body class="page__body">
     <div id="agent"></div>
+    <div id="agent1"></div>
     <header class="page__header header">
       <div class="header__content">
         <div class="container container--header">
@@ -652,10 +653,13 @@
     <script>
       var deviceAgent = navigator.userAgent;
       const userAgent = document.getElementById('agent')
-
+      const userAgent1 = document.getElementById('agent1')
+      const aboutText = document.getElementsByClassName('about__text')[0];
       userAgent.innerHTML = deviceAgent
-      if (deviceAgent.includes('Redmi Note 9')) {
-        userAgent.innerHTML = 'Redmi Note 9'
+      aboutText.style.maxWidth = '370px'
+      if (deviceAgent.includes('M2003j15')) {
+        userAgent1.innerHTML = 'Redmi Note 9'
+        aboutText.style.maxWidth = '370px'
       }
     </script>
   </body>
